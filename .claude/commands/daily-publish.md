@@ -1,9 +1,62 @@
 # Daily Auto-Publish Pipeline
 
-Fully automated pipeline: pick a topic, research, write, review, generate image, publish to the [thefbagirl.com](https://thefbagirl.com) Astro repo, commit & push. CI/CD deploys automatically.
+Fully automated pipeline: pick a topic (or start from a YouTube video), research, write, review, generate image, publish to the [thefbagirl.com](https://thefbagirl.com) Astro repo, commit & push. CI/CD deploys automatically.
 
 ## Usage
-This command is designed to run unattended via `claude -p`. **Do NOT ask the user any questions. Make all decisions autonomously.** If a step fails critically, save progress and stop — leave a clear status message.
+
+Four modes, selected by what you pass in `$ARGUMENTS`:
+
+**Mode A — Autonomous topic selection (default, for daily cron)**
+```
+/daily-publish
+```
+Pipeline picks the next best topic from the YouTube video pipeline and keyword clusters.
+
+**Mode B — Seed from a YouTube video (auto-scrape transcript)**
+```
+/daily-publish https://www.youtube.com/watch?v=NCQcvIrg8Yw
+/daily-publish https://youtu.be/NCQcvIrg8Yw
+/daily-publish https://www.youtube.com/shorts/abc123xyz
+/daily-publish NCQcvIrg8Yw
+```
+Pipeline fetches video metadata via YouTube Data API and scrapes the transcript via `youtube-transcript-api`.
+
+**Mode C — YouTube video + user-provided transcript (highest quality)**
+```
+/daily-publish https://youtu.be/NCQcvIrg8Yw /path/to/transcript.txt
+/daily-publish NCQcvIrg8Yw ~/Downloads/vine-transcript.md
+```
+Pipeline fetches metadata from the URL (title, description, channel ID, publish date) but uses **the provided transcript** instead of scraping. Use this when you have a professionally transcribed, manually-cleaned, or longer-form transcript than what YouTube auto-captions produce. The provided transcript is authoritative.
+
+**Mode D — Transcript only (no YouTube URL)**
+```
+/daily-publish /path/to/transcript.txt
+/daily-publish ~/Downloads/new-video-transcript.md
+```
+Pipeline derives title, primary keyword, and topic entirely from the transcript content. Useful when the video is unpublished, a draft, a private upload, or you simply do not need YouTube metadata. The article publishes without a `youtubeVideoId` — no video embed.
+
+---
+
+### Argument parsing
+
+`$ARGUMENTS` is whitespace-separated. For each token, classify:
+1. **YouTube URL** (`youtube.com/watch?v=`, `youtu.be/`, `youtube.com/shorts/`, `youtube.com/embed/`) → extract the 11-char video ID.
+2. **Bare video ID** matching `^[A-Za-z0-9_-]{11}$` AND not an existing file path → video ID.
+3. **Existing readable file path** → transcript path. Accept `.txt`, `.md`, `.json`, `.srt`, `.vtt`. Resolve `~` and relative paths.
+
+Mode selection:
+| video_id | transcript_path | Mode |
+|---|---|---|
+| none | none | A |
+| set | none | B |
+| set | set | C |
+| none | set | D |
+
+If classification is ambiguous (two tokens both look like file paths, or a bare-ID collides with an existing 11-char filename), prefer the file-path interpretation for the token that resolves to a real file, and report the decision in the final status.
+
+---
+
+**In all modes**: this command is designed to run unattended via `claude -p`. **Do NOT ask the user any questions. Make all decisions autonomously.** If a step fails critically, save progress and stop — leave a clear status message.
 
 ## Target repositories
 - **Content workspace** (this repo): `/Users/ync/poryadok/sources/seomachine-thefbagirl-com`
@@ -28,7 +81,11 @@ Execute these steps in order. Variables in `[brackets]` are filled in as you go.
 
 ---
 
-### Step 1: Pick a topic autonomously
+### Step 1: Pick a topic (Mode A) OR parse the input (Modes B / C / D)
+
+Classify `$ARGUMENTS` per the parsing rules at the top of this file. Branch to the matching mode below.
+
+#### Mode A — Autonomous topic selection (no arguments)
 
 Choose the next article topic using this priority order. Never ask the user.
 
@@ -51,6 +108,222 @@ Selection criteria:
 - YouTube video ID if applicable
 - Reasoning (2–3 sentences)
 - Suggested file slug (kebab-case, 3–6 words, includes keyword, includes year if time-sensitive)
+
+#### Mode B — Seed from a specific YouTube video
+
+The argument is a YouTube URL or a bare 11-character video ID. Extract the video ID using these patterns (in order):
+
+| Input format | Example | Extract |
+|---|---|---|
+| Full watch URL | `https://www.youtube.com/watch?v=NCQcvIrg8Yw` | `NCQcvIrg8Yw` |
+| Short URL | `https://youtu.be/NCQcvIrg8Yw` | `NCQcvIrg8Yw` |
+| Shorts URL | `https://www.youtube.com/shorts/NCQcvIrg8Yw` | `NCQcvIrg8Yw` |
+| Embed URL | `https://www.youtube.com/embed/NCQcvIrg8Yw` | `NCQcvIrg8Yw` |
+| Bare ID | `NCQcvIrg8Yw` | `NCQcvIrg8Yw` |
+
+Validate: the ID must match `^[A-Za-z0-9_-]{11}$`. Strip any trailing query params (`&t=30s`, `&list=...`, etc.).
+
+**Fetch video metadata** via YouTube Data API (key in `data_sources/config/.env` as `YOUTUBE_API_KEY`):
+
+```bash
+VIDEO_ID="[extracted-id]"
+YT_KEY=$(grep YOUTUBE_API_KEY data_sources/config/.env | cut -d= -f2)
+curl -s "https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=$VIDEO_ID&key=$YT_KEY" \
+  | python3 -m json.tool > research/video-$VIDEO_ID.json
+```
+
+From the response, extract:
+- `snippet.title` — video title (primary seed for article title and keyword)
+- `snippet.description` — video description (secondary content seed; may contain links and chapter markers)
+- `snippet.channelId` — must equal `UCPx3JO2j6hycfM_zGSqbYPA` (Katia's channel). If it does not match, **stop** and report: the command only seeds articles from Katia's own channel to maintain voice authenticity.
+- `snippet.publishedAt` — video publish date
+- `snippet.tags` — any tags attached to the video (optional keyword signals)
+- `contentDetails.duration` — video length (useful for framing "watch the 8-minute walkthrough")
+
+**Fetch the video transcript** via `youtube-transcript-api` — this is the highest-signal input for voice match. Use Katia's actual spoken words as the primary reference for the article body:
+
+```bash
+python3 -c "
+from youtube_transcript_api import YouTubeTranscriptApi
+import json, sys
+video_id = '$VIDEO_ID'
+try:
+    transcript = YouTubeTranscriptApi().fetch(video_id)
+    segments = transcript.to_raw_data()
+    full_text = ' '.join(s['text'] for s in segments)
+    out = {
+        'video_id': video_id,
+        'segments': len(segments),
+        'word_count': len(full_text.split()),
+        'full_text': full_text,
+        'timed_segments': segments,
+    }
+    with open(f'research/transcript-{video_id}.json', 'w') as f:
+        json.dump(out, f, indent=2)
+    print(f'Transcript saved: {out[\"word_count\"]} words, {out[\"segments\"]} segments')
+except Exception as e:
+    print(f'TRANSCRIPT_FETCH_FAILED: {e}', file=sys.stderr)
+    sys.exit(1)
+"
+```
+
+**If transcript fetch fails** (no captions, auto-captions disabled, video is very new and YouTube has not transcribed it yet): continue with title + description only — do NOT stop. Note the failure in the final summary and flag that the article's voice match may be weaker without transcript grounding.
+
+**If transcript succeeds**: save it to `research/transcript-$VIDEO_ID.json`. The write step (Step 3) must use this as the primary source for:
+- Voice calibration (Katia's actual word choices, sentence rhythms, filler phrases like "frankly," "here is the uncomfortable truth")
+- Specific examples and numbers mentioned in the video
+- The order in which Katia presents the topic (follow her structure where it makes sense)
+- Personal anecdotes she shared (use as mini-stories with minor polish, never fabricate new ones beyond what's in the transcript)
+
+The transcript is raw speech — expect filler words, repetitions, and grammar looseness. The article is a polished written version: keep the substance, tighten the prose. Never paste transcript text verbatim; always rewrite for written register.
+
+#### Mode C — YouTube video + user-provided transcript
+
+Same as Mode B for metadata (fetch title, description, channel ID, etc. from YouTube Data API and run the duplicate check).
+
+**Skip the `youtube-transcript-api` scrape.** Load the user-provided transcript instead using the normalizer below. The provided transcript is authoritative — it overrides anything YouTube's auto-captions would have returned.
+
+Save the normalized transcript to `research/transcript-$VIDEO_ID.json` using the same schema as Mode B so downstream steps do not need to branch:
+```json
+{
+  "video_id": "...",
+  "source": "user-provided",
+  "original_path": "/path/to/...",
+  "word_count": 1697,
+  "full_text": "..."
+}
+```
+
+Note in the final status that the user-provided transcript was used. This also means the article reliability bar is higher — user-provided transcripts are usually cleaner than auto-captions, so voice match should be tighter.
+
+#### Mode D — Transcript only (no YouTube URL)
+
+Skip all YouTube API calls. Load the user-provided transcript using the normalizer below.
+
+**Derive the topic and primary keyword from the transcript content**:
+1. Read the full transcript. Identify the core subject (usually established in the first 10–30% of the text).
+2. Pick a 2–4 word noun phrase as the primary keyword. Cross-check against `context/target-keywords.md` clusters — prefer an existing cluster match.
+3. Pick the target collection (`blog` / `tutorials` / `news` / `reviews` / `lifehacks`) based on how the transcript is structured:
+   - Step-by-step walkthrough → `tutorials`
+   - Opinion / strategic analysis → `blog`
+   - Tool discussion → `reviews`
+   - News / policy / fee announcement → `news`
+   - Workflow / productivity / mindset → `lifehacks`
+4. Generate a file slug (kebab-case, 3–6 words, includes keyword, includes year if time-sensitive).
+
+**Important**: in Mode D the frontmatter has NO `youtubeVideoId` or `youtubeVideoTitle` (leave them out entirely — they are optional in the schema). The article body must NOT reference a video ("watch the full walkthrough" language is forbidden). Internal links and YouTube-channel CTAs still apply.
+
+Save `topics/from-transcript-[YYYY-MM-DD].md` with:
+- Derived title
+- Primary keyword
+- Target collection + category
+- Mapped cluster
+- Suggested slug
+- Transcript source path and word count
+- 2–3 sentence reasoning
+
+Then save the normalized transcript to `research/transcript-[slug].json` using:
+```json
+{
+  "video_id": null,
+  "source": "user-provided",
+  "original_path": "/path/to/...",
+  "word_count": 1697,
+  "full_text": "..."
+}
+```
+
+#### Transcript normalizer (for Modes C and D)
+
+The user may provide the transcript in any of these formats. Normalize to plain-text `full_text`:
+
+| Format | Handling |
+|---|---|
+| `.txt` | Read as-is. Collapse all whitespace runs to single spaces; strip BOM. |
+| `.md` | Parse markdown. Strip frontmatter (if any YAML block at top), strip headings, collapse lists into sentences. Keep the body text only. |
+| `.json` | Expect either (a) youtube-transcript-api shape `[{"text": "...", "start": ..., "duration": ...}, ...]`, (b) a whisper/assemblyAI shape `{"segments": [{"text": "..."}]}`, or (c) an object with a top-level `full_text` or `transcript` field. Extract text in that order of precedence. |
+| `.srt` / `.vtt` | Strip cue indices, timestamps (`HH:MM:SS,mmm` / `HH:MM:SS.mmm`), and WEBVTT headers. Join caption text in order. Collapse whitespace. |
+
+Normalizer snippet (inline, runnable):
+```bash
+python3 -c "
+import sys, re, json, pathlib
+path = pathlib.Path('$TRANSCRIPT_PATH').expanduser()
+raw = path.read_text(encoding='utf-8-sig')
+ext = path.suffix.lower()
+if ext == '.json':
+    data = json.loads(raw)
+    if isinstance(data, list):
+        text = ' '.join(seg.get('text','') for seg in data)
+    elif isinstance(data, dict):
+        if 'full_text' in data: text = data['full_text']
+        elif 'transcript' in data: text = data['transcript']
+        elif 'segments' in data: text = ' '.join(s.get('text','') for s in data['segments'])
+        else: text = json.dumps(data)
+    else:
+        text = str(data)
+elif ext in ('.srt', '.vtt'):
+    lines = []
+    for line in raw.splitlines():
+        stripped = line.strip()
+        if not stripped: continue
+        if stripped.upper().startswith('WEBVTT'): continue
+        if re.match(r'^\d+$', stripped): continue
+        if re.match(r'^\d{2}:\d{2}:\d{2}[.,]\d{3}', stripped): continue
+        if '-->' in stripped: continue
+        lines.append(stripped)
+    text = ' '.join(lines)
+elif ext == '.md':
+    # Strip frontmatter
+    body = re.sub(r'^---\n.*?\n---\n', '', raw, count=1, flags=re.DOTALL)
+    # Strip headings, list markers, code fences
+    body = re.sub(r'^#+\s*', '', body, flags=re.MULTILINE)
+    body = re.sub(r'^[-*]\s+', '', body, flags=re.MULTILINE)
+    body = re.sub(r'\`\`\`.*?\`\`\`', '', body, flags=re.DOTALL)
+    text = body
+else:
+    text = raw
+# Normalize whitespace
+text = re.sub(r'\s+', ' ', text).strip()
+out = {
+    'video_id': '$VIDEO_ID' or None,
+    'source': 'user-provided',
+    'original_path': str(path),
+    'word_count': len(text.split()),
+    'full_text': text,
+}
+out_path = 'research/transcript-' + ('$VIDEO_ID' or '$SLUG') + '.json'
+pathlib.Path(out_path).write_text(json.dumps(out, indent=2))
+print(f'Normalized {out[\"word_count\"]} words to {out_path}')
+"
+```
+
+**Check for duplicates**: search `context/target-keywords.md` `YouTube Video → Article Pipeline` table AND the published articles under `/Users/ync/poryadok/sources/thefbagirl-com/src/content/*/` for existing frontmatter with `youtubeVideoId: "$VIDEO_ID"`. If found, the article already exists — stop and report the URL of the existing article. Do not silently overwrite.
+
+**Derive the primary keyword** from the video title:
+- Strip emoji, decorative punctuation, and promotional prefixes (e.g., "🔥 ", "Amazon FBA for Beginners: ", "NEW: ").
+- Identify the 2–4 word noun phrase that is the core search target.
+- Example: `"🍇 Amazon Vine Program Explained: How to Enroll, What It Costs & Get 30 Reviews (FBA Seller Guide)"` → primary keyword: `Amazon Vine program`.
+- Cross-check the derived keyword against `context/target-keywords.md` clusters. If it maps to a known cluster, use that cluster's existing pillar/supporting structure. If it is new, note that this article will seed a new cluster.
+
+**Pick the target collection** based on video content type:
+- Tutorial / walkthrough → `tutorials` (set `difficulty` and `estimatedTime` in frontmatter)
+- Tool review → `reviews` (set `toolName`, `toolUrl`, `rating`, `pros`, `cons`, `verdict`)
+- Amazon policy / fee / news → `news`
+- Productivity / workflow / mindset → `lifehacks`
+- Strategy, analysis, opinion, everything else → `blog`
+
+**Output**: Save `topics/from-video-$VIDEO_ID-[YYYY-MM-DD].md` with:
+- Full video title (from YouTube API)
+- Video ID and URL
+- Primary keyword (derived)
+- Target collection
+- Target category enum value
+- Mapped cluster from `target-keywords.md` (or "new cluster")
+- Suggested file slug
+- 2–3 sentence reasoning for the framing chosen
+
+The rest of the pipeline (Steps 2–14) runs identically in both modes. The key difference: in Mode B, every draft and every agent report must frontmatter-set `youtubeVideoId: "$VIDEO_ID"` and `youtubeVideoTitle: "[raw title]"`, and the article body must reference the video ("Watch the full walkthrough in the video above") in the natural place(s) the voice guide specifies.
 
 ---
 
@@ -85,6 +358,21 @@ if the SERP analysis suggests deeper cluster research would help.
 ### Step 3: Write the article
 
 Follow every requirement from `context/seo-guidelines.md`, `context/brand-voice.md`, and `context/style-guide.md`. Match the patterns from `context/writing-examples.md` as the ground truth for voice.
+
+**In Modes B, C, and D (any mode with a transcript)**: the transcript at `research/transcript-*.json` is the **primary** source of truth for both content and voice. Read it in full before writing. Specifically:
+- Use Katia's exact examples, numbers, and ASIN details from the transcript. Never substitute invented numbers when she gave real ones on camera.
+- Preserve her narrative order where it makes sense for a written article.
+- Quote characteristic phrasings (e.g., "here is the uncomfortable truth," "frankly," "I have seen sellers...") to lock voice match.
+- Expand on points she mentioned briefly if SERP research shows they deserve depth.
+- Skip filler, tangents, and throat-clearing from the transcript.
+- Never paste raw transcript sentences — rewrite for written register (tighter, no filler).
+- The article should read as the written sibling of the video (or of the raw thought, in Mode D), not a transcription. A reader who watched the video and then reads the article should find reinforcement + extra depth, not repetition.
+
+**Quality hierarchy between modes**:
+- **Mode C (user-provided transcript)** is the highest-fidelity mode. Treat the provided transcript as ground truth — if it contradicts SERP research or your training intuitions, the transcript wins.
+- **Mode B (scraped transcript)** has auto-caption artifacts (run-together numbers like "1,0 or 1,11" that actually meant "1,010 or 1,011", missing punctuation, misheard jargon). Use judgment to reconstruct obvious transcription errors while preserving the substance.
+- **Mode D (transcript only)** — no video to reference. Do not write phrases like "in the video above" or "watch the full walkthrough." The transcript is the source, but the article stands alone.
+- **Mode A (no transcript)**: rely on `context/writing-examples.md` and general brand voice.
 
 Hard requirements:
 - **Word count**: 1,500–2,500 for standard posts, 2,500–4,500 for pillar content. Cap at 3,000 unless pillar.

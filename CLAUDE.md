@@ -32,6 +32,7 @@ All commands are defined in `.claude/commands/` and invoked as slash commands:
 - `/research-ai-citations [topic]` - AI citation audit: generates prompts, clusters them, audits which sources AI cites
 - `/repurpose [file]` - Adapts article for LinkedIn, Medium, Reddit, Quora distribution
 - `/landing-write`, `/landing-audit`, `/landing-research`, `/landing-publish`, `/landing-competitor` - Landing page commands
+- `/daily-publish [arg]` - End-to-end automated pipeline: topic pick → research → write → optimize → image → publish to target Astro repo → commit/push. Four input modes: (A) autonomous, (B) YouTube URL/ID, (C) URL + transcript file, (D) transcript file only. See `.claude/commands/daily-publish.md`. Designed for `claude -p` / cron.
 
 ## Architecture
 
@@ -100,6 +101,20 @@ Rewrites go to `rewrites/`. Landing pages go to `landing-pages/`. Audits go to `
 - `ai-citation-targets.md` - Directories/platforms where your brand should be cited by AI tools
 - `reddit-strategy.md` - Reddit engagement strategy for AI SEO and community visibility
 
-## WordPress Integration
+## TheFBAGirl Publishing Setup (this workspace's target)
 
-Publishing uses the WordPress REST API with a custom MU-plugin (`wordpress/seo-machine-yoast-rest.php`) that exposes Yoast SEO fields. Articles are published in WordPress block format (HTML comments in Markdown files).
+This workspace publishes to the **thefbagirl.com** Astro site, not WordPress. The WordPress integration upstream in SEO Machine is unused here.
+
+- **Target repo**: `/Users/ync/poryadok/sources/thefbagirl-com` (Astro 6 + Tailwind 4, deployed to Cloudflare Pages on push to `main` via `.github/workflows/deploy.yml`). Remote: `git@github.com:daniks-ai/thefbagirl-com.git`. Push works as GitHub user `ekaterina-rubtcova`.
+- **Content format**: `.mdx` files in `src/content/{blog,tutorials,news,reviews,lifehacks}/`. Frontmatter must validate against the Zod schema in the target repo's `src/content.config.ts` — strict category enum, `title` ≤70 chars, `description` ≤160 chars, `coverImage` path required.
+- **Cover images**: Generated via Gemini Nano Banana 2 (`gemini-3.1-flash-image-preview`). `GEMINI_API_KEY` lives in the **target repo's** `.env`, not this workspace. Photorealistic DSLR-style only — never cartoon/illustration.
+- **Brand**: TheFBAGirl / Katia / YouTube `@AmazonFBAGirl` (channel ID `UCPx3JO2j6hycfM_zGSqbYPA`). Amazon FBA education niche. Every article should pair with or reference the YouTube channel; CTAs prefer YouTube subscribe > newsletter > related article > affiliate. Never push a course.
+- **Author avatar**: `src/assets/images/fba-girl-avatar.jpg` is `.gitignored` and fetched at build time via `scripts/fetch-youtube.ts` using `YOUTUBE_API_KEY`. Do not commit the JPG. Local builds without the key fail on this file; CI has the secret.
+- **Video → article workflow**: `/daily-publish` Modes B/C/D use the YouTube video transcript as the primary voice source. Mode B scrapes via `youtube-transcript-api`; Modes C/D use a user-provided transcript file (`.txt` / `.md` / `.json` / `.srt` / `.vtt`), which is higher-fidelity and preferred when available.
+- **Context files are populated** (not templates) with TheFBAGirl-specific voice, keywords, competitors, and style rules. When writing, match `context/writing-examples.md` as ground truth for voice — no AI-smell words, no guru language, first-person operator voice.
+
+## Runtime setup notes
+
+- Python deps include `textstat`, `numpy`, `scikit-learn`, `beautifulsoup4`, `youtube-transcript-api`, and Google API client libs. Install with `pip install -r data_sources/requirements.txt`.
+- `.claude/settings.json` pre-grants the bash patterns needed for unattended `/daily-publish` runs (python, pnpm, node, curl to Google/YouTube/DataForSEO domains, safe git ops). Destructive ops (`rm -rf`, `git push --force`, `git reset --hard`) are explicitly denied.
+- Known fixes applied to the upstream codebase: `content_scrubber.py` stats dict now initializes `ai_phrases_replaced`. Still-imperfect: the scrubber's `[Uu]tilize(?:s|d)?` regex collapses "utilized" → "use" (losing past-tense) — watch for broken grammar after scrub.

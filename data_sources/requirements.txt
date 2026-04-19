@@ -41,3 +41,6 @@ lxml>=4.9.0
 
 # Markdown processing (for WordPress publisher)
 markdown>=3.5.0
+
+# YouTube transcript fetching (for /daily-publish Mode B — seed articles from video transcripts)
+youtube-transcript-api>=1.0
