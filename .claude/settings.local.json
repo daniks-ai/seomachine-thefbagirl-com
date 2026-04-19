@@ -7,7 +7,18 @@
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(i['snippet']['publishedAt'][:10], '|', i['contentDetails']['videoId'], '|', i['snippet']['title']\\) for i in d.get\\('items',[]\\)]\")",
       "Bash(python3 -c ' *)",
       "Bash(python3 data_sources/modules/content_scorer.py drafts/amazon-vine-program-explained-2026-04-19.md)",
-      "Bash(pip3 install *)"
+      "Bash(pip3 install *)",
+      "Bash(awk '{if\\(length\\($0\\) > 200\\) print NR\": \"length\\($0\\)\" chars\"}' drafts/amazon-vine-program-explained-2026-04-19.md)",
+      "Bash(python3)",
+      "Bash(grep -l \"GEMINI_API_KEY\" .env*)",
+      "Bash(ls -la .env)",
+      "Bash(pnpm run *)",
+      "Bash(YOUTUBE_API_KEY=AIzaSyAgeslRMGG-ZVool2M98kU1c33mSboN0QY pnpm run build)",
+      "Bash(gh auth *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(ssh-add -l)",
+      "Bash(python3 /Users/ync/poryadok/sources/seomachine-thefbagirl-com/research_serp_analysis.py)",
+      "Bash(python3 /Users/ync/poryadok/sources/seomachine-thefbagirl-com/research_serp_analysis.py \"Amazon Vine program\")"
     ]
   }
 }
