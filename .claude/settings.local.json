@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^$\")",
+      "Bash(curl -s \"https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics,contentDetails,brandingSettings&forHandle=@AmazonFBAGirl&key=AIzaSyAgeslRMGG-ZVool2M98kU1c33mSboN0QY\")",
+      "Bash(curl -s \"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=25&playlistId=UUPx3JO2j6hycfM_zGSqbYPA&key=AIzaSyAgeslRMGG-ZVool2M98kU1c33mSboN0QY\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(i['snippet']['publishedAt'][:10], '|', i['contentDetails']['videoId'], '|', i['snippet']['title']\\) for i in d.get\\('items',[]\\)]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 data_sources/modules/content_scorer.py drafts/amazon-vine-program-explained-2026-04-19.md)",
+      "Bash(pip3 install *)"
+    ]
+  }
+}

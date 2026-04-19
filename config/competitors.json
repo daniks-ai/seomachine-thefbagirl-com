@@ -1,0 +1,131 @@
+{
+  "direct_competitors": [
+    "junglescout.com",
+    "helium10.com",
+    "sellerapp.com",
+    "amzscout.net",
+    "ecomcrew.com"
+  ],
+  "content_competitors": [
+    "myamazonguy.com",
+    "sellerengine.com",
+    "sellerboard.com",
+    "viralaunch.com",
+    "sellics.com",
+    "amazonfbatutorials.com"
+  ],
+  "bofu_keywords": [
+    "Amazon FBA",
+    "best Amazon seller tools",
+    "Amazon FBA course",
+    "Amazon seller software",
+    "Helium 10 alternatives",
+    "Jungle Scout alternatives",
+    "Helium 10 vs Jungle Scout",
+    "Helium 10 review",
+    "Jungle Scout review",
+    "AMZScout review",
+    "Amazon FBA coaching"
+  ],
+  "mofu_keywords": [
+    "how to start Amazon FBA",
+    "Amazon PPC strategy",
+    "Amazon product research",
+    "Amazon listing optimization",
+    "Amazon FBA for beginners",
+    "Amazon FBA business plan",
+    "Amazon FBA profitability",
+    "Amazon FBA tools guide",
+    "Amazon private label tutorial"
+  ],
+  "tofu_keywords": [
+    "is Amazon FBA worth it",
+    "Amazon FBA vs dropshipping",
+    "how much to start Amazon FBA",
+    "Amazon FBA for beginners 2026",
+    "Amazon FBA news",
+    "Amazon policy changes",
+    "Amazon fee changes 2026"
+  ],
+  "alternative_keywords": [
+    "Helium 10 alternatives",
+    "Jungle Scout alternatives",
+    "AMZScout alternatives",
+    "SellerApp alternatives",
+    "free Amazon seller tools"
+  ],
+  "key_queries": [
+    "Amazon FBA",
+    "Amazon seller tools",
+    "TheFBAGirl",
+    "Amazon FBA Girl",
+    "Katia Amazon FBA",
+    "Amazon PPC",
+    "Amazon product research",
+    "Amazon FBA fees",
+    "Amazon Vine"
+  ],
+  "relevant_terms": [
+    "Amazon FBA",
+    "Amazon seller",
+    "private label",
+    "product research",
+    "Amazon PPC",
+    "ACoS",
+    "TACoS",
+    "listing optimization",
+    "A+ Content",
+    "Amazon Vine",
+    "Seller Central",
+    "Amazon fees",
+    "fulfillment fee",
+    "referral fee",
+    "storage fee",
+    "inbound placement fee",
+    "Pan-European FBA",
+    "Amazon Brand Registry",
+    "virtual bundles",
+    "Helium 10",
+    "Jungle Scout",
+    "Alibaba",
+    "sourcing",
+    "supplier",
+    "MOQ",
+    "Amazon barcode",
+    "Amazon SP-API",
+    "Amazon marketplace"
+  ],
+  "skip_terms": [
+    "celebrity",
+    "net worth",
+    "biography",
+    "dating",
+    "reddit karma",
+    "onlyfans",
+    "tiktok dance",
+    "instagram model",
+    "amazon prime video show",
+    "amazon devices"
+  ],
+  "topic_patterns": {
+    "PPC & Advertising": ["ppc", "acos", "tacos", "sponsored products", "sponsored brands", "sponsored display", "bid", "campaign", "keyword match"],
+    "Product Research": ["product research", "niche", "product idea", "demand", "competition", "bsr", "black box", "opportunity score"],
+    "Listing Optimization": ["listing", "title", "bullet", "description", "a+ content", "backend keyword", "image", "photography", "conversion rate"],
+    "Financials & Fees": ["fee", "cost", "cogs", "margin", "profit", "fulfillment fee", "referral fee", "storage fee", "inbound placement", "aged inventory"],
+    "Sourcing & Suppliers": ["alibaba", "supplier", "moq", "trade assurance", "sourcing", "prep center", "freight", "customs"],
+    "Reviews & Vine": ["review", "vine", "request a review", "verified purchase", "feedback", "rating"],
+    "International / Europe": ["europe", "germany", "uk", "pan-european", "vat", "oss", "amazon.de", "amazon.co.uk"],
+    "Tools & Software": ["helium 10", "jungle scout", "amzscout", "repricer", "software", "tool", "chrome extension", "black box", "cerebro"],
+    "Amazon News & Policy": ["policy", "update", "change", "fee change", "sp-api", "barcode", "brand registry", "new rule"],
+    "Beginner / Getting Started": ["beginner", "start", "first product", "launch", "setup", "private label", "step by step"],
+    "Productivity & Operations": ["productivity", "sop", "workflow", "virtual assistant", "va", "automation", "time management", "batch"]
+  },
+  "industry_context": {
+    "vertical": "Amazon FBA and e-commerce education",
+    "audience_primary": "Amazon private label sellers, beginners through scaling",
+    "audience_secondary": "E-commerce entrepreneurs, YouTube viewers, industry news readers",
+    "brand_voice": "Operator-first, honest, numbers-anchored. Katia / FBA Girl personal brand.",
+    "main_channel": "YouTube @AmazonFBAGirl",
+    "domain": "thefbagirl.com"
+  }
+}

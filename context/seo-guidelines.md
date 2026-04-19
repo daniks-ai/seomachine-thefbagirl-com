@@ -1,598 +1,546 @@
-# SEO Guidelines for Castos Content
+# SEO Guidelines for TheFBAGirl Content
 
-This document outlines SEO best practices and requirements for all Castos blog content to maximize organic search visibility and rankings.
+This document outlines SEO requirements and best practices for all TheFBAGirl content. It works alongside `brand-voice.md` (voice), `style-guide.md` (style), `target-keywords.md` (keywords), and `internal-links-map.md` (links).
+
+TheFBAGirl competes in the Amazon FBA education niche against high-DR tool blogs (Jungle Scout, Helium 10) and established operator brands (EcomCrew). Our SEO edge comes from: operator voice, time-current content, YouTube/blog pairing, honest tool reviews, and underserved niches (EU FBA, 2026 policy changes). These guidelines prioritize those edges.
 
 ## Content Length Requirements
 
 ### Target Word Counts
-- **Standard Blog Post**: 1,500-3,000 words (target: 2,000-2,500)
-- **Pillar Content / Comprehensive Guides**: 3,000-5,000 words maximum
-- **How-To Guides**: 1,500-2,500 words
-- **News / Updates**: 800-1,200 words (exception to standard)
+- **Standard blog post**: 1,500–2,500 words (target: 2,000).
+- **Pillar / comprehensive guides**: 2,500–4,500 words.
+- **Tutorials**: 1,500–2,500 words (match to complexity).
+- **Reviews**: 1,500–2,000 words minimum (honest pros/cons demand depth).
+- **News articles**: 800–1,500 words (time-sensitive; brevity is a feature).
+- **Lifehacks**: 1,000–1,800 words (list + supporting detail).
 
-### Important Length Guidelines
-- **Maximum for most articles**: 3,000 words
-- **Maximum for pillar content**: 5,000 words
-- If a topic requires more than the maximum, break it into a series of related articles
-- Aim for the lower end of ranges when possible—concise, focused content often performs better
+### Maximum Length
+- **Most articles**: Cap at 3,000 words. Longer = lower finish rate.
+- **Pillar content**: Cap at 4,500 words. Break larger topics into a series.
+- Quality > quantity. A 2,000-word article with real numbers beats a 3,500-word article padded with fluff.
 
-### Why Length Matters
-- Longer content typically ranks higher in search results
-- More words = more opportunities for keyword integration and topic coverage
-- Comprehensive content earns more backlinks and engagement
-- Depth signals expertise and authority to search engines
-
-### Quality Over Quantity
-- Don't add fluff just to hit word counts
-- Every section should provide genuine value
-- Better to have 2,000 valuable words than 3,000 padded words
-- **Stay within the maximum word counts**—overly long articles hurt user experience
+### Why Length Matters (Realistically)
+- Longer content correlates with higher rankings *only when depth is real*.
+- Padded content loses to concise content in 2026's helpful-content-era SERPs.
+- Specific numbers, frameworks, and examples make length justified.
 
 ## Keyword Optimization
 
 ### Keyword Research Requirements
 Before writing any article:
-1. Identify primary target keyword
-2. Research search volume and difficulty
-3. Analyze top 10 ranking competitors
-4. Identify 3-5 secondary/related keywords
-5. List LSI (Latent Semantic Indexing) keywords
+1. Identify the primary keyword from `target-keywords.md`.
+2. Confirm search intent (informational / commercial / transactional).
+3. Pull SERP data via `/research-serp [keyword]` (DataForSEO integration).
+4. Identify 3–5 secondary keywords from the same cluster.
+5. List 5–10 LSI/semantic terms.
+6. Check competitor coverage (`competitor-analysis.md`).
 
 ### Keyword Density Guidelines
-- **Primary Keyword**: 1-2% density
-  - Example: In a 2,000-word article, use keyword 20-40 times
-  - Natural integration is critical—never force keywords
-- **Secondary Keywords**: 0.5-1% density each
-- **LSI Keywords**: Sprinkle throughout naturally
+- **Primary keyword**: 1–2% density.
+  - 2,000-word article → 20–40 uses of the primary keyword or close variants.
+  - Natural integration only. Never force it.
+- **Secondary keywords**: 0.5–1% each.
+- **LSI keywords**: Naturally sprinkled. Don't count; just include the terms a topical expert would use.
 
 ### Critical Keyword Placement
 Primary keyword MUST appear in:
-- [ ] H1 headline (preferably near the beginning)
-- [ ] First 100 words of article
-- [ ] At least 2-3 H2 subheadings
-- [ ] Last paragraph / conclusion
-- [ ] Meta title (within first 60 characters)
-- [ ] Meta description
-- [ ] URL slug
+- [ ] H1 headline (naturally, preferably near the front).
+- [ ] First 100 words of the article.
+- [ ] At least 2–3 H2 subheadings (or close variations).
+- [ ] Last paragraph / conclusion.
+- [ ] Meta title (frontmatter `title`).
+- [ ] Meta description (frontmatter `description`).
+- [ ] URL slug (matches file name).
+- [ ] At least one `alt` text on an image where natural.
 
 ### Keyword Integration Best Practices
-- **Natural language first**: Write for humans, optimize for search engines
-- **Use variations**: Don't repeat exact phrase robotically
-  - Example: "podcast hosting" → "hosting your podcast" → "podcast host"
-- **Question formats**: Include conversational variations
-  - "How to start a podcast" vs "starting a podcast"
-- **Semantic keywords**: Use related terms to support topical authority
-  - For "podcast editing": include "audio editing", "post-production", "editing workflow"
+- **Write for humans first**: Draft the article, then adjust placement.
+- **Use variations**: "Amazon PPC strategy" → "PPC campaigns on Amazon" → "Amazon ads."
+- **Question formats**: "How to lower ACoS" alongside "lowering ACoS on Amazon."
+- **Semantic family**: For "Amazon PPC," include ACoS, TACoS, Sponsored Products, bid, campaign, placement, keyword match types.
 
-### Keyword Stuffing (Avoid)
-❌ "Podcast hosting is important. Podcast hosting helps podcasters. Our podcast hosting platform offers podcast hosting services for podcast hosting needs."
+### Keyword Stuffing — Forbidden
 
-✅ "Podcast hosting is important for creators who want to distribute their show to major platforms. A reliable host ensures your episodes are accessible wherever listeners discover new content."
+❌ "Amazon PPC strategy matters. With the right Amazon PPC strategy, Amazon sellers can use Amazon PPC strategy to grow Amazon PPC campaigns. My Amazon PPC strategy guide will show you Amazon PPC strategy tactics."
+
+✅ "Amazon PPC is the engine that launches most private label products — and it's also where sellers burn the most money. The three-phase framework below is how I structure every campaign, whether I'm launching a new ASIN or optimizing a three-year-old listing."
 
 ## Content Structure Requirements
 
 ### Heading Hierarchy
 
-#### H1 (Title)
-- **Only one H1 per article**
-- Include primary keyword naturally
-- 60 characters or less (for SERP display)
-- Compelling and benefit-focused
-- Should answer: "What will I learn/gain from this?"
+#### H1 (Title) — Frontmatter `title`
+- **One H1 per article** — the frontmatter title.
+- Include primary keyword naturally.
+- **Max 70 characters** (content collection schema enforces this).
+- Benefit-focused or curiosity-hook.
+- Must answer "why should I read this?" in itself.
 
 #### H2 (Main Sections)
-- **4-7 H2 sections** for standard articles
-- At least **2-3 should include keyword variations**
-- Descriptive and keyword-rich
-- Logical progression through topic
-- Can be standalone (readers should understand flow from H2s alone)
+- **4–7 H2 sections** in standard articles.
+- At least 2–3 should include keyword or close variation.
+- Sentence case by default (see `style-guide.md`); Title Case when naming a framework ("The Three-Phase Campaign Structure").
+- H2s should read as a table of contents — a skimmer should get the article's arc from headers alone.
 
 #### H3 (Subsections)
-- Nested under H2s (never skip from H2 to H4)
-- Break complex sections into digestible chunks
-- Include keywords where natural
-- More specific than H2s
+- Nested under H2s. Never skip H2 → H4.
+- Break complex sections into 2–4 subsections.
+- More specific than H2s.
 
 ### Article Structure Template
 
 ```markdown
-# [H1: Compelling Title with Primary Keyword]
+# [H1: Compelling Title with Primary Keyword — ≤70 chars]
 
-## Introduction (150-250 words)
-- Hook: Attention-grabbing opening
-- Problem: What challenge does this address?
-- Promise: What will reader learn/achieve?
-- Keyword in first 100 words
+[Opening hook — 1-2 sentences. Specific scenario, surprising number, or personal admission.]
 
-## [H2: Main Section 1 - Include Keyword Variation]
-### [H3: Subsection if needed]
-- Content depth
-- Examples
-- Data/statistics
+[Problem statement — 2-3 sentences. Name the pain.]
 
-## [H2: Main Section 2]
-### [H3: Subsection if needed]
-- Content depth
-- Examples
-- Data/statistics
+[Promise — 2-3 sentences. What they'll learn/do.]
 
-## [H2: Main Section 3 - Include Keyword Variation]
-### [H3: Subsection if needed]
-- Content depth
-- Examples
-- Data/statistics
+[Direct-answer sentence for AI SEO if "best/how/top" query — see AI Search Optimization below.]
 
-## [H2: Main Section 4]
-[Continue with 4-7 total H2 sections]
+> **Key Takeaways**
+> - [Specific claim 1]
+> - [Specific claim 2]
+> - [Specific claim 3]
+> - [Specific claim 4]
 
-## Conclusion (150-250 words)
-- Recap key points (3-5 takeaways)
-- Include keyword
-- Clear call-to-action
-- Next steps for reader
+## [H2: First Main Section — Keyword Variation]
+
+[Body: 250-350 words. Specific examples, numbers, frameworks.]
+
+### [H3: Subsection if section > 350 words]
+
+## [H2: Second Main Section]
+
+[Body]
+
+## [H2: Third Main Section — Keyword Variation]
+
+[Body]
+
+## [H2: Common Mistakes / Pitfalls] (optional but high-value)
+
+## [H2: Your Next Steps / Conclusion]
+
+[Recap — 2-4 bullet points or short paragraph]
+[Next step — what to do this week]
+[CTA — YouTube video / newsletter / related article]
 ```
 
 ## Meta Elements
 
-### Meta Title
-**Requirements**:
-- **Length**: 50-60 characters (including "| Castos" if used)
-- **Primary keyword**: Must be included
-- **Compelling**: Should encourage clicks from SERP
-- **Unique**: Different from all other Castos page titles
-- **Accurate**: Must match page content
+### Meta Title (frontmatter `title`)
+- **Length**: ≤ 70 characters (schema max). Aim for 50–60 to ensure no SERP truncation.
+- **Primary keyword**: Included naturally near the front when possible.
+- **Compelling**: Encourages clicks. Not "Blog Post About PPC."
+- **Unique**: Different from every other article on thefbagirl.com.
 
-**Format Options**:
-- `[Primary Keyword]: [Benefit/Promise]`
-- `How to [Goal] | [Qualifier]`
-- `[Number] Ways to [Achieve Benefit]`
-- `[Topic] Guide for [Audience] | Castos`
+**Formats that work**:
+- `[Primary Keyword]: [Benefit or Specific Promise]`
+- `How to [Goal] (Without [Common Mistake])`
+- `[Number] [Specific Thing] That [Outcome]`
+- `[Topic] in 2026: [Honest Take / Specific Angle]`
 
 **Examples**:
-- ✅ "How to Start a Podcast in 2025: Complete Guide"
-- ✅ "12 Proven Podcast Growth Strategies | Castos"
-- ❌ "Podcast Tips and Tricks" (too vague, no keyword)
-- ❌ "The Ultimate Comprehensive Guide to Everything About Starting Your First Podcast Successfully" (too long)
+- ✅ "The Ultimate Amazon PPC Strategy Guide for 2026"
+- ✅ "7 Listing Optimization Tips That Actually Boost Sales"
+- ✅ "Amazon FBA: US vs Europe — The Brutal Truth"
+- ❌ "Amazon PPC Tips" (too vague)
+- ❌ "Learn Everything About Amazon PPC Strategy and Grow Your Business Today Faster" (too long)
 
-### Meta Description
-**Requirements**:
-- **Length**: 150-160 characters
-- **Primary keyword**: Include naturally
-- **Value proposition**: Clear benefit to reader
-- **Call-to-action**: Action phrase (Learn, Discover, Find out, Get, etc.)
-- **Complete**: Must not cut off mid-sentence
-- **Compelling**: Should drive clicks from SERP
+### Meta Description (frontmatter `description`)
+- **Length**: ≤ 160 characters (schema max). Aim for 150–160.
+- **Primary keyword**: Include naturally.
+- **Value proposition**: Clear benefit.
+- **Call-to-action verb**: Learn, Master, Discover, Get, Find out.
+- **Complete sentence** — no cut-offs.
 
-**Formula**:
-```
-[Problem/Question]? [Solution/Benefit]. [Unique angle]. [CTA].
-```
+**Formula**: `[Promise / Hook]. [What's inside — specific]. [Optional CTA verb].`
 
 **Examples**:
-- ✅ "Learn how to start a podcast with our step-by-step guide. Everything from equipment to launch strategy. Perfect for beginners. Start your show today." (159 chars)
-- ✅ "Discover 12 proven podcast growth strategies that top creators use. Increase downloads, engagement, and audience loyalty. Actionable tips inside." (155 chars)
-- ❌ "This is a blog post about podcasting where we discuss many podcast-related topics." (vague, no value prop, no CTA)
+- ✅ "Master Amazon PPC advertising with proven strategies for keyword targeting, campaign structure, ACoS optimization, and bid management." (153 chars)
+- ✅ "My honest comparison of selling on Amazon US versus Europe, including the mistakes I made starting in Germany." (115 chars)
+- ❌ "This is a blog post about Amazon FBA where we discuss many topics for sellers." (vague, no value prop)
 
 ### URL Slug
-**Requirements**:
-- Include primary keyword
-- Lowercase letters only
-- Hyphens between words (not underscores)
-- Short and descriptive (3-5 words ideal)
-- No stop words unless necessary (a, the, and, of, etc.)
-
-**Format**: `/blog/[primary-keyword-phrase]`
+- **Requirements**:
+  - Lowercase only.
+  - Hyphens (never underscores).
+  - Includes primary keyword.
+  - 3–6 words.
+  - Matches the MDX file name exactly.
 
 **Examples**:
-- ✅ `/blog/start-podcast-guide`
-- ✅ `/blog/podcast-growth-strategies`
-- ✅ `/blog/podcast-editing-software`
-- ❌ `/blog/how-to-start-a-podcast-in-2025-the-complete-guide` (too long)
-- ❌ `/blog/post-12345` (no keywords)
+- ✅ `/blog/amazon-ppc-strategy-guide-2026`
+- ✅ `/blog/the-fifty-cent-mistake-amazon-sellers`
+- ✅ `/reviews/helium-10-review`
+- ❌ `/blog/post-2026-03-22-ppc-strategy-guide`
+- ❌ `/blog/amazon_ppc_strategy` (underscores)
 
 ## Internal Linking Strategy
 
-### Requirements
-- **Minimum**: 3 internal links per article
-- **Optimal**: 4-5 internal links
-- **Maximum**: 7 internal links (unless 3,000+ word article)
+### Requirements (adjusted for TheFBAGirl)
+- **Minimum**: 3 internal links per article.
+- **Optimal**: 4–5 internal links.
+- **Maximum**: 7 internal links (only for pillar articles > 3,000 words).
 
-### Link Types to Include
+### Link Types
 
-#### 1. Pillar Content (1-2 links)
-- Link to main comprehensive guides on related topics
-- Builds topic cluster authority
-- Usually 2,000+ word cornerstone content
+#### 1. Pillar Content (1–2 links)
+- Link to cluster pillars on related topics. See `internal-links-map.md`.
 
-#### 2. Related Blog Posts (2-3 links)
-- Link to articles on related subtopics
-- Creates content web
-- Helps readers explore topics comprehensively
+#### 2. Related Blog / Tutorial / Review (2–3 links)
+- Cross-collection linking is encouraged: Blog → Tutorial, Tutorial → Review, News → Blog.
 
-#### 3. Product/Feature Pages (0-1 link)
-- Only when contextually relevant
-- Natural mention of how Castos solves problem
-- Never forced or overly promotional
+#### 3. News (when time-sensitive context helps)
+- Link to `/news/amazon-fee-changes-2026` (or the current-year news pillar) when fees, policy, or rules are referenced.
 
-#### 4. Resource Pages (0-1 link)
-- Templates, tools, checklists
-- When mentioned as solutions in content
-- Provides additional value to reader
+#### 4. Review (when a tool is mentioned)
+- Don't mention a tool without linking to the review.
 
-### Internal Linking Best Practices
+### Anchor Text
+- ✅ Descriptive: "my [three-phase campaign structure]"
+- ✅ Natural: "I wrote up [the True COGS breakdown] with a worked example"
+- ❌ Generic: "click here" / "read more"
+- ❌ Repeat exact-match anchors across an article (vary the phrasing).
 
-**Anchor Text**:
-- ✅ Descriptive and keyword-rich: "our complete guide to podcast analytics"
-- ✅ Natural in sentence flow: "Learn more about podcast SEO strategies"
-- ❌ Generic: "click here" or "read more"
-- ❌ Exact match repeatedly: Always using same anchor text for same page
-
-**Placement**:
-- Within body paragraphs (most valuable)
-- Natural context that adds value to reader
-- Never more than 2 links per paragraph
-- Distributed throughout article, not clustered
-
-**Reference**:
-- Always check @context/internal-links-map.md for priority linking targets
-- Ensure links are current and functional
-- Link to most relevant, up-to-date content
+### Link Placement
+- Place at least one internal link in the first 500 words.
+- Distribute throughout the article.
+- Never more than 2 links per paragraph.
+- Every new article published → add to `internal-links-map.md`.
 
 ## External Linking Strategy
 
 ### Requirements
-- **Minimum**: 2 external links per article
-- **Optimal**: 3-4 external authority links
-- Purpose: Add credibility, provide sources, support claims
+- **Minimum**: 2 external authority links per article.
+- **Optimal**: 3–4.
+- **Purpose**: Add credibility, cite sources, support claims.
 
-### What to Link Externally
-- **Statistics and data sources**: Always cite where numbers come from
-- **Research and studies**: Link to original research
-- **Tools and resources**: When recommending specific tools
-- **Industry authorities**: Expert opinions or industry publications
+### Good External Targets (Amazon FBA niche)
+- **Amazon Seller Central help pages** — authoritative on fees, policies, program rules.
+- **Amazon Ads documentation** — for advertising specifics.
+- **Amazon Revenue Calculator** — for fee estimation.
+- **Jungle Scout annual "State of the Amazon Seller" report** — for industry data.
+- **EU tax authorities / OSS scheme docs** — for VAT / EU content.
+- **Helium 10 Podcast / Seriously Simple Podcast transcripts** — when referencing industry insights.
+- **Statista, eMarketer, Digital Commerce 360** — for broader e-commerce stats.
 
-### External Link Quality Standards
-- **Authority**: Link to credible, well-known sources
-  - ✅ Industry publications (Podcast Host, Podnews, etc.)
-  - ✅ Research institutions and studies
-  - ✅ Established media outlets
-  - ❌ Random blogs with no authority
-  - ❌ Spammy or low-quality sites
+### Avoid
+- Random blogs with no authority.
+- Affiliate links in body (use Amazon / tool affiliate links only in review pages with disclosure).
+- Outdated sources (>2 years old for fee/policy data).
 
-- **Relevance**: Links must directly support content claims
-- **Freshness**: Prefer recent sources (within 1-2 years for data)
-- **Functionality**: All links must work (no broken links)
-
-### External Link Attributes
-- Most external links: No special attributes needed
-- Sponsored/affiliate links: Use `rel="sponsored"` or `rel="nofollow"`
-- User-generated content: Use `rel="nofollow"`
+### Attributes
+- Default: no special attributes (dofollow).
+- **Affiliate links** (tool reviews): use `rel="sponsored"` — the WordPress publisher handles this when the review schema has `affiliateUrl`.
+- **User-generated content links**: `rel="nofollow"`.
 
 ## Readability Optimization
 
 ### Target Reading Level
-- **Goal**: 8th-10th grade reading level (Flesch-Kincaid)
-- Makes content accessible to wider audience
-- Easier to scan and understand quickly
+- **Goal**: 8th–10th grade Flesch-Kincaid.
+- FBA audience includes many non-native English speakers; plain language wins.
 
 ### Sentence Structure
-- **Average length**: 15-20 words per sentence
-- **Maximum**: 25 words (break longer sentences into two)
-- **Variety**: Mix short punchy sentences with longer explanatory ones
-- **Active voice**: Preferred over passive voice (80%+ active)
+- **Average length**: 15–20 words.
+- **Maximum**: 25 words — break longer ones.
+- **Variety**: Mix short punchy sentences (for takeaways) with longer explanatory ones (for frameworks).
+- **Active voice**: 80%+. "Amazon raised storage fees" > "Storage fees were raised."
 
 ### Paragraph Structure
-- **Length**: 2-4 sentences per paragraph
-- **One idea**: Focus each paragraph on single point
-- **White space**: No walls of text
-- **Mobile-friendly**: Short paragraphs scan better on phones
+- 2–4 sentences per paragraph.
+- One idea per paragraph.
+- Short paragraphs scan well on mobile (where majority of Amazon sellers read).
 
 ### Formatting for Scannability
-- **Subheadings**: Every 300-400 words
-- **Lists**: Use bullets/numbers for sequential or multiple items
-- **Bold**: Emphasize key concepts or takeaways
-- **Short paragraphs**: Easier to digest
-- **White space**: Makes content less intimidating
+- Subheadings every 300–400 words.
+- Bulleted/numbered lists for steps, rankings, collections.
+- **Bold** on key concepts, tier labels, critical numbers.
+- Plenty of white space.
 
-### Transition Words
-Use transition words to improve flow (target: one per paragraph):
-- Addition: Additionally, Furthermore, Moreover
-- Contrast: However, On the other hand, Nevertheless
-- Cause/Effect: Therefore, Consequently, As a result
-- Example: For instance, For example, Specifically
-- Time: First, Next, Finally
+### Transition Words (one per paragraph, natural)
+- Addition: Additionally, Furthermore, Also.
+- Contrast: However, But here's the thing, On the other hand.
+- Cause/effect: Therefore, As a result, Because of this.
+- Example: For instance, Take [specific example].
+- Time: First, Next, Finally, After two weeks.
 
-## Content Quality Standards
+## Content Quality Standards (E-E-A-T)
 
-### Expertise, Authoritativeness, Trustworthiness (E-A-T)
+### Experience
+- First-person operator voice: Katia's actual selling experience.
+- "I've tried X across multiple businesses" beats "studies show."
 
-#### Expertise
-- Provide accurate, detailed information on podcasting topics
-- Back claims with data and examples
-- Demonstrate deep understanding of podcast creator needs
-- Include actionable, practical advice
+### Expertise
+- Accurate fee structures (match current Amazon schedule).
+- Accurate tool feature descriptions (revisit tool reviews quarterly).
+- Specific-category nuances called out when relevant.
 
-#### Authoritativeness
-- Cite credible sources
-- Reference industry data and trends
-- Include expert quotes when relevant
-- Leverage Castos's position as hosting platform
+### Authoritativeness
+- Author attribution: `author: "FBA Girl"` in frontmatter.
+- Cite Amazon's own documentation when claiming how a program/fee/rule works.
+- Link to the @AmazonFBAGirl YouTube channel where the author is visibly teaching the topic.
 
-#### Trustworthiness
-- Be transparent and honest
-- Acknowledge limitations or challenges
-- Don't overpromise results
-- Cite sources for all statistics and claims
-- Update outdated content regularly
+### Trustworthiness
+- No overpromising ("make six figures in 90 days").
+- Acknowledge trade-offs openly.
+- Affiliate disclosure when relevant (`affiliateDisclosure: true` in review schema).
+- Update outdated content — especially fee / policy articles that age fast.
 
 ### Content Originality
-- **Never plagiarize**: All content must be original
-- **Add unique value**: What perspective or insight do we add?
-- **Fresh examples**: Use current, relevant examples
-- **Updated data**: Use most recent statistics available
-- **Unique angle**: Differentiate from competitor content
+- Never plagiarize.
+- Use Katia's actual experience (Amazon.de launch, cookware brand, multi-business perspective) for unique angles.
+- Reference competitor coverage to ensure comprehensiveness; differentiate by voice + specificity.
 
 ### Factual Accuracy
-- **Verify statistics**: Check all numbers and data points
-- **Current information**: Ensure practices/processes are up-to-date
-- **Technical accuracy**: Podcasting terminology and processes must be correct
-- **Castos features**: Ensure product references are accurate
+- Verify fee numbers against Amazon's current published schedule.
+- Verify tool pricing against current tool websites.
+- Include "as of [month YYYY]" when quoting time-sensitive data.
 
 ## Image Optimization
 
-### Image Requirements
-- **Relevant**: Images should support content points
-- **High-quality**: Professional appearance
-- **Optimized**: Compressed for fast loading
-- **Mobile-friendly**: Visible and useful on small screens
+### Cover Image
+- **Photorealistic only** — DSLR-style. No cartoon / illustration / digital-art.
+- Stored in `./images/` next to the MDX file.
+- `coverImage` field must reference it; `coverImageAlt` required.
+- Use the `generate-cover-image` skill (Gemini Nano Banana 2) — always include "no text or lettering" in the prompt.
 
-### Image SEO
-**File Names**:
-- Descriptive and keyword-rich
-- ✅ `podcast-editing-software-interface.jpg`
-- ❌ `IMG_12345.jpg`
+### File Names
+- Descriptive, kebab-case. `amazon-ppc-strategy-2026.jpg`, not `IMG_1234.jpg`.
 
-**Alt Text**:
-- Describe what image shows (accessibility + SEO)
-- Include keywords naturally where relevant
-- 125 characters or less
-- ✅ "Podcast editing software interface showing waveform and timeline"
-- ❌ "Image"
+### Alt Text
+- Describes what the image shows.
+- Keyword included naturally when relevant.
+- ≤125 characters.
+- No "image of" / "photo of" — implied.
 
-**Placement**:
-- Break up long text sections
-- Illustrate concepts being discussed
-- After explaining concept, not before
+### Placement
+- Cover image at the top (handled by layout).
+- In-body images break up long sections.
+- Screenshots of Seller Central / tool dashboards where they clarify the text.
 
-## Featured Snippet Optimization
-
-Featured snippets appear at position 0 in Google search results. Optimize for them when possible.
+## Featured Snippet & PAA Optimization
 
 ### Question-Based Snippets
-- Include question as H2 heading
-- Answer concisely in 40-60 words immediately after
-- Use clear, direct language
+- Include the question as an H2 or H3.
+- Answer concisely in 40–60 words immediately after.
+- Then expand.
 
 **Example**:
 ```markdown
-## What is Podcast Hosting?
+## What is a good ACoS on Amazon?
 
-Podcast hosting is a service that stores your audio files and generates an RSS feed that distributes your episodes to podcast platforms like Apple Podcasts, Spotify, and Google Podcasts. Without a host, listeners can't discover or access your show on their favorite apps.
+A good ACoS depends on your product margin. Most Amazon sellers target an ACoS between 15% and 30%. A high-margin product ($30 selling price, $5 COGS) can sustain 30%+ ACoS profitably. A thin-margin product ($12 selling price, $7 COGS) needs ACoS under 15% to stay in the black.
+
+[Expand with nuance...]
 ```
 
 ### List-Based Snippets
-- Use numbered or bulleted lists
-- Keep items concise (1-2 sentences each)
-- Include 5-8 items typically
+- Numbered steps or bulleted collections.
+- Keep items to 1–2 sentences each.
+- 5–8 items ideal.
 
 ### Table-Based Snippets
-- Use HTML tables or markdown tables
-- Comparison charts, pricing, specifications
-- Clear headers and organized data
+- Comparison charts (tool pricing, fee tiers, marketplace differences).
+- Clean headers, organized data.
 
 ### Definition Snippets
-- Define term in first sentence after heading
-- 40-60 word clear, concise definition
-- Expand with additional detail after
+- Define the term in the first sentence after the heading.
+- 40–60 word definition; expand after.
 
 ## Mobile Optimization
 
-### Mobile-First Considerations
-- **Short paragraphs**: 2-3 sentences max
-- **Scannable**: Heavy use of subheadings and lists
-- **Large fonts**: Readable without zooming
-- **Tap-friendly links**: Adequate spacing
-- **Fast loading**: Optimized images
+- Mobile-first audience (most FBA research happens on phone in-between Seller Central sessions).
+- Short paragraphs (2–3 sentences).
+- Large fonts by default (handled by the Astro theme's global CSS).
+- Tap-friendly links.
+- Fast loading — cover image `.jpg` optimized; avoid unnecessary JavaScript.
 
 ## AI Search Optimization (GEO/AICO)
 
-AI search engines (ChatGPT, Perplexity, Gemini, Claude) are now a significant traffic and recommendation channel. 5-15% of website traffic can come from AI sources, and 90% of buyers consult AI before purchase decisions. These guidelines ensure your content performs in both traditional Google search AND AI-generated answers.
+AI search engines (ChatGPT, Perplexity, Gemini, Claude) are a major and growing traffic / recommendation channel. For TheFBAGirl's niche, AI recommendations particularly matter on tool-comparison queries and "how to" searches. These guidelines ensure articles perform in both traditional search and AI-generated answers.
 
 ### Direct-Answer-First Principle
 
-AI scrapers prioritize content near the top of the page. When a user asks ChatGPT "best project management tool" or "how to start a podcast," the AI scans articles and pulls from the earliest clear answer it finds.
+AI scrapers prioritize the earliest clear answer on the page.
 
-**Rules:**
-- **Answer the query directly in the first 1-2 sentences** of the article, before the narrative hook or story
-- For "best/top/how" queries, state the answer (or a clear thesis) immediately
-- Put the core answer in the meta description too — literally answer the question in 150-160 chars
-- Do NOT bury the answer behind 200+ words of context, history, or definitions
-- The narrative hook and APP formula still apply, but they come AFTER the direct answer sentence
+**Rules**:
+- Answer the query directly in the first 1–2 sentences for "best / top / how / what is" queries — before the narrative hook.
+- Meta description should literally answer the target query in 150–160 chars.
+- Don't bury the answer behind 200+ words of context.
+- The narrative hook still applies; it comes *after* the direct answer when one is needed.
 
-**Example — Before (traditional SEO):**
-> Most businesses struggle with choosing the right platform. In today's crowded market... [200 words later] ...the best option is X because...
-
-**Example — After (AI-optimized):**
-> The best project management tools in 2026 are Asana, Monday, and ClickUp — each optimized for different team sizes and workflows. Here's what separates them. [Then hook, story, depth]
+**Example — AI-optimized direct answer**:
+> The best Amazon PPC strategy in 2026 uses a three-phase campaign structure: auto campaigns for discovery, manual exact match for proven keywords, and continuous bid optimization. Here's how each phase works — and the ACoS/TACoS benchmarks to hit.
 
 ### TL;DR / Key Takeaways Block
 
-Every article should include a TL;DR block near the top (after the introduction, before the first H2 body section). This gets pulled into AI-generated summaries and helps both AI and human readers.
+Every article should include a Key Takeaways block **near the top** (after the hook/intro, before the first H2). This gets pulled into AI summaries and helps human readers skim.
 
-**Format:**
+**Format**:
 ```markdown
 > **Key Takeaways**
-> - [Core finding or recommendation #1]
-> - [Core finding or recommendation #2]
-> - [Core finding or recommendation #3]
-> - [Core finding or recommendation #4 if needed]
-> - [Core finding or recommendation #5 if needed]
+> - [Specific claim with a number or named framework]
+> - [Specific claim]
+> - [Specific claim]
+> - [Specific claim — optional 4th]
+> - [Specific claim — optional 5th]
 ```
 
-**Rules:**
-- 3-5 bullet points maximum
-- Each bullet is a complete, standalone claim (not a teaser)
-- Use specific numbers, names, or outcomes — not vague summaries
-- This is NOT a table of contents — it's the article's actual conclusions up front
+**Rules**:
+- 3–5 bullets max.
+- Each bullet is a complete, standalone claim — not a teaser.
+- Use specific numbers, tool names, outcomes — not vague summaries.
+- This is NOT a table of contents; it's the article's conclusions up front.
 
 ### Authority Signaling for AI
 
-AI models weight authoritativeness signals when choosing which sources to cite. Include these in every article:
-
-- **Author attribution**: Named author, not just "Team" or brand name
-- **Reviewer/editor credit**: "Reviewed by [name], [title]" where possible
-- **Last updated date**: Visible on the page, not just in metadata
-- **Expert verification badge**: Where applicable, note content has been expert-reviewed
-- **Year in titles**: Include current year for time-sensitive topics ("Best X Tools 2026")
-
-These signals should be in the article's frontmatter for the WordPress publisher to render.
+Include in every article:
+- **Author attribution**: `author: "FBA Girl"` in frontmatter (default) — named, not "Team."
+- **Last updated date**: Use `updatedDate` in the frontmatter when revising.
+- **Year in title for time-sensitive topics**: "Best Amazon PPC Strategy 2026."
+- **YouTube video embed when one exists** (`youtubeVideoId` frontmatter field is already in the schema). Perplexity and Gemini cross-validate video with article.
 
 ### One Idea Per Section
 
-AI models parse content by section. Each H2/H3 section should focus on a single clear idea. This increases the chance that a specific section gets cited as a source in AI answers.
+AI models parse content by section. Each H2/H3 should focus on a single clear idea to maximize the chance of targeted citation.
 
-- One concept per heading
-- Use bullet lists and structured formatting within sections
-- Avoid long flowing paragraphs that blend multiple topics
+- One concept per heading.
+- Use bullet lists and structured formatting within sections.
+- Avoid long flowing paragraphs that blend multiple topics.
 
 ### Embedded Media for Cross-Validation
 
-AI models (especially Perplexity and Gemini) reference YouTube videos alongside articles. Embedding relevant YouTube videos in articles:
-- Provides cross-validation (the article references a video that references the same topic)
-- Increases time on page (Google signal)
-- Adds a content format AI can independently verify
-
-**Rule:** Embed at least one relevant YouTube video per article where it adds context. Prefer your own videos, then authoritative third-party videos.
+- Embed the matching YouTube video when the article has one (`youtubeVideoId` in schema).
+- Where useful, embed Amazon Seller Central screenshots or tool dashboards.
 
 ### FAQ Sections as Prompt Targets
 
-FAQ sections serve double duty: they target Google's People Also Ask AND they match the question-answer format that ChatGPT/Perplexity users type as prompts.
+FAQ sections target Google PAA and match how ChatGPT/Perplexity users phrase queries.
 
-- Write FAQ questions in natural prompt language (how real people ask, not SEO-speak)
-- Answer each question directly in the first sentence, then expand
-- Include 4-6 questions per article
-- Questions should come from actual user research (Reddit, YouTube comments, search suggestions)
+- Write 4–6 FAQ questions per article.
+- Questions in natural prompt language ("how do I lower my ACoS?" not "ACoS reduction strategies").
+- Answer each in the first sentence, then expand.
+- Pull questions from YouTube comments, Reddit, and Google's "People also ask."
 
 ### Content Repurposing for AI Citation Surface
 
-AI tools pull from many surfaces beyond your website: Medium, LinkedIn Pulse, Reddit, Quora, YouTube transcripts. One article should be repurposed across multiple platforms to maximize the chance of being cited.
-
-This is handled by the `/repurpose` command, but writers should be aware: the more surfaces your content appears on (with attribution back to your site), the higher the chance AI recommends it.
+AI tools pull from Medium, LinkedIn Pulse, Reddit, Quora, and YouTube transcripts. Use the `/repurpose` command to adapt cornerstone articles across platforms with canonical attribution back to thefbagirl.com. See `ai-citation-targets.md` for priority surfaces.
 
 ### AI Citation Audit
 
-For competitive topics, audit which sources AI actually cites. See `context/ai-citation-targets.md` for priority citation surfaces and the `/research-ai-citations` command for prompt-based auditing.
+Run `/research-ai-citations [topic]` quarterly on each high-priority prompt cluster. Feed findings back into `ai-citation-targets.md` and adjust content strategy accordingly.
 
 ## Content Refresh Strategy
 
-### When to Update Content
-- Article is 12+ months old
-- Statistics or data are outdated
-- Processes or best practices have changed
-- Competitor content has surpassed ours
-- Rankings have declined
-- New relevant information available
+### When to Update
+- **News/fee/policy articles**: When facts change — e.g., new fee schedule, updated program rules.
+- **Tool reviews**: Quarterly, or whenever the tool releases major updates / price changes.
+- **Tactical content (PPC, launch, product research)**: Every 6–12 months; always within 12 months for anything dated in the title.
+- **Evergreen strategy content**: Annually; refresh examples and add current-year context.
 
 ### What to Update
-- Publication date or "Last Updated" date
-- Statistics with current data
-- Screenshots with current versions
-- Examples with recent case studies
-- SEO elements (keyword focus may have shifted)
-- Internal links to newer content
+- Frontmatter `updatedDate`.
+- Fee / price / policy specifics.
+- Screenshots (tools and Seller Central UIs change).
+- Example calculations.
+- Internal links to newer content.
+- CTA if new relevant content exists.
+
+### Update, Don't Replace
+- Most refreshes happen in place (edit the existing file) — not new URLs. The existing URL has accumulated authority.
+- If the article's premise has changed (e.g., "Amazon FBA is dead" reversal), write a new article and 301 the old one — but this is rare.
 
 ## SEO Checklist for Every Article
 
 Before publishing, verify:
 
 ### Content
-- [ ] 2,000+ words (or appropriate for content type)
-- [ ] Primary keyword identified
-- [ ] Keyword density 1-2%
-- [ ] 3-5 secondary keywords included
-- [ ] LSI keywords naturally integrated
-- [ ] Provides unique value vs. competitors
-- [ ] Factually accurate and current
+- [ ] 1,500–3,000 words for standard articles (or appropriate for content type).
+- [ ] Primary keyword identified and confirmed against `target-keywords.md`.
+- [ ] Keyword density 1–2%.
+- [ ] 3–5 secondary keywords included.
+- [ ] LSI keywords naturally integrated.
+- [ ] Unique angle vs. competitor coverage.
+- [ ] Factually accurate (fees, tool features, policy specifics).
 
 ### Structure
-- [ ] One H1 with primary keyword
-- [ ] 4-7 H2 sections
-- [ ] 2-3 H2s include keyword variations
-- [ ] Proper H1>H2>H3 hierarchy
-- [ ] Keyword in first 100 words
-- [ ] Keyword in conclusion
+- [ ] One H1 via frontmatter `title`, includes primary keyword.
+- [ ] 4–7 H2 sections.
+- [ ] 2–3 H2s include keyword variations.
+- [ ] Proper H1 → H2 → H3 hierarchy.
+- [ ] Keyword in first 100 words.
+- [ ] Keyword in conclusion.
 
-### Meta Elements
-- [ ] Meta title 50-60 characters with keyword
-- [ ] Meta description 150-160 characters with keyword & CTA
-- [ ] URL slug includes primary keyword
-- [ ] All meta elements are unique
+### Meta Elements (Frontmatter)
+- [ ] `title` ≤70 chars, includes keyword.
+- [ ] `description` ≤160 chars, includes keyword + value + CTA verb.
+- [ ] `publishDate` ISO format.
+- [ ] `updatedDate` if refreshing.
+- [ ] `category` matches schema enum.
+- [ ] `tags` array populated.
+- [ ] `coverImage` + `coverImageAlt` present.
+- [ ] `youtubeVideoId` + `youtubeVideoTitle` if video exists.
+- [ ] `author: "FBA Girl"` (default, but verify).
+- [ ] `affiliateDisclosure: true` for reviews / affiliate-linked articles.
+- [ ] URL slug matches file name, includes keyword.
 
 ### Links
-- [ ] 3-5 internal links included
-- [ ] Internal links use descriptive anchor text
-- [ ] 2-3 external authority links
-- [ ] All links functional (no broken links)
-- [ ] Links add value to reader
+- [ ] 3–5 internal links (see `internal-links-map.md`).
+- [ ] Internal links use descriptive anchor text (not "click here").
+- [ ] 2+ external authority links.
+- [ ] All links functional.
+- [ ] New article added to `internal-links-map.md` after publish.
 
 ### Readability
-- [ ] 8th-10th grade reading level
-- [ ] Average sentence length 15-20 words
-- [ ] Paragraphs 2-4 sentences
-- [ ] Subheadings every 300-400 words
-- [ ] Lists used for scannability
-- [ ] Active voice predominantly
+- [ ] 8th–10th grade reading level.
+- [ ] Sentences 15–20 words average; max 25.
+- [ ] Paragraphs 2–4 sentences.
+- [ ] Subheadings every 300–400 words.
+- [ ] Lists used for scannability.
+- [ ] Active voice predominantly.
 
-### Images
-- [ ] Relevant images included
-- [ ] Descriptive file names
-- [ ] Alt text with keywords
-- [ ] Images optimized for web
+### Media
+- [ ] Cover image photorealistic (DSLR-style).
+- [ ] Alt text descriptive with keyword when natural.
+- [ ] Images optimized (.jpg).
+- [ ] YouTube video embedded / referenced when available.
 
 ### AI Search Optimization
-- [ ] Direct answer in first 1-2 sentences (not buried)
-- [ ] TL;DR / Key Takeaways block after introduction
-- [ ] Meta description directly answers the target query
-- [ ] FAQ questions written in natural prompt language
-- [ ] At least one embedded YouTube video
-- [ ] Author attribution (named, not generic "Team")
-- [ ] Last updated date included
-- [ ] Year included in title for time-sensitive topics
+- [ ] Direct answer in first 1–2 sentences (for "best/how/top" queries).
+- [ ] TL;DR / Key Takeaways block after intro, before first H2.
+- [ ] Meta description answers the target query directly.
+- [ ] FAQ section with 4–6 prompt-language questions.
+- [ ] At least one embedded YouTube video when available.
+- [ ] Year included in title for time-sensitive topics.
+- [ ] Named author (`FBA Girl`).
+- [ ] Last updated date when applicable.
 
 ### Quality
-- [ ] No spelling or grammar errors
-- [ ] Factually accurate
-- [ ] Sources cited
-- [ ] Brand voice maintained
-- [ ] Provides actionable value
-- [ ] Clear call-to-action
+- [ ] No AI-smell words (see `brand-voice.md` list).
+- [ ] No guru language.
+- [ ] Sources cited with links.
+- [ ] Brand voice maintained (see `brand-voice.md` examples).
+- [ ] Actionable "this week" takeaway.
+- [ ] Clear CTA (YouTube / newsletter / related article).
 
 ## SEO Tools & Resources
 
-### Recommended Tools
-- **Keyword Research**: Ahrefs, SEMrush, Google Keyword Planner
-- **Content Analysis**: Clearscope, Surfer SEO, MarketMuse
-- **Readability**: Hemingway Editor, Grammarly
-- **Technical SEO**: Screaming Frog, Google Search Console
-- **Rank Tracking**: Ahrefs, SEMrush, Google Search Console
+### Tools Used in TheFBAGirl Pipeline
+- **DataForSEO** (via `.env` credentials) — keyword research, SERP analysis, rankings.
+- **Google Search Console** (via `.env` credentials) — impressions, rankings, CTR.
+- **Google Analytics 4** (via `.env` credentials) — traffic, engagement.
+- **YouTube Data API v3** (via `.env` `YOUTUBE_API_KEY`) — channel/video data for content pipeline.
 
 ### Reference Resources
-- Google's Search Quality Evaluator Guidelines
-- Moz Beginner's Guide to SEO
-- Backlinko Blog (Brian Dean)
-- Search Engine Journal
-- Ahrefs Blog
+- Google's Search Quality Evaluator Guidelines (for E-E-A-T framing).
+- Amazon Seller Central help pages (for authoritative fee/policy references).
+- Ahrefs blog, Backlinko, Search Engine Journal (for general SEO best practices).
+- "State of the Amazon Seller" report (Jungle Scout, annual) — for industry benchmarks.
 
 ---
 
-**Remember**: SEO serves the user, not the algorithm. Never sacrifice content quality, accuracy, or helpfulness for keyword optimization. The best SEO is great content that genuinely helps your audience succeed.
+**Remember**: SEO serves the Amazon seller trying to learn, launch, or scale — not the algorithm. A 2,500-word article that honestly answers the seller's question and points them to the right tool/tactic will outperform a 4,500-word SEO-stuffed article every time in the long run. Write the article Katia would want to send a friend who just asked the question.

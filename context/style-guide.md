@@ -1,9 +1,6 @@
-# Castos Style Guide
+# TheFBAGirl Style Guide
 
-This guide defines writing conventions, formatting standards, and editorial guidelines for all Castos content.
-
-## Instructions
-Fill in this template with Castos-specific style preferences. Update as the style guide evolves.
+This guide defines writing conventions, formatting standards, and editorial rules for all TheFBAGirl content across the blog, tutorials, reviews, news, and lifehacks collections. It complements `brand-voice.md` (voice/tone) and `seo-guidelines.md` (SEO structure).
 
 ---
 
@@ -12,77 +9,106 @@ Fill in this template with Castos-specific style preferences. Update as the styl
 ### Capitalization
 
 **Headlines & Subheadings**:
-- [ ] Title Case (Capitalize Major Words)
-- [ ] Sentence case (Only capitalize first word)
-- **Decision**: [Choose one and document here]
+- **Decision**: Title Case for article titles (H1), Sentence case for H2/H3 subheadings. Example:
+  - H1: `The Ultimate Amazon PPC Strategy Guide for 2026`
+  - H2: `Understanding Amazon's ad types`
+  - H2 alt (when naming a concept): `The Three-Phase Campaign Structure` — Title Case when the heading is a named framework.
 
-**Product Names**:
-- Castos: [Always capitalized]
-- Seriously Simple Podcasting: [Capitalization style]
-- [Other Castos products]: [Style]
+**Product & Brand Names**:
+- `Amazon` — always capitalized.
+- `Amazon FBA` — always caps (both words).
+- `Seller Central` — Title Case (it's Amazon's product name).
+- `Sponsored Products`, `Sponsored Brands`, `Sponsored Display` — Title Case (Amazon's ad product names).
+- `TheFBAGirl` — written as one word, "TheFBAGirl," when referring to the brand.
+- `@AmazonFBAGirl` — YouTube handle, always with the @ and exact case.
+- `FBA Girl` — author name (two words).
+- `Amazon.com`, `Amazon.de`, `Amazon.co.uk` — lowercase domain style when referencing a specific marketplace.
 
 **Industry Terms**:
-- podcast / Podcast: [Choose one]
-- podcaster / Podcaster: [Choose one]
-- RSS / rss: [RSS (always caps)]
-- [Add other common terms]
+- `ACoS`, `TACoS` — spelled "ACoS" and "TACoS" (capital A, C, S / T, A, C, S). Never "acos" or "Acos."
+- `ASIN` — all caps.
+- `FBA`, `FBM`, `MFN` — all caps.
+- `PPC` — all caps.
+- `SEO` — all caps.
+- `BSR` (Best Sellers Rank) — all caps on first use with expansion.
+- `COGS` — all caps.
+- `STR` (Search Term Report) — all caps.
+- `A+ Content` — Title Case with a plus sign.
+- `private label` — lowercase (it's a generic term, not a brand).
+- `brand registry` vs `Brand Registry` — capitalize when referring to Amazon's Brand Registry program.
+- `Vine` when referring to Amazon's review program — capital V (Amazon Vine).
 
 ### Numbers
 
 **When to Spell Out**:
-- Spell out: One through nine
-- Use numerals: 10 and above
-- Exceptions:
-  - Percentages: Always use numerals (5%, 50%)
-  - Money: Always use numerals ($5, $500)
-  - Measurements: Always use numerals (5 GB, 50 MB)
-  - Lists/stats: Always use numerals for scannability
+- Spell out: one through nine in prose ("one product," "three weeks").
+- Use numerals: 10 and above.
+- **Exceptions — always use numerals**:
+  - Percentages: 5%, 20%
+  - Money: $3, $2.70, $5,000
+  - Measurements: 2 lbs, 12 ounces, 1 cubic foot
+  - Tier thresholds: 181 days, 365 days, 12 ounces, 100 characters
+  - Dollar-and-cents prices: $19.97, $0.15
+  - Lists/stats/specific metrics: "7 listing tips," "15% ACoS"
 
 **Large Numbers**:
-- 1,000+ (use comma)
-- 1 million (spell out million, billion, etc.)
-- $5,000 or $5K? [Choose convention]
+- 1,000+ uses commas: 1,234
+- 1 million, 1 billion: spell out "million" and "billion"
+- Money in thousands: use `$5K` sparingly in headlines and casual context; use `$5,000` in body text.
+
+**Ranges**:
+- Use en dash for numeric ranges in prose where available (5–10%, $30–$50), or hyphen as fallback (5-10%). Either is acceptable — match what's consistent within an article.
 
 ### Punctuation
 
 **Oxford Comma**:
-- [ ] Yes (A, B, and C)
-- [ ] No (A, B and C)
-- **Decision**: [Choose and document]
+- **Decision**: Use the Oxford comma. "Amazon fees, shipping costs, and operational expenses."
 
 **Em Dashes**:
-- Style: — (em dash, no spaces) or - - (hyphens with spaces)
-- Usage: For parenthetical statements or emphasis
-- Example: "Podcast analytics—when used correctly—drive better content decisions."
+- **Style**: Em dash (—) with a space on each side. Example: "Your supplier cost is usually only 25-35% of your total cost of goods sold — the rest is a long tail of Amazon fees."
+- Use for: parenthetical emphasis, dramatic pivots, setting off a clarifying clause.
+- Alternative: if you can't type an em dash easily, two hyphens (--) are acceptable but should be replaced with — in editing.
 
 **Quotation Marks**:
-- "Straight quotes" or "Curly quotes"?
-- **Decision**: [Choose one]
+- **Decision**: Curly/smart quotes ("example") in published prose. The MDX editor and build pipeline can render either — smart quotes look more polished.
 
 **Ellipses**:
-- Three dots: ...
-- Spacing: no spaces before or after
-- Use sparingly: Primarily for omitted text in quotes
+- Three dots: `...` (no spaces before/after).
+- Use sparingly. Primarily for omitted text in quotes or (rarely) a trailing thought.
+
+**Colons**:
+- Use to introduce a list or a piece of emphasis. "Here is the formula that actually tells you whether a product is profitable:"
+- Capitalize the first word after a colon only if what follows is a complete sentence.
+
+**Bullets**:
+- End bullets with a period if the bullet is a complete sentence; no period if it's a fragment. Be consistent within a single list.
 
 ### Abbreviations & Acronyms
 
 **First Use**:
-- Spell out on first use, acronym in parentheses
-- Example: "Really Simple Syndication (RSS) feeds distribute..."
-- Exceptions for universally known: SEO, URL, CTA
+- Spell out on first use, then use the acronym. Example: "Cost of Goods Sold (COGS) includes..."
+- Exceptions for universally known: `Amazon`, `PPC`, `SEO`, `URL`, `ASIN`.
 
-**Common Podcasting Acronyms**:
-- RSS: Really Simple Syndication
-- DAI: Dynamic Ad Insertion
-- SEO: Search Engine Optimization
-- IAB: Interactive Advertising Bureau
-- [Add others as needed]
+**Common FBA Acronyms** (expand first time):
+- ACoS — Advertising Cost of Sale
+- TACoS — Total Advertising Cost of Sale
+- ASIN — Amazon Standard Identification Number
+- BSR — Best Sellers Rank
+- COGS — Cost of Goods Sold
+- FBA — Fulfillment by Amazon
+- FBM — Fulfilled by Merchant
+- MFN — Merchant Fulfilled Network
+- MOQ — Minimum Order Quantity
+- PPC — Pay-Per-Click
+- STR — Search Term Report
+- VAT — Value Added Tax (EU context)
+- OSS — One-Stop Shop (EU VAT)
+- A+ Content — (formerly Enhanced Brand Content)
 
 **Latin Abbreviations**:
-- e.g. (for example): [Use or avoid?]
-- i.e. (that is): [Use or avoid?]
-- etc. (and so forth): [Use or avoid?]
-- **Decision**: [Generally avoid in favor of plain English]
+- `e.g.` — use, with commas on both sides.
+- `i.e.` — use sparingly; often "meaning" reads better in casual FBA content.
+- `etc.` — avoid in published prose when possible; list specific items instead.
 
 ---
 
@@ -91,28 +117,61 @@ Fill in this template with Castos-specific style preferences. Update as the styl
 ### Preferred Terms
 
 **Say This** → **Not That**:
-- podcast creators → podcasters
-- podcast hosting → podcast storage
-- listeners → subscribers
-- audio quality → sound quality
-- show notes → episode notes / shownotes
-- podcast episode → podcast show (episode is unit, show is series)
-- analytics → stats
-- monetize → monetise (US spelling)
-- [Add Castos-specific preferences]
+- `Amazon seller` → Amazon entrepreneur (too vague)
+- `FBA seller` → FBA-preneur (cringe)
+- `first-time seller` → noob / newbie (condescending)
+- `profit margin` → "the money you keep" (imprecise)
+- `launch a product` → "push a product to market" (corporate)
+- `Seller Central` → "the Amazon dashboard" (ambiguous)
+- `Search Term Report` → STR (spell out first)
+- `negative keyword` → "blocked keyword" (wrong term)
+- `brand registry` → "brand verification" (wrong term)
+- `product research` → "niche hunting" (vague)
+- `supplier` → "vendor" / "manufacturer" — all technically correct; prefer "supplier" as the Amazon-community default.
+- `suspended` or `deactivated` → "banned" (imprecise; Amazon uses "suspended" for accounts, "deactivated" for listings).
 
-### Words to Avoid
-- Avoid jargon without explanation
-- Avoid "very", "really", "actually" (usually unnecessary)
-- Avoid passive constructions when active is clearer
-- Avoid "click here" or "read more" (use descriptive links)
-- [Add other words/phrases to avoid]
+### Words & Phrases to Avoid
+
+**AI-smell / corporate speak — banned**:
+- "leverage" (use "use" or name the specific thing)
+- "navigate" (use "deal with" or name the action)
+- "unlock" (use "get" or name the outcome)
+- "ever-evolving"
+- "in today's landscape"
+- "a myriad of"
+- "delve into"
+- "empower" / "empowered"
+- "seamlessly"
+- "robust" / "robustly"
+- "cutting-edge"
+- "revolutionize"
+- "game-changer"
+- "synergy"
+- "embark on your journey"
+- "unlock your potential"
+- "transform your business"
+
+**Fluff words — cut in edit pass**:
+- "very," "really," "actually" (usually unneeded)
+- "in order to" → "to"
+- "it is important to note that" → just state the note
+- "at the end of the day"
+- "a wide variety of"
+- "needless to say"
+
+**Guru language — never use**:
+- "passive income" (misleading in an FBA context)
+- "secret loophole" / "hack the algorithm"
+- "make money in your sleep"
+- "six figures in 30 days"
+- "the one weird trick"
+- "financial freedom" as a promise (okay as an abstract goal)
 
 ### Inclusive Language
-- Use gender-neutral language ("they" instead of "he/she")
-- "Podcast creator" or "podcaster" instead of gendered terms
-- Avoid idioms that may not translate globally
-- Be mindful of accessibility in descriptions
+- Use gender-neutral language ("they," "a seller," "an entrepreneur") — Katia's audience is global.
+- Do not assume reader location — say "US sellers" or "EU sellers" when relevant; don't default to "we" meaning Americans.
+- Avoid idioms that don't translate globally ("hit it out of the park," "a whole new ball game").
+- Use plain English. Readers may have English as a second language (common in FBA audiences).
 
 ---
 
@@ -121,248 +180,248 @@ Fill in this template with Castos-specific style preferences. Update as the styl
 ### Text Formatting
 
 **Bold**:
-- Use for: Key concepts, important takeaways, emphasis
-- Don't overuse: If everything is bold, nothing stands out
-- Example: "**Keyword density** should be 1-2% for optimal results."
+- Use for: key concepts, tier labels, critical numbers, lead-in phrases in bullet points.
+- Good example: "**Winning keywords** (low ACoS, high sales): Increase bids by 10-15% to capture more impressions."
+- Do not over-bold. If every line has bold, nothing stands out.
 
 **Italics**:
-- Use for: Emphasis (sparingly), titles of works, foreign phrases
-- Example: "The term *podcast* combines 'iPod' and 'broadcast'."
-
-**Underline**:
-- Generally avoid (reserve for links)
+- Use for: titles of publications (`Podnews`), emphasis (sparingly), technical-but-untranslated terms on first use.
+- Example: "This is what we call *organic momentum* — the compounding effect of PPC-driven ranking improvements."
 
 **ALL CAPS**:
-- Avoid except for standard acronyms (RSS, SEO, URL)
+- Never for emphasis in body text.
+- Acceptable for: bullet-point lead-ins in listing-optimization content (e.g., `"GENTLE ON SENSITIVE SKIN — ..."`), because that mirrors Amazon listing copy conventions.
 
 ### Lists
 
 **Bulleted Lists**:
-- Use for: Non-sequential items, features, benefits
-- Capitalization: [Sentence case or Title Case?]
-- Punctuation: [Period at end of each item or no punctuation?]
-- **Decision**:
-  - Capitalize first word
-  - Period if complete sentence, no period if fragment
-  - Parallel structure (all sentences or all fragments)
+- Use for: non-sequential items, features, benefits, "mistakes to avoid" collections.
+- Capitalization: Capitalize first word of each bullet.
+- Punctuation: Period at end only if the bullet is a complete sentence. No period for fragments. Stay consistent within one list.
 
 **Numbered Lists**:
-- Use for: Sequential steps, rankings, ordered priorities
-- Format: 1. 2. 3. (with period after number)
-- Same capitalization and punctuation rules as bullets
+- Use for: sequential steps, ranked priorities, "Step 1 / Step 2 / Step 3" instructions.
+- Format: `1.`, `2.`, `3.` with a period after the number.
 
 **Nested Lists**:
-- Maximum 2 levels deep for readability
-- Use different markers for sub-items
+- Max 2 levels deep.
+- Use different markers: outer level bullets, inner level indented dashes or numbers.
 
 ### Links
 
 **Anchor Text**:
-- Descriptive (tell reader where they're going)
-- Keyword-rich when possible
-- 2-5 words typically
-- ✅ "Learn more about podcast SEO"
-- ❌ "Click here"
+- Descriptive and keyword-rich.
+- ✅ "Read my full [Helium 10 review](…)"
+- ✅ "Watch the [three-phase campaign structure walkthrough](…)"
+- ❌ "[Click here](…)"
+- ❌ "[Read more](…)"
 
 **Link Formatting**:
-- Color: [Default blue or Castos brand color?]
-- Underline: [Yes/No]
-- Open in new tab: [Only for external links]
+- Standard markdown link syntax in MDX: `[anchor](url)`
+- External links automatically open in new tab via site config — no manual `target="_blank"` needed.
+- Affiliate links must be disclosed at top of article (schema: `affiliateDisclosure: true`).
 
 ### Code & Technical Elements
 
 **Inline Code**:
-- Use backticks for: URLs, file names, code snippets
-- Example: "Your RSS feed URL is `https://feeds.castos.com/...`"
+- Use backticks for: file paths, exact Seller Central button labels, search term examples, backend keyword examples, ASIN values.
+- Example: "Your backend keywords field accepts up to `250 bytes`, not 250 characters."
 
 **Code Blocks**:
-- Use for: Multi-line code, configuration examples
-- Include language identifier for syntax highlighting
+- Use for: formulas, multi-line examples, frontmatter examples.
+
+**Example formula block** (preferred format for financial articles):
+```
+True COGS = Supplier Cost + Shipping to Amazon + Customs/Duties + Prep Fees + Inbound Placement Fee
+True Margin = Selling Price - True COGS - Referral Fee - Fulfillment Fee - Return Cost - PPC Spend - Storage Cost
+```
 
 ### Callout Boxes / Asides
 
 **When to Use**:
-- Important notes or warnings
-- Pro tips or expert insights
-- Key takeaways or summaries
+- Pro tips that deserve visual separation.
+- Important warnings about Amazon TOS or common mistakes.
+- Quick-reference summaries.
 
-**Format**:
-- [Define how to format: blockquote, box, highlighted section?]
-- Example style to be determined
+**Format**: Use a blockquote (`>`) for now since the site doesn't yet have a custom callout component. Lead with a label in bold.
+
+Example:
+```markdown
+> **Pro tip:** Every bundle ASIN can rank for keywords your individual products cannot naturally target.
+```
 
 ---
 
 ## Content Structure
 
 ### Article Introduction
-**Standard Structure** (150-250 words):
-1. **Hook** (1-2 sentences): Grab attention with question, statistic, or bold statement
-2. **Problem** (2-3 sentences): What challenge or question does this address?
-3. **Promise** (2-3 sentences): What will reader learn/achieve?
-4. **Credibility** (optional, 1-2 sentences): Why trust this source?
+**Standard Structure** (150–250 words):
+1. **Hook** (1–2 sentences): A specific seller scenario, a startling number, or a bold statement. No generic opening.
+2. **Problem** (2–3 sentences): Name the pain or situation the reader is in.
+3. **Promise** (2–3 sentences): What they'll learn / be able to do by the end.
+4. **Optional credibility** (1–2 sentences): "After two years of running this across multiple businesses, here's what I actually use."
 
-**Keyword Placement**:
-- Must include primary keyword in first 100 words
-- Natural integration, not forced
+**Direct-Answer-First rule** (for AI SEO):
+- For "best/how/top" queries, state the answer in sentence 1 or 2, before the narrative hook. See `seo-guidelines.md` → AI Search Optimization section.
 
 ### Section Length
-- **Minimum**: 150 words per section
-- **Maximum**: 500 words per section (break into subsections if longer)
-- **Ideal**: 250-350 words per main section
+- **Minimum**: 150 words per section.
+- **Maximum**: 500 words per section (break into H3 subsections if longer).
+- **Ideal**: 250–350 words per H2 section.
 
 ### Conclusion
-**Standard Structure** (150-250 words):
-1. **Recap** (3-5 bullet points or paragraph): Key takeaways
-2. **Action** (1-2 sentences): What should reader do next?
-3. **CTA** (1-2 sentences): Call-to-action (trial, resource, related content)
-4. **Forward-looking** (optional, 1 sentence): Encouraging final thought
+**Standard Structure** (150–250 words):
+1. **Recap** (2–4 bullet points or paragraph): The takeaways.
+2. **Next step for the reader** (1–2 sentences): What to do this week.
+3. **CTA** (1–2 sentences): YouTube video, newsletter, or related article.
+4. **Optional forward-looking sentence**: Encouragement, not hype.
+
+**Never end with**:
+- "I hope this helped!"
+- A generic question ("What are your thoughts? Comment below!")
+- A sales pitch for a course (we don't sell one).
 
 ---
 
 ## SEO-Specific Style
 
 ### Meta Titles
-- 50-60 characters including spaces
-- Include primary keyword
-- Include "| Castos" if space allows
-- No ending punctuation
+- 50–60 characters including spaces.
+- Include primary keyword.
+- Consider "| TheFBAGirl" if space allows — but the content frontmatter `title` field is max 70 chars, so often brand suffix is managed by the SEOHead component rather than the title itself.
+- No ending punctuation (no period, no exclamation).
 
 ### Meta Descriptions
-- 150-160 characters including spaces
-- Include primary keyword
-- Include call-to-action
-- End with complete thought
+- 150–160 characters including spaces.
+- Include primary keyword naturally.
+- Include a call-to-action verb (Learn, Discover, Get, Master, Find out).
+- End with a complete thought. No cutoff.
 
 ### URL Slugs
-- Lowercase only
-- Hyphens between words
-- Include primary keyword
-- 3-5 words ideal
-- Format: `/blog/primary-keyword-phrase`
+- Lowercase only.
+- Hyphens between words.
+- Include primary keyword.
+- 3–6 words ideal.
+- Match the content file name (slug = file name in `src/content/{collection}/<slug>.mdx`).
 
 ### Alt Text
-- Describe what image shows
-- Include keyword naturally if relevant
-- 125 characters or less
-- No "image of" or "picture of" (implied)
+- Describe what the image actually shows (accessibility + SEO).
+- Include the keyword naturally when relevant.
+- 125 characters or less.
+- Do not start with "image of" or "picture of" — it's implied.
 
 ---
 
 ## Dates & Time
 
 **Date Format**:
-- Month DD, YYYY (January 15, 2025)
-- Or: DD Month YYYY (15 January 2025)
-- **Decision**: [Choose one]
-
-**Time**:
-- 12-hour format with a.m./p.m.: 3:00 p.m.
-- Or: 24-hour format: 15:00
-- **Decision**: [Choose one]
+- **Decision**: Long form in prose — `March 22, 2026`. Short form in lists/tables — `2026-03-22`.
+- In frontmatter, always ISO: `publishDate: 2026-04-18`.
 
 **Time Zones**:
-- Specify when relevant: "3:00 p.m. EST"
-- Or use: "3:00 p.m. Eastern Time"
+- Specify when relevant. "7–10 PM local time" or "3:00 PM Eastern" — whichever matches the context.
+
+**Relative References to "Now"**:
+- Convert to absolute dates when saving content to memory or referencing other articles. "Last Thursday" → "2026-04-10."
 
 ---
 
 ## Statistics & Data
 
 ### Citing Sources
-- Always cite statistics with sources
-- Format: "According to [Source], [statistic]."
-- Link to original source when possible
-- Include year of data: "In 2024, podcast listeners reached..."
+- Always cite when referencing a stat, study, or claim you didn't generate yourself.
+- Format: "According to [Amazon's Revenue Calculator], ..." or "Per [Helium 10's data], ..."
+- Link to the original source when possible.
+- Include year when data is time-sensitive.
 
 ### Presenting Numbers
-- Round large numbers for readability: "1.2 million" not "1,234,567"
-- Use % symbol: 15% (not "percent")
-- Use $ for money: $500 (not "dollars")
-- Include commas: 10,000 not 10000
+- Round large numbers for readability in prose: "1.2 million," not "1,234,567." Precise numbers when the precision matters (fees, fee tiers, product dimensions).
+- Use % symbol: `15%` (not "15 percent").
+- Use $ for money: `$500` (not "500 dollars").
+- Commas in numbers ≥ 1,000: `10,000` (not `10000`).
 
 ---
 
 ## Images & Media
 
-### Image Captions
-- [ ] Required for all images
-- [ ] Optional, only when needed for context
-- **Decision**: [Choose one]
-
-**Caption Style**:
-- Sentence case
-- End with period if complete sentence
-- Placement: Below image
+### Cover Images
+- **Photorealistic only** — DSLR-style photography look. Never cartoon, illustration, or digital-art style.
+- Include "no text or lettering" in any generation prompt — covers should be image-only.
+- Images are `.jpg`, stored in `./images/` next to the content file.
+- Use the `generate-cover-image` skill (Gemini Nano Banana 2) for new posts.
+- All covers must match the `coverImage` and `coverImageAlt` schema fields.
 
 ### Screenshots
-- Include relevant screenshots when helpful
-- Crop to show only relevant portion
-- Add arrows/highlights if needed to draw attention
-- Alt text should describe what's shown
+- When showing Seller Central, Helium 10, Jungle Scout, or any SaaS dashboard — crop to the relevant portion.
+- Add arrows or highlight boxes when calling out a specific element.
+- Alt text describes what's shown, not "screenshot."
 
 ### Charts & Graphs
-- Include data visualization when it helps understanding
-- Keep design simple and clean
-- Always provide context in surrounding text
-- Alt text should describe the key finding, not just "chart"
+- Simple, clean design.
+- Label axes clearly.
+- Alt text describes the key finding, not just "chart."
+- Source the data in caption.
 
 ---
 
 ## Brand-Specific Guidelines
 
-### Castos Product References
+### Brand References
 
-**Castos Platform**:
-- "Castos" (not "the Castos platform" unless needed for clarity)
-- "Castos analytics dashboard"
-- [Add other product-specific terms]
+- **TheFBAGirl** — the site/brand (one word, capital T, F, B, A, G).
+- **FBA Girl** — the author byline (two words).
+- **Katia** — the person. Use "Katia" in first-person articles and founder-story content. Use "FBA Girl" when the brand voice is the subject.
+- **@AmazonFBAGirl** — the YouTube handle; always include the @.
 
-**Features**:
-- [List how to refer to specific features]
-- [Capitalization conventions for features]
+### Referring to the YouTube Channel
 
-### Competitor References
-- [ ] Name competitors directly when relevant
-- [ ] Use generic terms ("other podcast hosts")
-- **Decision**: [Choose approach]
+- ✅ "Watch the full walkthrough on my YouTube channel"
+- ✅ "Subscribe to @AmazonFBAGirl"
+- ✅ "I break this down in the video above"
+- ❌ "Check out my vids" (too casual)
+- ❌ "Hit that subscribe button and ring the bell!" (not Katia's voice)
 
-**If Naming Competitors**:
-- Be fair and factual
-- No disparaging language
-- Focus on differentiation, not criticism
+### Competitor / Tool References
+
+- Name tools and competitors directly when relevant. No generic "some tools."
+- Be fair and factual. "Helium 10's pricing is higher than Jungle Scout's" — not "Helium 10 overcharges."
+- Affiliate disclosure goes at the top of any review that uses affiliate links.
+- Never disparage. Focus on differentiation and specific use cases.
 
 ---
 
 ## Accessibility
 
 ### Screen Reader Friendly
-- Descriptive link text (not "click here")
-- Image alt text for all images
-- Proper heading hierarchy (H1→H2→H3, no skipping)
-- Descriptive link previews
+- Descriptive link text (never "click here").
+- Image alt text for every image.
+- Proper heading hierarchy: H1 (one per article) → H2 → H3. Do not skip levels.
+- Form fields have labels.
 
 ### Plain Language
-- Write at 8th-10th grade level
-- Define technical terms on first use
-- Use short sentences and paragraphs
-- Break complex ideas into digestible chunks
+- Target 8th–10th grade reading level.
+- Define technical terms on first use.
+- Short sentences. Short paragraphs.
 
 ---
 
 ## Voice & Tone Reminders
 
 ### Core Voice Characteristics
-1. Professional yet approachable
-2. Educational and empowering
-3. Podcast creator advocate
-4. Technically accurate but accessible
-5. Results and growth-focused
+1. Honest-operator voice — first-person, experiential.
+2. Numbers-first clarity — specifics over vagueness.
+3. Mentor-to-friend tone — peer, not professor.
+4. Practical-first — action before theory.
+5. Community-peer — never polished-PR.
 
-### Tone Variations
-- **How-to content**: Instructive, step-by-step, encouraging
-- **Strategic content**: Authoritative, experienced, actionable
-- **Industry news**: Insightful, analytical, forward-looking
-- **Product content**: Benefit-focused, clear, honest
+### Tone Variations (quick reference)
+- **Tutorials** — instructive, patient, step-by-step.
+- **Blog/Strategy** — opinionated, numbered, experienced.
+- **News** — analytical, sober, actionable.
+- **Reviews** — fair, experiential, transparent (affiliate disclosed).
+- **Lifehacks** — direct, systems-oriented, tactical.
+
+See `brand-voice.md` for detailed examples and messaging framework.
 
 ---
 
@@ -371,49 +430,54 @@ Fill in this template with Castos-specific style preferences. Update as the styl
 Before publishing any content:
 
 **Grammar & Mechanics**:
-- [ ] Spelling checked
-- [ ] Grammar checked
-- [ ] Punctuation correct (Oxford comma, em dashes, etc.)
-- [ ] Numbers formatted consistently
-- [ ] Dates formatted correctly
+- [ ] Spelling checked.
+- [ ] Oxford comma used consistently.
+- [ ] Em dashes (—) used, not hyphens (-) as em-dash substitutes.
+- [ ] Numbers formatted per rules (numerals ≥ 10; always for money/%/measurements).
+- [ ] Dates consistent (ISO in frontmatter, long-form in prose).
 
 **Style**:
-- [ ] Follows capitalization guidelines
-- [ ] Uses preferred terminology
-- [ ] Consistent formatting (bold, italics, lists)
-- [ ] Links are descriptive
-- [ ] Voice and tone appropriate
+- [ ] Title Case for H1; Sentence case for H2/H3 (unless naming a framework).
+- [ ] FBA terminology correct (ACoS, TACoS, A+ Content, Brand Registry).
+- [ ] No AI-smell words (leverage, navigate, unlock, delve, ever-evolving).
+- [ ] No guru language (passive income, secret loophole).
+- [ ] Links descriptive (no "click here").
+- [ ] Voice matches `brand-voice.md`.
 
 **Structure**:
-- [ ] Strong introduction (hook, problem, promise)
-- [ ] Logical section flow
-- [ ] Proper heading hierarchy
-- [ ] Effective conclusion with CTA
-- [ ] Appropriate section lengths
+- [ ] Hook → Problem → Promise intro (or direct-answer-first for AI SEO).
+- [ ] H2 sections 250–350 words ideally; never over 500 without H3 breakdown.
+- [ ] Logical section flow — H2s work as a table of contents.
+- [ ] Conclusion with recap + next step + CTA.
 
-**SEO**:
-- [ ] Keyword integrated naturally
-- [ ] Meta elements optimized
-- [ ] Internal and external links included
-- [ ] Images have alt text
-- [ ] URL slug optimized
+**SEO & Schema**:
+- [ ] Primary keyword in first 100 words, H1, 2+ H2s, conclusion.
+- [ ] Meta title 50–60 chars, meta description 150–160 chars.
+- [ ] URL slug matches file name, 3–6 words.
+- [ ] 3–5 internal links (see `internal-links-map.md`).
+- [ ] 2+ external authority links.
+- [ ] Frontmatter matches schema (correct category enum, photorealistic `coverImage`, `coverImageAlt`, tags).
+
+**Media**:
+- [ ] Cover image is photorealistic (DSLR-style).
+- [ ] Alt text descriptive; keyword included naturally if relevant.
+- [ ] YouTube video embedded or referenced if `youtubeVideoId` present.
 
 **Quality**:
-- [ ] Factually accurate
-- [ ] Sources cited
-- [ ] No broken links
-- [ ] Provides genuine value
-- [ ] Ready for publication
+- [ ] Facts verified.
+- [ ] Affiliate disclosure present if any affiliate link is used.
+- [ ] Clear next step for the reader.
+- [ ] No broken links.
 
 ---
 
 ## Updates & Maintenance
 
 **Style Guide Version**: 1.0
-**Last Updated**: [Date]
-**Next Review**: [Date]
+**Last Updated**: 2026-04-18
+**Next Review**: Every 6 months, or when new content collections are added to the site.
 
-This style guide is a living document. Update as Castos brand and voice evolve.
+This style guide is a living document. When you encounter a style question not covered here, make a decision, document it, and add it to this guide for the next time it comes up.
 
 **Questions or Additions?**
-If you encounter a style question not covered here, make a decision, document it, and add it to this guide for future reference.
+Update this file directly. Every clarifying decision made once saves ambiguity for every future article.
