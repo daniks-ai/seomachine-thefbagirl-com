@@ -105,6 +105,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Profitability content, financial modeling, fee analysis, sourcing negotiations, margin optimization.
 - **Anchor Text Examples**: "the $0.50 mistake", "true COGS breakdown", "the fee stack most sellers miss"
 
+### 10 Amazon FBA Mistakes That Cost Beginners Thousands in 2026
+- **URL**: https://thefbagirl.com/blog/10-amazon-fba-mistakes-2026
+- **Primary Topic**: Beginner FBA mistakes — product research, unit economics, saturated niches, visuals, SEO, dumping, stockouts, platform rules, packaging, reviews.
+- **When to Link**: Any beginner-oriented content, "what not to do" framing, pre-launch checklists, product-research articles, post-mortem reviews.
+- **Anchor Text Examples**: "10 Amazon FBA mistakes beginners make", "the mistakes that cost beginners thousands", "FBA beginner pitfalls", "common Amazon FBA mistakes"
+
 ---
 
 ## Tutorials (Structured Learning)
