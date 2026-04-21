@@ -111,6 +111,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any beginner-oriented content, "what not to do" framing, pre-launch checklists, product-research articles, post-mortem reviews.
 - **Anchor Text Examples**: "10 Amazon FBA mistakes beginners make", "the mistakes that cost beginners thousands", "FBA beginner pitfalls", "common Amazon FBA mistakes"
 
+### Amazon Product Research in 2026: 7 Unconventional Methods
+- **URL**: https://thefbagirl.com/blog/amazon-product-research-methods-2026
+- **Primary Topic**: Unconventional product research methods — Canton Fair catalog, AliExpress Dropshipping Center, one-star review mining, leech strategy, Kickstarter/Indiegogo, Reddit pain points, subscription boxes. Also covers small-MOQ testing tactics and probabilistic launch strategy.
+- **When to Link**: Product research articles, sourcing content, launch guides, niche selection discussions, any article touching Helium 10/Jungle Scout where unconventional signals could complement the structured tools.
+- **Anchor Text Examples**: "7 unconventional product research methods", "the Canton Fair catalog trick", "Reddit pain-point mining", "the leech strategy", "unconventional Amazon product research"
+
 ---
 
 ## Tutorials (Structured Learning)
