@@ -171,6 +171,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Industry-news articles, forward-looking strategy pieces.
 - **Anchor Text Examples**: "Q2 2026 e-commerce trends", "latest marketplace trends"
 
+### Amazon SP-API Paid Changes 2026: $1,400/Year, Explained
+- **URL**: https://thefbagirl.com/news/amazon-sp-api-paid-changes-2026
+- **Primary Topic**: Amazon Seller Partner API moving from free to paid ($1,400/year per developer) in 2026, impact on repricers, PPC tools, analytics dashboards, and seller software stacks.
+- **When to Link**: Tool reviews and tool-stack articles (Helium 10, Jungle Scout, repricers, PPC management tools), software cost discussions, news/policy roundups, articles about software subscription drag, anything mentioning vibe coding or third-party Amazon tools.
+- **Anchor Text Examples**: "the 2026 SP-API paid changes", "Amazon's paid SP-API rollout", "what the $1,400 SP-API fee means for sellers", "the SP-API subscription change", "why your Amazon tools may get more expensive"
+
 ---
 
 ## Lifehacks
