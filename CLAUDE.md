@@ -91,6 +91,8 @@ Rewrites go to `rewrites/`. Landing pages go to `landing-pages/`. Audits go to `
 ## Context Files
 
 `context/` contains brand guidelines that inform all content generation:
+- `author-bio.md` — **Ground truth** for author identity (Katia Rubtcova, real name, LinkedIn, Daniks brand). Read before writing any byline, author block, or attribution.
+- `credibility-signals.md` — **Ground truth** for the six verifiable proof points that should surface in articles, schema, and AI-citation pitches. Read before writing About-style content or anything that makes a claim about authority.
 - `brand-voice.md` - Tone, messaging pillars
 - `style-guide.md` - Grammar, formatting standards
 - `seo-guidelines.md` - Keyword and structure rules
