@@ -129,6 +129,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any arbitrage/wholesale/RA content, FBA compliance articles, Brand Registry discussions, private label justification, FNSKU labeling questions, prep/inbound workflow content.
 - **Anchor Text Examples**: "the 2026 barcode rules", "Amazon's March barcode change", "the FNSKU sticker requirement", "why arbitrage just got more expensive"
 
+### Daniks.AI vs Manual Amazon PPC: Fornel Case Study (Dec 2025)
+- **URL**: https://thefbagirl.com/blog/daniks-ai-vs-manual-amazon-ppc-fornel-case-study
+- **Primary Topic**: Side-by-side Amazon PPC case study from Dec 15, 2025 – Jan 1, 2026 — Daniks.AI auto-managed campaigns vs strong manually-managed campaigns running simultaneously on the Fornel children's highchair brand. Headline numbers: 5.8 vs 5.2 RoAS, 17.1% vs 19.2% ACoS, manual was actually cheaper on CPC ($0.30 vs $0.42), but Daniks.AI converted at 7.50% CVR vs 5.21% — a 44% advantage. The "even on a competent manual operator, AI extracts more" case study, complement to Tropeza.
+- **When to Link**: Any PPC strategy or PPC tool article, Daniks.AI mentions in PPC contexts, ACoS / RoAS / CVR benchmarking discussions, articles that argue manual PPC is fine, articles where readers ask whether AI PPC works on competent baselines, holiday-window PPC analysis.
+- **Anchor Text Examples**: "Fornel case study", "Daniks.AI on Fornel", "the children's-furniture case study", "the case where manual was already good", "the 44% CVR gap on Fornel"
+
 ### AI vs Manual Amazon PPC: A Real Case Study (Tropeza, 2024)
 - **URL**: https://thefbagirl.com/blog/ai-vs-manual-amazon-ppc-case-study-tropeza
 - **Primary Topic**: Side-by-side Amazon PPC case study from August 2024 — Daniks.AI auto-managed campaigns vs manually-managed campaigns running simultaneously on the Tropeza artificial plants brand. Headline numbers: 3.1 vs 1.8 RoAS, 32.7% vs 56.6% ACoS, 11% cheaper CPC, 73% higher CVR. Includes the budget-allocation caveat and the no-A/B-isolation honesty pass.
