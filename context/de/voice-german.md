@@ -99,7 +99,7 @@ Use instead:
 
 ## When to use English-language references
 
-The articles link to the @AmazonFBAGirl YouTube channel — which is in English. Be transparent about it in German articles. Use a phrase like: „(Video auf Englisch — deutsche Untertitel folgen)" or „Hinweis: Die Video-Erklärung ist auf Englisch."
+The articles link to the @AmazonFBAGirl YouTube channel — which is in English. Don't apologise for or disclaim the language — the German FBA-Verkäufer-audience is comfortable with English content. Just embed the video naturally. No subtitle promises, no „Hinweis"-paragraphs about language.
 
 ## Author byline
 
