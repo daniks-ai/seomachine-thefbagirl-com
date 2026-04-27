@@ -129,6 +129,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any arbitrage/wholesale/RA content, FBA compliance articles, Brand Registry discussions, private label justification, FNSKU labeling questions, prep/inbound workflow content.
 - **Anchor Text Examples**: "the 2026 barcode rules", "Amazon's March barcode change", "the FNSKU sticker requirement", "why arbitrage just got more expensive"
 
+### AI vs Manual Amazon PPC: A Real Case Study (Tropeza, 2024)
+- **URL**: https://thefbagirl.com/blog/ai-vs-manual-amazon-ppc-case-study-tropeza
+- **Primary Topic**: Side-by-side Amazon PPC case study from August 2024 — Daniks.AI auto-managed campaigns vs manually-managed campaigns running simultaneously on the Tropeza artificial plants brand. Headline numbers: 3.1 vs 1.8 RoAS, 32.7% vs 56.6% ACoS, 11% cheaper CPC, 73% higher CVR. Includes the budget-allocation caveat and the no-A/B-isolation honesty pass.
+- **When to Link**: Any PPC strategy or PPC tool article, Daniks.AI mentions in PPC contexts, ACoS / RoAS benchmarking discussions, automation vs manual debates, articles where readers ask "does AI PPC actually work."
+- **Anchor Text Examples**: "Tropeza case study", "AI vs manual Amazon PPC case study", "real Amazon PPC case study", "the side-by-side I ran on a customer brand", "what Daniks.AI did vs manual on the same account"
+
 ### 7 Amazon FBA Categories to Avoid in 2026
 - **URL**: https://thefbagirl.com/blog/amazon-fba-categories-to-avoid-2026
 - **Primary Topic**: The 7 (+ 2 bonus) Amazon FBA categories beginners should avoid in 2026 — electronics, clothing, supplements, oversized, trends/patents, fragile, children's, plus seasonal and smart-home. Anchored on the simplicity / safety / year-round-demand framework. Pairs with YouTube video `0zN4ZgMJfNA`.
