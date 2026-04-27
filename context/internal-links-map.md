@@ -117,6 +117,30 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Product research articles, sourcing content, launch guides, niche selection discussions, any article touching Helium 10/Jungle Scout where unconventional signals could complement the structured tools.
 - **Anchor Text Examples**: "7 unconventional product research methods", "the Canton Fair catalog trick", "Reddit pain-point mining", "the leech strategy", "unconventional Amazon product research"
 
+### How to Legally Buy Amazon Reviews: The Vine Mistake to Avoid
+- **URL**: https://thefbagirl.com/blog/how-to-legally-buy-amazon-reviews
+- **Primary Topic**: Amazon Vine as the only legal way to "buy" reviews at launch — pricing tiers ($0/$75/$200), eligibility, the listing-prep mistake that tanks Vine ratings, review timing, ultra-budget trap.
+- **When to Link**: Launch content, review-acquisition discussions, TOS/account-health articles, Vine mentions, "how to get first reviews" questions, any content where sellers are tempted by black-hat review services.
+- **Anchor Text Examples**: "how to legally buy Amazon reviews", "the Vine mistake to avoid", "the only legal way to pay for reviews", "why buying Amazon reviews gets you banned"
+
+### Amazon Barcode Rules 2026: What the March Change Means for FBA
+- **URL**: https://thefbagirl.com/news/amazon-barcode-rules-2026
+- **Primary Topic**: The March 1, 2026 Amazon barcode policy change — only brand owners/representatives can ship with manufacturer barcode; everyone else must apply FNSKU stickers. Covers FNSKU vs GTIN, $0.30/unit Amazon prep fee, why it accelerates the private label thesis, action checklist by seller type.
+- **When to Link**: Any arbitrage/wholesale/RA content, FBA compliance articles, Brand Registry discussions, private label justification, FNSKU labeling questions, prep/inbound workflow content.
+- **Anchor Text Examples**: "the 2026 barcode rules", "Amazon's March barcode change", "the FNSKU sticker requirement", "why arbitrage just got more expensive"
+
+### 7 Amazon FBA Categories to Avoid in 2026
+- **URL**: https://thefbagirl.com/blog/amazon-fba-categories-to-avoid-2026
+- **Primary Topic**: The 7 (+ 2 bonus) Amazon FBA categories beginners should avoid in 2026 — electronics, clothing, supplements, oversized, trends/patents, fragile, children's, plus seasonal and smart-home. Anchored on the simplicity / safety / year-round-demand framework. Pairs with YouTube video `0zN4ZgMJfNA`.
+- **When to Link**: Beginner content, product research articles, niche-selection discussions, "what to sell on Amazon" articles, pre-launch checklists, and any article framing first-product decisions. Pair with `/blog/amazon-fba-before-product-research` (upstream) and `/blog/amazon-product-research-methods-2026` (downstream).
+- **Anchor Text Examples**: "Amazon FBA categories to avoid", "the 7 categories beginners should skip", "the simplicity, safety, year-round demand framework", "categories that break beginners", "what NOT to sell on Amazon FBA"
+
+### Amazon FBA Setup: 3 Steps Before Product Research
+- **URL**: https://thefbagirl.com/blog/amazon-fba-before-product-research
+- **Primary Topic**: The three pre-launch decisions every Amazon FBA seller must make before touching product research — company structure (sole prop vs LLC/GmbH), banking (Revolut, Bunq, Vivid, N26 neo-bank stack for EU; Mercury, Relay, Wise for US), and finding an Amazon-literate accountant before incorporation.
+- **When to Link**: Beginner content, "how to start FBA" articles, entity/tax/legal discussions, exit-strategy content, any article where sellers are tempted to skip straight to product research. Pair with videos `lYGsZN6sS6M` (4:44 full) and `zg72t0nO9yQ` (1:27 teaser cut) — both YouTube videos map to this article.
+- **Anchor Text Examples**: "3 steps before product research", "the pre-launch checklist", "the boring FBA setup most sellers skip", "what to do before Helium 10"
+
 ---
 
 ## Tutorials (Structured Learning)
