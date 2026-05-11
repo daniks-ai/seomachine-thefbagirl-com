@@ -153,6 +153,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any beginner-oriented content, "how to start FBA" articles, product research guides, first-product discussions, articles debating arbitrage vs private label.
 - **Anchor Text Examples**: "the two-phase beginner strategy", "best Amazon FBA strategy for beginners", "why you should start with arbitrage before private label", "the learning-first approach"
 
+### 9 Amazon FBA Niches for 2026 With Room to Win
+- **URL**: https://thefbagirl.com/blog/amazon-fba-niches-2026
+- **Primary Topic**: 9 low-competition Amazon FBA niches for 2026 — aesthetic child safety, postworkout recovery, urban gardening, niche journals, eco-friendly kitchen, tea rituals, coffee rituals, sleep products, and Montessori-style educational toys. Anchored on a five-test filter (small/light, no certification, $25-$50 price band, specific buyer, room to differentiate). Pairs with `amazon-fba-categories-to-avoid-2026` as the inverse companion. Pulls from YouTube video `wK9IMTyKolo`.
+- **When to Link**: Product research articles, "what to sell on Amazon" content, niche selection discussions, first-product decisions, beginner content where the reader has to pick a category. Pair upstream with `/blog/amazon-fba-before-product-research` and downstream with `/blog/amazon-product-research-methods-2026` and `/tutorials/product-research-masterclass`.
+- **Anchor Text Examples**: "9 Amazon FBA niches for 2026", "the niches with room to win", "low-competition FBA niches", "what to sell on Amazon in 2026", "the nine niches I'd launch into"
+
 ### Amazon FBA Startup Cost 2026: Full Line-Item Breakdown
 - **URL**: https://thefbagirl.com/blog/amazon-fba-startup-cost-2026
 - **Primary Topic**: Amazon FBA startup cost — full line-item budget covering inventory, samples, shipping, Brand Registry/trademark, photography, seller account, UPC/GS1, PPC launch budget, Amazon Vine, tools, and accounting. Conservative planning estimate: $3,745 for first private label product.
