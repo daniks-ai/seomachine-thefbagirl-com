@@ -273,6 +273,24 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Russian sourcing content, product research articles mentioning suppliers, beginner guides, cost breakdown articles.
 - **Anchor Text Examples**: "как найти поставщика на Alibaba", "поиск поставщика для Amazon", "заказ на Alibaba", "поставщик из Китая для Amazon"
 
+### Amazon Europe для продавцов из СНГ в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-europe-dlja-prodavcov-sng-2026
+- **Primary Topic**: Russian guide to selling on Amazon Europe from CIS countries — 7 EU marketplaces overview, VAT registration, Pan-European FBA vs EFN, logistics from China to Europe, step-by-step launch plan, startup budget $3,000-5,500.
+- **When to Link**: Russian content about Amazon Europe, marketplace choice, VAT, Pan-EU FBA, logistics, international expansion, beginner guides in Russian.
+- **Anchor Text Examples**: "Amazon Europe для продавцов из СНГ", "как выйти на Amazon Europe", "VAT для Amazon", "Pan-European FBA гайд"
+
+### AI-инструменты для продавцов Amazon в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/ai-instrumenty-amazon-prodavcov-2026
+- **Primary Topic**: Russian guide to 12 AI tools for Amazon sellers — PPC automation (Daniks.AI, Perpetua, Quartile, PacVue), listing optimization (Helium 10 AI, ChatGPT/Claude, Jungle Scout AI), analytics (SoStocked, Nozzle.ai), monitoring (Bindwise), research (Market Tracker 360, Perci.ai). Includes tool stack budget and 5 common mistakes.
+- **When to Link**: Russian content about Amazon tools, PPC automation, AI, listing optimization tools, Daniks.AI mentions, tool comparison articles in Russian.
+- **Anchor Text Examples**: "AI-инструменты для Amazon", "лучшие AI-инструменты для селлеров", "автоматизация PPC", "инструменты Amazon 2026"
+
+### Amazon FBA из Казахстана и Грузии в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-fba-kazahstan-gruzija-2026
+- **Primary Topic**: Russian guide to starting Amazon FBA from Kazakhstan or Georgia — company registration (ИП/ТОО in KZ, ИП/ООО in GE), tax regimes (3% KZ, 1% GE), banking (Kaspi, Bank of Georgia), Payoneer setup, LLC in USA for Amazon account, step-by-step launch plan, startup budget $2,500-4,500.
+- **When to Link**: Russian content about starting Amazon from CIS, company registration, tax optimization, Payoneer, country-specific guides, beginner content targeting KZ/GE audience.
+- **Anchor Text Examples**: "Amazon FBA из Казахстана", "Amazon FBA из Грузии", "как начать Amazon из СНГ", "налоги для Amazon-селлера в Грузии"
+
 ### Amazon FBA Setup: 3 Steps Before Product Research
 - **URL**: https://thefbagirl.com/blog/amazon-fba-before-product-research
 - **Primary Topic**: The three pre-launch decisions every Amazon FBA seller must make before touching product research — company structure (sole prop vs LLC/GmbH), banking (Revolut, Bunq, Vivid, N26 neo-bank stack for EU; Mercury, Relay, Wise for US), and finding an Amazon-literate accountant before incorporation.
@@ -429,6 +447,149 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - `/blog/how-to-launch-your-first-amazon-product` — launch guide
 - `/tutorials/getting-started-with-amazon-fba` — tutorial
 - `/blog/amazon-fba-us-vs-europe` — which market to start in
+
+---
+
+## German Locale (/de/) — Key Pages
+
+All German content lives under `/de/`. When writing German articles, link to German URLs — never to English equivalents.
+
+### Core Pages (DE)
+
+- `/de` — Homepage
+- `/de/about` — Über mich
+- `/de/tools` — Empfohlene Tools
+- `/de/contact` — Kontakt
+- `/de/newsletter` — Newsletter-Anmeldung
+- `/de/impressum` — Impressum (legal requirement)
+- `/de/datenschutz` — Datenschutzerklärung (DSGVO)
+
+### Blog — Amazon FBA Grundlagen (DE)
+
+- `/de/blog/amazon-fba-deutschland-starten-2026` — Amazon FBA in Deutschland starten 2026
+- `/de/blog/amazon-fba-kosten-2026-deutschland` — Amazon FBA Kosten 2026 in Deutschland
+- `/de/blog/beste-amazon-fba-strategie-anfaenger-2026` — Beste Amazon FBA Strategie für Anfänger
+- `/de/blog/10-amazon-fba-fehler-anfaenger-2026` — 10 Amazon FBA Fehler, die Anfänger kosten
+- `/de/blog/erstes-amazon-produkt-launchen-2026` — Erstes Amazon-Produkt launchen
+- `/de/blog/amazon-fba-setup-vor-produktrecherche` — 3 Schritte vor der Produktrecherche
+- `/de/blog/der-50-cent-fehler-amazon-seller` — Der 0,50-€-Fehler bei Amazon-Sellern
+
+### Blog — Produktrecherche & Nischen (DE)
+
+- `/de/blog/amazon-produktrecherche-methoden-2026` — 7 unkonventionelle Produktrecherche-Methoden
+- `/de/blog/amazon-fba-nischen-2026` — 9 Amazon FBA Nischen für 2026
+- `/de/blog/amazon-fba-kategorien-vermeiden-2026` — 7 Kategorien, die man 2026 meiden sollte
+- `/de/blog/private-label-hersteller-deutschland-finden` — Private-Label-Hersteller in Deutschland
+- `/de/blog/amazon-fba-import-china-deutschland-2026` — Import aus China nach Deutschland
+
+### Blog — Listing-Optimierung (DE)
+
+- `/de/blog/amazon-listing-optimieren-amazon-de` — Listing optimieren für Amazon.de
+- `/de/blog/amazon-listing-optimierung-tipps-2026` — 7 Listing-Optimierung-Tipps
+- `/de/blog/amazon-virtuelle-bundles-anleitung` — Virtuelle Bundles erstellen
+- `/de/blog/amazon-bewertungen-legal-kaufen-vine` — Bewertungen legal kaufen: Vine
+- `/de/blog/amazon-vine-programm-2026` — Amazon Vine Programm 2026
+- `/de/blog/amazon-fba-retourenquote-senken` — Retourenquote senken
+
+### Blog — PPC & Werbung (DE)
+
+- `/de/blog/amazon-ppc-strategie-leitfaden-2026` — Amazon PPC Strategie 2026
+- `/de/blog/amazon-ppc-anfaenger-leitfaden-2026` — Amazon PPC für Anfänger
+- `/de/blog/amazon-acos-senken-7-massnahmen` — ACoS senken — 7 Maßnahmen
+- `/de/blog/amazon-tacos-verstehen` — TACoS verstehen
+- `/de/blog/amazon-tacos-verstehen-acos` — TACoS vs ACoS
+- `/de/blog/amazon-negative-keywords-richtig-nutzen` — Negative Keywords richtig nutzen
+- `/de/blog/beste-amazon-ppc-tools-2026` — 7 beste Amazon PPC Tools 2026
+- `/de/blog/daniks-ai-erfahrung-amazon-ppc-nicht-mehr-manuell` — DaniksAI Erfahrung
+
+### Blog — Daniks.AI Vergleiche (DE)
+
+- `/de/blog/daniks-ai-vs-pacvue-amazon-ppc-vergleich-2026` — Daniks.AI vs Pacvue
+- `/de/blog/daniks-ai-vs-perpetua-amazon-ppc-vergleich-2026` — Daniks.AI vs Perpetua
+- `/de/blog/daniks-ai-vs-quartile-amazon-ppc-vergleich-2026` — Daniks.AI vs Quartile
+- `/de/blog/daniks-ai-vs-teikametrics-amazon-ppc-vergleich-2026` — Daniks.AI vs Teikametrics
+- `/de/blog/daniks-ai-vs-manuell-amazon-ppc-fornel-fallstudie` — Daniks.AI vs manuell: Fornel-Fallstudie
+- `/de/blog/ki-vs-agentur-amazon-ppc-fallstudie-basecamp-roasters` — KI vs Agentur: Basecamp Roasters
+- `/de/blog/ki-vs-manuell-amazon-ppc-fallstudie-tropeza-2024` — KI vs Manuell: Tropeza Fallstudie
+
+### Blog — Recht, Steuern & Compliance (DE)
+
+- `/de/blog/gmbh-ug-einzelunternehmen-amazon-fba` — GmbH, UG oder Einzelunternehmen
+- `/de/blog/kleinunternehmerregelung-amazon-fba` — Kleinunternehmerregelung
+- `/de/blog/amazon-fba-buchhaltung-deutschland` — Buchhaltung in Deutschland
+- `/de/blog/mehrwertsteuer-amazon-verkaeufer-oss-pan-eu` — Mehrwertsteuer, OSS, Pan-EU
+- `/de/blog/ce-kennzeichnung-produktsicherheit-amazon-de` — CE-Kennzeichnung
+- `/de/blog/verpackungsgesetz-lucid-amazon-verkaeufer-2026` — Verpackungsgesetz und LUCID
+- `/de/blog/weee-nummer-beantragen-amazon` — WEEE-Nummer beantragen
+- `/de/blog/gpsr-compliance-nicht-eu-amazon-seller-2026` — GPSR-Compliance 2026
+
+### Blog — Internationalisierung (DE)
+
+- `/de/blog/amazon-de-vs-amazon-com-unterschiede` — Amazon.de vs Amazon.com Unterschiede
+- `/de/blog/amazon-pan-eu-efn-narf-vergleich-2026` — Pan-EU vs EFN vs NARF
+- `/de/blog/amazon-social-commerce-influencer-leitfaden-2026` — Social Commerce Influencer-Leitfaden
+
+### Tutorials (DE)
+
+- `/de/tutorials/amazon-fba-einstieg-anleitung` — Amazon FBA Einstiegs-Leitfaden
+- `/de/tutorials/erste-ppc-kampagne-einrichten` — Erste PPC-Kampagne einrichten
+- `/de/tutorials/produktrecherche-masterclass` — Produktrecherche-Masterclass
+- `/de/tutorials/amazon-brand-registry-beantragen-anleitung` — Brand Registry beantragen
+- `/de/tutorials/eori-nummer-beantragen-anleitung` — EORI-Nummer beantragen
+- `/de/tutorials/lucid-registrierung-anleitung` — LUCID-Registrierung
+
+### Reviews (DE)
+
+- `/de/reviews/daniks-ai-test` — Daniks.AI Test
+- `/de/reviews/helium-10-test` — Helium 10 Test
+- `/de/reviews/jungle-scout-test` — Jungle Scout Test
+- `/de/reviews/sellerboard-test` — sellerboard Test
+- `/de/reviews/taxdoo-test` — Taxdoo Test
+- `/de/reviews/hellotax-test` — Hellotax Test
+
+### News (DE)
+
+- `/de/news/amazon-barcode-regeln-2026` — Barcode-Regeln 2026
+- `/de/news/amazon-gebuehrenaenderungen-2026-deutschland` — Gebührenänderungen 2026
+- `/de/news/amazon-sp-api-kostenpflichtig-2026` — SP-API wird kostenpflichtig
+- `/de/news/e-commerce-trends-q2-2026-deutschland` — E-Commerce-Trends Q2 2026
+- `/de/news/eu-ppwr-ab-12-august-2026` — EU-PPWR ab August 2026
+
+### Lifehacks (DE)
+
+- `/de/lifehacks/10-produktivitaetstipps-fuer-amazon-seller` — 10 Produktivitätstipps
+- `/de/lifehacks/7-wege-amazon-fba-gebuehren-sparen` — 7 Wege FBA-Gebühren sparen
+- `/de/lifehacks/amazon-fba-versandkosten-senken-7-tricks` — Versandkosten senken
+- `/de/lifehacks/amazon-seller-central-30-minuten-tagescheck` — 30-Minuten-Tagescheck
+
+### German Cross-Linking Guidelines
+
+**When writing a German FBA-basics article**, link to:
+- `/de/blog/amazon-fba-deutschland-starten-2026` — the main getting-started post
+- `/de/blog/amazon-fba-kosten-2026-deutschland` — cost breakdown
+- `/de/tutorials/amazon-fba-einstieg-anleitung` — step-by-step tutorial
+- `/de/blog/gmbh-ug-einzelunternehmen-amazon-fba` — legal entity choice
+
+**When writing about PPC in German**, link to:
+- `/de/blog/amazon-ppc-strategie-leitfaden-2026` — the pillar PPC guide
+- `/de/blog/amazon-acos-senken-7-massnahmen` — ACoS optimization
+- `/de/blog/amazon-tacos-verstehen` — TACoS explainer
+- `/de/tutorials/erste-ppc-kampagne-einrichten` — first campaign tutorial
+- `/de/reviews/daniks-ai-test` — the Daniks.AI tool review
+
+**When writing about German compliance**, link to:
+- `/de/blog/ce-kennzeichnung-produktsicherheit-amazon-de` — CE marking
+- `/de/blog/verpackungsgesetz-lucid-amazon-verkaeufer-2026` — packaging law
+- `/de/blog/weee-nummer-beantragen-amazon` — WEEE registration
+- `/de/blog/gpsr-compliance-nicht-eu-amazon-seller-2026` — GPSR for non-EU sellers
+- `/de/tutorials/eori-nummer-beantragen-anleitung` — EORI tutorial
+- `/de/tutorials/lucid-registrierung-anleitung` — LUCID tutorial
+
+**When writing about product research in German**, link to:
+- `/de/blog/amazon-produktrecherche-methoden-2026` — research methods
+- `/de/blog/amazon-fba-nischen-2026` — niche ideas
+- `/de/blog/amazon-fba-kategorien-vermeiden-2026` — categories to avoid
+- `/de/tutorials/produktrecherche-masterclass` — masterclass tutorial
 
 ---
 
