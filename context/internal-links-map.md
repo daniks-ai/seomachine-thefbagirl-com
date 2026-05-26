@@ -147,6 +147,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Beginner content, product research articles, niche-selection discussions, "what to sell on Amazon" articles, pre-launch checklists, and any article framing first-product decisions. Pair with `/blog/amazon-fba-before-product-research` (upstream) and `/blog/amazon-product-research-methods-2026` (downstream).
 - **Anchor Text Examples**: "Amazon FBA categories to avoid", "the 7 categories beginners should skip", "the simplicity, safety, year-round demand framework", "categories that break beginners", "what NOT to sell on Amazon FBA"
 
+### 7 Best Amazon PPC Tools in 2026
+- **URL**: https://thefbagirl.com/blog/best-amazon-ppc-tools-2026
+- **Primary Topic**: Ranked listicle of 7 Amazon PPC tools — Daniks.AI (#1), Perpetua, PacVue, Helium 10 Adtomic, Quartile, Adspert, Teikametrics. Comparison table, detailed pricing at every spend level, Adspert pricing math, FAQ section, automation level, best-fit audience. Transparent owner disclosure for Daniks.AI. Available in EN, DE (`/de/blog/beste-amazon-ppc-tools-2026`), RU (`/ru/blog/luchshie-amazon-ppc-instrumenty-2026`).
+- **When to Link**: Any PPC strategy or PPC tool article, "which tool should I use" discussions, Daniks.AI mentions, articles comparing automation approaches, beginner content where readers ask about PPC tools, tool-stack articles.
+- **Anchor Text Examples**: "7 best Amazon PPC tools", "my PPC tool ranking", "the best PPC tools for 2026", "which Amazon PPC tool to choose", "PPC tool comparison"
+
 ### Best Amazon FBA Strategy for Beginners in 2026
 - **URL**: https://thefbagirl.com/blog/best-amazon-fba-strategy-beginners-2026
 - **Primary Topic**: Two-phase beginner strategy — start with arbitrage/wholesale to learn Amazon mechanics, then transition to private label. Covers startup costs, product selection framework, pre-launch checklist.
@@ -159,11 +165,113 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Product research articles, "what to sell on Amazon" content, niche selection discussions, first-product decisions, beginner content where the reader has to pick a category. Pair upstream with `/blog/amazon-fba-before-product-research` and downstream with `/blog/amazon-product-research-methods-2026` and `/tutorials/product-research-masterclass`.
 - **Anchor Text Examples**: "9 Amazon FBA niches for 2026", "the niches with room to win", "low-competition FBA niches", "what to sell on Amazon in 2026", "the nine niches I'd launch into"
 
+### Amazon ACoS Explained: What It Is and How to Lower It
+- **URL**: https://thefbagirl.com/blog/amazon-acos-guide-2026
+- **Primary Topic**: ACoS formula, ACoS vs TACoS, break-even ACoS calculation, benchmarks by category, 7 tactics to lower ACoS, AI-powered PPC optimization (mentions Daniks.AI).
+- **When to Link**: Any PPC strategy article, ACoS/TACoS discussions, ad spend optimization, campaign profitability analysis, bid management content, PPC tool mentions.
+- **Anchor Text Examples**: "ACoS guide", "how to lower your ACoS", "ACoS vs TACoS explained", "break-even ACoS formula", "what is a good ACoS"
+
+### Amazon ACoS: что это и как снизить в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-acos-rukovodstvo-2026
+- **Primary Topic**: Russian adaptation of the ACoS guide — ACoS formula, ACoS vs TACoS, break-even ACoS, benchmarks by category, 7 tactics to lower ACoS, Daniks.AI mention. Translation pair: `translationKey: amazon-acos-guide-2026`.
+- **When to Link**: Russian PPC articles, ACoS/TACoS discussions in Russian content, Russian ad spend optimization, PPC tool mentions in RU context.
+- **Anchor Text Examples**: "гайд по ACoS", "как снизить ACoS", "ACoS vs TACoS", "формула безубыточного ACoS", "что такое хороший ACoS"
+
+### Amazon FBA Inventory Management: Avoid Fees and Stock Smarter
+- **URL**: https://thefbagirl.com/blog/amazon-fba-inventory-management-2026
+- **Primary Topic**: FBA storage fees (monthly + aged inventory surcharges), IPI score, restock timing formula, 6 inventory tactics, stranded inventory, seasonal planning.
+- **When to Link**: Any logistics/operations content, fee analysis, profitability articles, first-product launch planning, Q4 prep, stockout/overstock discussions.
+- **Anchor Text Examples**: "inventory management guide", "how to avoid FBA storage fees", "IPI score explained", "restock timing formula", "aged inventory surcharge"
+
+### Amazon Brand Registry: 8 Benefits You Get After Enrolling
+- **URL**: https://thefbagirl.com/blog/amazon-brand-registry-benefits-2026
+- **Primary Topic**: 8 Brand Registry benefits — A+ Content, Brand Analytics, Sponsored Brands, Amazon Stores, Brand Dashboard, IP protection, virtual bundles, Vine access. Includes enrollment steps and common misconceptions.
+- **When to Link**: Brand-building content, A+ Content mentions, Sponsored Brands discussions, IP protection, hijacker problems, virtual bundles, Vine, trademark questions.
+- **Anchor Text Examples**: "Brand Registry benefits", "what Brand Registry gives you", "8 reasons to enroll in Brand Registry", "A+ Content through Brand Registry", "Brand Registry enrollment guide"
+
+### How to Read Your Amazon Search Term Report (and Act on It)
+- **URL**: https://thefbagirl.com/blog/amazon-search-term-report-guide-2026
+- **Primary Topic**: Search Term Report (STR) — how to download, understand each column, the four-bucket system (Winners/Potentials/Money Drains/Irrelevant), keyword harvesting from auto campaigns, common STR mistakes.
+- **When to Link**: Any PPC content, keyword research, negative keyword discussions, campaign optimization, auto-to-manual campaign workflow, ad spend waste.
+- **Anchor Text Examples**: "Search Term Report guide", "how to read your STR", "the four-bucket system", "keyword harvesting from auto campaigns", "find wasted ad spend"
+
 ### Amazon FBA Startup Cost 2026: Full Line-Item Breakdown
 - **URL**: https://thefbagirl.com/blog/amazon-fba-startup-cost-2026
 - **Primary Topic**: Amazon FBA startup cost — full line-item budget covering inventory, samples, shipping, Brand Registry/trademark, photography, seller account, UPC/GS1, PPC launch budget, Amazon Vine, tools, and accounting. Conservative planning estimate: $3,745 for first private label product.
 - **When to Link**: Beginner content, "how much to start FBA" articles, budget/planning content, articles debunking the "$500 to start" myth, private label launch guides, pre-launch checklists, profitability content where total upfront investment matters.
 - **Anchor Text Examples**: "Amazon FBA startup cost", "the full line-item budget", "real cost to start Amazon FBA", "$2,500-$5,000 startup budget", "how much to start Amazon FBA"
+
+### Сколько стоит начать бизнес на Amazon FBA (RU)
+- **URL**: https://thefbagirl.com/ru/blog/skolko-stoit-amazon-fba-2026
+- **Primary Topic**: Russian-language startup cost breakdown for Amazon FBA in 2026 — detailed budget from $2,500 to $10,000 covering inventory, samples, shipping, PPC, photography, company registration, trademark, tools. Personal first-launch story with real numbers.
+- **When to Link**: Russian-language content about starting Amazon FBA, budget planning, beginner guides in Russian.
+- **Anchor Text Examples**: "сколько стоит начать Amazon FBA", "стартовый бюджет Amazon FBA", "реальный бюджет запуска", "стоимость запуска на Amazon"
+
+### Как начать продавать на Amazon FBA с нуля (RU)
+- **URL**: https://thefbagirl.com/ru/blog/kak-nachat-prodavat-amazon-fba-2026
+- **Primary Topic**: Complete Russian-language beginner guide to starting on Amazon FBA — 7-step process from marketplace choice to PPC launch. Covers company registration, product research, supplier sourcing, listing creation, advertising. Budget breakdown $3,000-5,000.
+- **When to Link**: Any Russian beginner content, "с чего начать" questions, product research in Russian, Russian PPC guides.
+- **Anchor Text Examples**: "как начать продавать на Amazon FBA", "пошаговый план запуска", "гайд для начинающих", "начать на Amazon с нуля"
+
+### Как открыть LLC в США для Amazon в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/llc-dlja-amazon-v-ssha-2026
+- **Primary Topic**: Step-by-step LLC registration guide for CIS-based Amazon sellers — Delaware vs Wyoming vs New Mexico comparison, EIN process, Mercury/Relay bank accounts, Payoneer vs US bank, taxes for foreign LLC owners. Total cost $200-500.
+- **When to Link**: Russian content about company registration, legal setup for Amazon, banking, tax questions, Payoneer discussions.
+- **Anchor Text Examples**: "как открыть LLC для Amazon", "регистрация компании в США", "EIN для Amazon", "LLC в Вайоминге для селлера"
+
+### Amazon FBA vs Wildberries vs Ozon в 2026 году (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-fba-vs-wildberries-vs-ozon-2026
+- **Primary Topic**: Comprehensive comparison of Amazon FBA, Wildberries, and Ozon for Russian-speaking sellers — commissions, margins, competition, logistics, brand protection. Decision framework by seller type.
+- **When to Link**: Russian content about marketplace choice, Wildberries/Ozon mentions, "какой маркетплейс выбрать" questions, beginner guides in Russian.
+- **Anchor Text Examples**: "Amazon vs Wildberries vs Ozon", "сравнение маркетплейсов", "какой маркетплейс выбрать", "Amazon или Wildberries"
+
+### 7 способов найти прибыльный товар для Amazon (RU)
+- **URL**: https://thefbagirl.com/ru/blog/poisk-tovara-amazon-fba-2026
+- **Primary Topic**: Russian-language product research methods for Amazon FBA — 7 methods from BSR analysis to Reddit mining, AliExpress/Alibaba, one-star reviews, trade show catalogs, Kickstarter, Amazon recommendation algorithm. Includes product criteria checklist and 24-hour idea validation framework.
+- **When to Link**: Russian product research content, beginner guides in Russian, niche selection articles in Russian, any Russian content about finding products to sell on Amazon.
+- **Anchor Text Examples**: "7 способов найти товар для Amazon", "поиск товара для Amazon FBA", "методы продакт рисёрча", "как найти прибыльный товар"
+
+### Реальный P&L продавца Amazon: разбор цифр (RU)
+- **URL**: https://thefbagirl.com/ru/blog/realnyj-pnl-prodavca-amazon-2026
+- **Primary Topic**: Real Amazon seller P&L breakdown for a $24.99 kitchen product — 200 units/month, every line item from COGS to net profit. 22.5% net margin after 8 months of optimization. Month-by-month profitability timeline, Wildberries margin comparison, three levers to improve profit.
+- **When to Link**: Russian content about unit economics, profitability, margins, Amazon fees, financial planning, "сколько можно заработать" questions, realistic expectations content.
+- **Anchor Text Examples**: "реальный P&L Amazon-продавца", "сколько зарабатывает продавец Amazon", "разбор прибыли на Amazon", "юнит-экономика Amazon FBA"
+
+### FBA vs FBM на Amazon: что выбрать в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/fba-vs-fbm-chto-vybrat-2026
+- **Primary Topic**: Russian FBA vs FBM comparison — fulfillment fees, logistics, Buy Box, Prime badge, concrete $25 product example. Hybrid model explanation. Personal experience.
+- **When to Link**: Russian beginner content, logistics discussions in Russian, fulfillment model questions, cost breakdowns in Russian.
+- **Anchor Text Examples**: "FBA vs FBM сравнение", "что выбрать FBA или FBM", "FBA или FBM на Amazon", "модели фулфилмента Amazon"
+
+### Как вывести деньги с Amazon в СНГ в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/kak-vyvesti-dengi-amazon-sng-2026
+- **Primary Topic**: Russian-language guide to withdrawing Amazon earnings to CIS countries — Payoneer, US bank via LLC, Wise, WorldFirst. Country-specific notes for Russia, Kazakhstan, Georgia, Uzbekistan, Armenia. Conversion optimization tips.
+- **When to Link**: Russian content about Amazon payments, banking, LLC registration, financial planning, country-specific guides.
+- **Anchor Text Examples**: "как вывести деньги с Amazon", "Payoneer для Amazon", "вывод выплат Amazon в СНГ", "банк для Amazon-селлера"
+
+### Amazon Brand Registry: зачем и как получить (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-brand-registry-rukovodstvo-2026
+- **Primary Topic**: Russian Brand Registry guide — 8 benefits (A+ Content, Brand Analytics, Sponsored Brands, Store, Dashboard, IP protection, Virtual Bundles, Vine), trademark registration paths (USPTO vs UKIPO), step-by-step enrollment, common mistakes.
+- **When to Link**: Russian brand-building content, trademark discussions, A+ Content mentions, Vine references, IP protection questions in Russian.
+- **Anchor Text Examples**: "Brand Registry на Amazon", "как зарегистрировать бренд", "преимущества Brand Registry", "регистрация торговой марки для Amazon"
+
+### Amazon PPC для новичков: стратегия запуска (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-ppc-strategija-dlja-novichkov-2026
+- **Primary Topic**: Russian PPC beginner guide — three campaign types, exact launch structure (auto + broad + exact), $35-50/day budget, ACoS targets, four-bucket optimization system, 5 common mistakes.
+- **When to Link**: Russian PPC content, beginner guides mentioning advertising, launch strategy articles in Russian, ACoS discussions.
+- **Anchor Text Examples**: "PPC стратегия для новичков", "как запустить рекламу на Amazon", "гайд по Amazon PPC", "структура кампаний Amazon"
+
+### Оптимизация листинга на Amazon: полный гайд (RU)
+- **URL**: https://thefbagirl.com/ru/blog/optimizacija-listinga-amazon-2026
+- **Primary Topic**: Russian listing optimization guide — title structure, bullet points, photos (7 images minimum), A+ Content, backend keywords (250 bytes), conversion tracking. Concrete examples of good vs bad.
+- **When to Link**: Russian content about conversions, product listings, SEO on Amazon, A+ Content, image strategy, launch preparation.
+- **Anchor Text Examples**: "оптимизация листинга Amazon", "как создать листинг", "гайд по листингу", "A+ Content гайд"
+
+### Как найти поставщика на Alibaba для Amazon (RU)
+- **URL**: https://thefbagirl.com/ru/blog/kak-najti-postavshika-alibaba-amazon-2026
+- **Primary Topic**: Russian Alibaba sourcing guide — filters and signals, factory vs trading company, first message template, samples ($150-400 budget), price/MOQ negotiation, quality inspection, shipping options (AGL, air, sea), red flags.
+- **When to Link**: Russian sourcing content, product research articles mentioning suppliers, beginner guides, cost breakdown articles.
+- **Anchor Text Examples**: "как найти поставщика на Alibaba", "поиск поставщика для Amazon", "заказ на Alibaba", "поставщик из Китая для Amazon"
 
 ### Amazon FBA Setup: 3 Steps Before Product Research
 - **URL**: https://thefbagirl.com/blog/amazon-fba-before-product-research
@@ -280,6 +388,10 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 
 **When writing about Amazon PPC**, link to:
 - `/blog/amazon-ppc-strategy-guide-2026` — the main strategy guide
+- `/blog/amazon-acos-guide-2026` — ACoS explained, benchmarks, lowering tactics
+- `/ru/blog/amazon-acos-rukovodstvo-2026` — ACoS guide (Russian)
+- `/blog/amazon-search-term-report-guide-2026` — STR analysis, four-bucket system
+- `/blog/best-amazon-ppc-tools-2026` — PPC tool comparison (7 tools ranked)
 - `/tutorials/setting-up-ppc-campaigns` — the step-by-step setup
 - `/reviews/helium-10-review` — keyword research tool
 
@@ -296,8 +408,14 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 
 **When writing about Profitability/Fees/Financials**, link to:
 - `/blog/the-fifty-cent-mistake-amazon-sellers` — True COGS framework
+- `/blog/amazon-fba-inventory-management-2026` — storage fees, IPI score, restock timing
 - `/news/amazon-fee-changes-2026` — current fee context
 - `/lifehacks/save-money-on-amazon-fba-fees` — practical savings tactics
+
+**When writing about Brand Building**, link to:
+- `/blog/amazon-brand-registry-benefits-2026` — 8 benefits of Brand Registry
+- `/blog/amazon-virtual-bundles-guide` — bundles via Brand Registry
+- `/blog/7-listing-optimization-tips-that-boost-sales` — listing optimization with A+ Content
 
 **When writing about Marketplace Expansion**, link to:
 - `/blog/amazon-fba-us-vs-europe` — US vs EU breakdown
