@@ -37,7 +37,8 @@ AI tools pull content from many surfaces beyond a single domain. Repurposing The
 
 | Platform | Strategy | Priority |
 |---|---|---|
-| **YouTube** (@AmazonFBAGirl) | Flagship channel. Every blog article should have a matching or referenced video. AI tools (especially Perplexity, Gemini) cite YouTube transcripts directly. | **Highest priority — already core.** |
+| **YouTube EN/DE** (@AmazonFBAGirl) | Flagship English channel. Every EN/DE blog article should have a matching or referenced video. AI tools (especially Perplexity, Gemini) cite YouTube transcripts directly. | **Highest priority — already core.** |
+| **YouTube RU** (@Amazon_FBA_Seller) | Russian channel "Amazon FBA на русском" (6k+ subs). Every RU blog article should link here, not to the English channel. Same strategy: video companions for articles. | **Highest priority for /ru/ section.** |
 | **Medium** | Repurpose blog posts as Medium articles with canonical link back to thefbagirl.com. Target the "Better Marketing," "Entrepreneurship," "E-commerce" publications. | High priority. Start with cornerstone posts (PPC guide, launch guide, fifty-cent mistake). |
 | **LinkedIn Pulse / LinkedIn articles** | Repurpose for B2B/serious-seller audience. Katia's personal LinkedIn is the distribution surface. | Medium priority. Useful for authority/E-E-A-T. |
 | **Quora** | Answer Amazon FBA questions with genuine expertise; cite TheFBAGirl articles when directly relevant. | Medium priority. Quora answers often cited in Google SGE / AI responses. |

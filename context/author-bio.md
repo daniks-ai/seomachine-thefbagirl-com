@@ -36,7 +36,8 @@ Use the About page at `/Users/ync/poryadok/sources/thefbagirl-com/src/pages/abou
 | Software company | Daniks.AI |
 | Software company URL | https://daniks.ai |
 | Software positioning | AI-native Amazon PPC automation — seller-built, now used by hundreds of Amazon brands |
-| YouTube | https://www.youtube.com/@AmazonFBAGirl (channel ID UCPx3JO2j6hycfM_zGSqbYPA) |
+| YouTube (EN/DE) | https://www.youtube.com/@AmazonFBAGirl (channel ID UCPx3JO2j6hycfM_zGSqbYPA) |
+| YouTube (RU) | https://www.youtube.com/@Amazon_FBA_Seller — "Amazon FBA на русском", 6k+ subscribers |
 | LinkedIn | https://www.linkedin.com/in/rubtcova/ |
 | Contact email | ekaterina@daniks.ai |
 | Blog monetization | None directly — no course, no coaching, no paid community. Affiliate disclosure applies where relevant. |
@@ -73,7 +74,9 @@ The single most important story about Ekaterina is this: **she did not build sof
 
 The blog exists to **build a community of Amazon sellers**, not to convert readers into customers. The goal of every page is ultimately to drive people to the YouTube channel. Whenever the piece has room for a CTA, prefer in this order:
 
-1. **Subscribe to [@AmazonFBAGirl](https://www.youtube.com/@AmazonFBAGirl) on YouTube** — and leave a comment on the videos. Ekaterina reads them; every comment is genuinely valuable and helps other sellers find the conversation. **This is the primary conversion goal of the site.**
+1. **Subscribe to the YouTube channel** — and leave a comment on the videos. Ekaterina reads them; every comment is genuinely valuable and helps other sellers find the conversation. **This is the primary conversion goal of the site.**
+   - For **English/German** content: [@AmazonFBAGirl](https://www.youtube.com/@AmazonFBAGirl)
+   - For **Russian** content: [@Amazon_FBA_Seller](https://www.youtube.com/@Amazon_FBA_Seller) ("Amazon FBA на русском")
 2. **Join the newsletter.** Framing: "rare letters, not spam" — only sent when there is something genuinely worth sending.
 3. **Connect on [LinkedIn](https://www.linkedin.com/in/rubtcova/).** Real name, real profile, real seller.
 4. **Check out the [Daniks brand](https://a.co/d/02NCH0TJ) on Amazon** — as proof she actually sells, not as a product push.

@@ -282,7 +282,7 @@ Primary keyword MUST appear in:
 ### Authoritativeness
 - Author attribution: `author: "FBA Girl"` in frontmatter.
 - Cite Amazon's own documentation when claiming how a program/fee/rule works.
-- Link to the @AmazonFBAGirl YouTube channel where the author is visibly teaching the topic.
+- Link to the YouTube channel where the author is visibly teaching the topic: @AmazonFBAGirl for EN/DE content, @Amazon_FBA_Seller for RU content.
 
 ### Trustworthiness
 - No overpromising ("make six figures in 90 days").
