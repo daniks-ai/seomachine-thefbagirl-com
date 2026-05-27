@@ -591,6 +591,47 @@ All German content lives under `/de/`. When writing German articles, link to Ger
 - `/de/blog/amazon-fba-kategorien-vermeiden-2026` — categories to avoid
 - `/de/tutorials/produktrecherche-masterclass` — masterclass tutorial
 
+### Wildberries vs Ozon: где выгоднее продавать в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/wildberries-vs-ozon-2026
+- **Primary Topic**: Head-to-head comparison of Wildberries and Ozon for Russian sellers — commissions (WB 24-28% all-in, Ozon 20-30%), advertising models (CPM vs CPC), margins, FBO/FBS, audience differences, traffic volume.
+- **When to Link**: Russian content about choosing between WB and Ozon, marketplace comparison, commission discussions, advertising strategy on Russian marketplaces.
+- **Anchor Text Examples**: "Wildberries vs Ozon сравнение", "где выгоднее продавать WB или Ozon", "комиссии Wildberries и Ozon", "какой маркетплейс выбрать в 2026"
+
+### FBO vs FBS на Wildberries и Ozon: что выбрать (RU)
+- **URL**: https://thefbagirl.com/ru/blog/fbo-vs-fbs-wildberries-ozon-2026
+- **Primary Topic**: FBO vs FBS logistics comparison for both WB and Ozon — fees, storage costs, ranking impact, hybrid strategy, when to use each model. Amazon FBA/FBM parallels.
+- **When to Link**: Russian logistics content, fulfillment discussions, beginner guides mentioning warehousing, FBO/FBS questions, scaling discussions.
+- **Anchor Text Examples**: "FBO или FBS на Wildberries", "FBO vs FBS Ozon", "какую схему логистики выбрать", "фулфилмент на маркетплейсах"
+
+### Реальный P&L продавца Wildberries: разбор цифр (RU)
+- **URL**: https://thefbagirl.com/ru/blog/realnyj-pnl-prodavca-wildberries-2026
+- **Primary Topic**: Real Wildberries seller P&L breakdown — two examples (home goods 28.7% margin vs clothing 3.4% margin), cost structure, returns impact, advertising spend, unit economics calculator, comparison with Amazon margins.
+- **When to Link**: Russian content about WB profitability, margins, unit economics, "сколько зарабатывают на Wildberries", financial planning for marketplaces, return rate discussions.
+- **Anchor Text Examples**: "P&L продавца Wildberries", "сколько зарабатывают на WB", "маржа на Wildberries", "юнит-экономика Wildberries"
+
+### PPC-реклама на Wildberries и Ozon: гайд для селлера (RU)
+- **URL**: https://thefbagirl.com/ru/blog/ppc-reklama-wildberries-ozon-2026
+- **Primary Topic**: Advertising guide for WB (CPM model) and Ozon (CPC model) — budgets, formats, common mistakes, Amazon PPC comparison table, recommendation by experience level.
+- **When to Link**: Russian advertising content, PPC discussions for Russian marketplaces, beginner launch guides, marketing budget articles, ACoS/ДРР discussions.
+- **Anchor Text Examples**: "реклама на Wildberries", "PPC на Ozon", "как рекламировать на маркетплейсах", "CPM vs CPC маркетплейсы"
+
+### Как выйти на Wildberries из-за рубежа в 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/wildberries-iz-za-rubezha-2026
+- **Primary Topic**: Guide to selling on WB from abroad — supported countries, three schemes (own entity in KZ, own entity in RU, agent model), fulfillment operators, startup budget 70-145K₽, tax considerations, common mistakes.
+- **When to Link**: Russian content about WB for non-residents, CIS seller guides, Kazakhstan/Georgia/Cyprus business, international marketplace expansion, Amazon-to-WB transition content.
+- **Anchor Text Examples**: "Wildberries из-за рубежа", "продавать на WB из Казахстана", "выход на Wildberries нерезидент", "Wildberries для иностранцев"
+
+**When writing about Wildberries/Ozon in Russian**, link to:
+- `/ru/blog/wildberries-vs-ozon-2026` — WB vs Ozon comparison
+- `/ru/blog/fbo-vs-fbs-wildberries-ozon-2026` — FBO vs FBS guide
+- `/ru/blog/realnyj-pnl-prodavca-wildberries-2026` — WB P&L breakdown
+- `/ru/blog/ppc-reklama-wildberries-ozon-2026` — advertising guide
+- `/ru/blog/wildberries-iz-za-rubezha-2026` — selling on WB from abroad
+- `/ru/blog/amazon-fba-vs-wildberries-vs-ozon-2026` — three-way comparison
+- `/ru/blog/hudsie-tovary-dlja-starta-marketplejsy` — worst products to sell
+- `/ru/blog/luchshie-nishi-marketplejsy-2026` — best niches
+- `/ru/blog/zakupochnaja-cena-marketplejsy` — purchase price myth
+
 ---
 
 *Note: Update this map whenever a new article is published. The map powers internal linking across the entire SEO Machine content pipeline — stale or missing entries mean missed linking opportunities.*
