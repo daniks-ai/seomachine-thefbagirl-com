@@ -195,6 +195,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any PPC content, keyword research, negative keyword discussions, campaign optimization, auto-to-manual campaign workflow, ad spend waste.
 - **Anchor Text Examples**: "Search Term Report guide", "how to read your STR", "the four-bucket system", "keyword harvesting from auto campaigns", "find wasted ad spend"
 
+### Amazon FBA Profit in 2026: Where Your Money Goes
+- **URL**: https://thefbagirl.com/blog/amazon-fba-profit-guide-2026
+- **Primary Topic**: Where Amazon FBA profit disappears — real $30 product cost breakdown, Revenue Vanity Trap concept, break-even ACoS formula, 7-step profit audit checklist. Pairs with YouTube video `g1pQlss22uY`.
+- **When to Link**: Any profitability/unit economics content, beginner articles, PPC strategy where margins matter, "is Amazon FBA dead" discussions, fee-change impact analysis, financial modeling content.
+- **Anchor Text Examples**: "where Amazon FBA profit disappears", "the Revenue Vanity Trap", "7-step profit audit checklist", "Amazon FBA profit breakdown", "break-even ACoS calculator"
+
 ### Amazon FBA Startup Cost 2026: Full Line-Item Breakdown
 - **URL**: https://thefbagirl.com/blog/amazon-fba-startup-cost-2026
 - **Primary Topic**: Amazon FBA startup cost — full line-item budget covering inventory, samples, shipping, Brand Registry/trademark, photography, seller account, UPC/GS1, PPC launch budget, Amazon Vine, tools, and accounting. Conservative planning estimate: $3,745 for first private label product.
@@ -260,6 +266,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **Primary Topic**: Russian PPC beginner guide — three campaign types, exact launch structure (auto + broad + exact), $35-50/day budget, ACoS targets, four-bucket optimization system, 5 common mistakes.
 - **When to Link**: Russian PPC content, beginner guides mentioning advertising, launch strategy articles in Russian, ACoS discussions.
 - **Anchor Text Examples**: "PPC стратегия для новичков", "как запустить рекламу на Amazon", "гайд по Amazon PPC", "структура кампаний Amazon"
+
+### Реклама на Amazon: полный гайд по PPC для продавцов (RU)
+- **URL**: https://thefbagirl.com/ru/blog/amazon-ppc-reklama-polnyj-gajd-2026
+- **Primary Topic**: Comprehensive Russian PPC guide — marketplace revenue models (CPM/CPC/CPA), three ad types (Sponsored Products/Display/Brands), ACoS/TACoS with category benchmarks, match types, keyword funnel (discovery to exact), product targeting, placements & multipliers, day-parting. Includes agency manipulation warning. Pairs with YouTube video `5mz-2CRc1AE`.
+- **When to Link**: Russian PPC content, ACoS/TACoS discussions, match type questions, product targeting articles, placement optimization, agency evaluation, beginner-to-intermediate PPC education.
+- **Anchor Text Examples**: "полный гайд по PPC", "реклама на Amazon", "как работает PPC на Amazon", "ACoS и TACoS разница", "типы соответствия Amazon PPC"
 
 ### Оптимизация листинга на Amazon: полный гайд (RU)
 - **URL**: https://thefbagirl.com/ru/blog/optimizacija-listinga-amazon-2026
@@ -413,10 +425,17 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - `/tutorials/setting-up-ppc-campaigns` — the step-by-step setup
 - `/reviews/helium-10-review` — keyword research tool
 
+**When writing about Amazon Seller Tools / Alternatives**, link to:
+- `/blog/helium-10-alternatives-2026` — 7 Helium 10 alternatives comparison (EN)
+- `/de/blog/helium-10-alternativen-2026` — Helium 10 Alternativen (DE)
+- `/ru/blog/helium-10-alternativy-2026` — альтернативы Helium 10 (RU)
+- `/blog/best-amazon-ppc-tools-2026` — PPC tool comparison (7 tools ranked)
+
 **When writing about Product Research**, link to:
 - `/tutorials/product-research-masterclass` — structured framework
 - `/reviews/helium-10-review` — Black Box product research
 - `/reviews/jungle-scout-review` — Jungle Scout comparison
+- `/blog/helium-10-alternatives-2026` — alternatives to Helium 10 for research
 - `/blog/how-to-launch-your-first-amazon-product` — follow-on to research
 
 **When writing about Listing Optimization**, link to:
