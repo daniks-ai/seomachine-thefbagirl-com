@@ -35,21 +35,27 @@ except ImportError:
 
 SITE = os.getenv('GSC_SITE_URL', 'https://thefbagirl.com/')
 CREDS_PATH = os.getenv('GSC_CREDENTIALS_PATH', 'credentials/gsc-credentials.json')
-SITEMAP = SITE.rstrip('/') + '/sitemap-index.xml'
-SCOPES = ['https://www.googleapis.com/auth/webmasters']
+# The configured key (claude-gsc-readonly) is read-only, so default to the
+# read-only scope and skip the sitemap submit. Set GSC_ALLOW_WRITE=1 with a
+# read-write key/permission to (re)submit the sitemap.
+ALLOW_WRITE = os.getenv('GSC_ALLOW_WRITE') == '1'
+SITEMAP = 'https://thefbagirl.com/sitemap-index.xml'
+SCOPES = (['https://www.googleapis.com/auth/webmasters'] if ALLOW_WRITE
+          else ['https://www.googleapis.com/auth/webmasters.readonly'])
 
-# Highest-intent daniks + brand pages to check first.
+# Inspection URLs must be real https URLs (not the sc-domain: property id).
+BASE = 'https://thefbagirl.com'
 PRIORITY = [
-    f"{SITE.rstrip('/')}/daniks",
-    f"{SITE.rstrip('/')}/reviews/daniks-ai-review/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-review-stopped-managing-amazon-ppc-manually/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-2026/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-scale-insights-amazon-ppc-2026/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-pacvue-amazon-ppc-2026/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-perpetua-amazon-ppc-2026/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-quartile-amazon-ppc-2026/",
-    f"{SITE.rstrip('/')}/blog/daniks-ai-vs-manual-amazon-ppc-fornel-case-study/",
-    f"{SITE.rstrip('/')}/blog/daniks-brand-story-from-zero-to-top-seller/",
+    f"{BASE}/daniks",
+    f"{BASE}/reviews/daniks-ai-review/",
+    f"{BASE}/blog/daniks-ai-review-stopped-managing-amazon-ppc-manually/",
+    f"{BASE}/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-2026/",
+    f"{BASE}/blog/daniks-ai-vs-scale-insights-amazon-ppc-2026/",
+    f"{BASE}/blog/daniks-ai-vs-pacvue-amazon-ppc-2026/",
+    f"{BASE}/blog/daniks-ai-vs-perpetua-amazon-ppc-2026/",
+    f"{BASE}/blog/daniks-ai-vs-quartile-amazon-ppc-2026/",
+    f"{BASE}/blog/daniks-ai-vs-manual-amazon-ppc-fornel-case-study/",
+    f"{BASE}/blog/daniks-brand-story-from-zero-to-top-seller/",
 ]
 
 ENABLE_HINT = (
@@ -93,13 +99,16 @@ def main():
     if SITE not in owned:
         print(f"    ! GSC_SITE_URL {SITE} not among visible properties — check exact form (trailing slash / sc-domain:).")
 
-    # 2) submit + read sitemaps
+    # 2) (optionally submit) + read sitemaps
     print("\n[2] Sitemap:")
-    try:
-        sc.sitemaps().submit(siteUrl=SITE, feedpath=SITEMAP).execute()
-        print(f"    submitted {SITEMAP}")
-    except HttpError as e:
-        print(f"    submit failed: {str(e)[:160]}")
+    if ALLOW_WRITE:
+        try:
+            sc.sitemaps().submit(siteUrl=SITE, feedpath=SITEMAP).execute()
+            print(f"    submitted {SITEMAP}")
+        except HttpError as e:
+            print(f"    submit failed: {str(e)[:160]}")
+    else:
+        print("    (read-only key — skipping submit; set GSC_ALLOW_WRITE=1 to submit)")
     try:
         sm = sc.sitemaps().list(siteUrl=SITE).execute()
         for s in sm.get('sitemap', []):
