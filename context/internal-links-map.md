@@ -698,6 +698,80 @@ All German content lives under `/de/`. When writing German articles, link to Ger
 - `/ru/blog/luchshie-nishi-marketplejsy-2026` — best niches
 - `/ru/blog/zakupochnaja-cena-marketplejsy` — purchase price myth
 
+## Brazil (pt-BR) — /br/
+
+### Core Pages (br)
+- `/br/` — homepage (pt-BR)
+- `/br/about` — Sobre a Ekaterina
+- `/br/daniks` — Daniks.AI pre-sell hub (conversion funnel)
+- `/br/tools` — Ferramentas recomendadas
+- `/br/blog` · `/br/tutorials` · `/br/reviews` · `/br/news` · `/br/lifehacks` — collection indexes
+- `/br/newsletter` · `/br/contact` · `/br/search`
+
+### Key Blog Posts (br)
+Getting started (TOFU):
+- `/br/blog/como-comecar-amazon-fba-brasil-2026` — how to start (featured gateway)
+- `/br/blog/quanto-custa-amazon-fba-brasil-2026` — startup cost (R$)
+- `/br/blog/melhor-estrategia-amazon-fba-iniciantes-2026` — beginner strategy
+- `/br/blog/erros-amazon-fba-iniciantes-2026` — 10 mistakes
+- `/br/blog/como-achar-produtos-amazon-fba-2026` — product research
+
+Brazil-specific (local compliance/ops — no EN equivalent):
+- `/br/blog/imposto-importacao-nota-fiscal-amazon-brasil-2026` — import tax + Nota Fiscal
+- `/br/blog/cnpj-mei-simples-vender-amazon-brasil-2026` — CNPJ/MEI/Simples company setup
+- `/br/blog/mercado-livre-vs-amazon-brasil-2026` — Mercado Livre vs Amazon
+- `/br/blog/como-receber-pagamento-amazon-brasil-pix-2026` — Pix / payouts
+
+Listing & PPC (MOFU/BOFU → daniks.ai):
+- `/br/blog/como-otimizar-anuncio-amazon-brasil-2026` — listing optimization
+- `/br/blog/acos-amazon-o-que-e-como-reduzir-2026` — ACoS guide (Daniks.AI CTA)
+- `/br/blog/guia-amazon-ppc-brasil-2026` — PPC pillar (Daniks.AI CTA)
+- `/br/blog/melhores-ferramentas-amazon-ppc-2026` — best PPC tools (Daniks.AI #1)
+- `/br/reviews/daniks-ai-analise` — Daniks.AI review
+
+### Brazil Cross-Linking Guidelines
+- Getting-started posts → link to the gateway (`como-comecar…`), cost (`quanto-custa…`), and entity (`cnpj-mei-simples…`).
+- PPC / BOFU posts (funnel to daniks.ai) → link to the pillar (`guia-amazon-ppc-brasil-2026`), `acos-amazon-o-que-e-como-reduzir-2026`, `melhores-ferramentas-amazon-ppc-2026`, `/br/reviews/daniks-ai-analise`, and the hub `/br/daniks`.
+- Local-ops posts (import tax, Pix, Mercado Livre) cross-link each other + the getting-started gateway.
+- CTA hierarchy: internal link → daniks.ai (via `getCompanyUrl()` UTM) → English @AmazonFBAGirl YouTube (videos subtitled).
+
+## Mexico (es-MX) — /mx/
+
+### Core Pages (mx)
+- `/mx/` — homepage (es-MX)
+- `/mx/about` — Acerca de Ekaterina
+- `/mx/daniks` — Daniks.AI pre-sell hub (conversion funnel)
+- `/mx/tools` — Herramientas recomendadas
+- `/mx/blog` · `/mx/tutorials` · `/mx/reviews` · `/mx/news` · `/mx/lifehacks` — collection indexes
+- `/mx/newsletter` · `/mx/contact` · `/mx/search`
+
+### Key Blog Posts (mx)
+Getting started (TOFU):
+- `/mx/blog/como-empezar-amazon-fba-mexico-2026` — how to start (featured gateway)
+- `/mx/blog/cuanto-cuesta-amazon-fba-mexico-2026` — startup cost (MXN)
+- `/mx/blog/mejor-estrategia-amazon-fba-principiantes-2026` — beginner strategy
+- `/mx/blog/errores-amazon-fba-principiantes-2026` — 10 mistakes
+- `/mx/blog/como-encontrar-productos-amazon-fba-2026` — product research
+
+Mexico-specific (local compliance/ops — no EN equivalent):
+- `/mx/blog/rfc-sat-impuestos-vender-amazon-mexico-2026` — RFC/SAT taxes + facturación
+- `/mx/blog/como-importar-china-eua-amazon-mexico-2026` — importing from China/US (aranceles, pedimento)
+- `/mx/blog/mercado-libre-vs-amazon-mexico-2026` — Mercado Libre vs Amazon
+- `/mx/blog/vender-amazon-estados-unidos-mexico-cross-border-2026` — US+MX cross-border (NARF/T-MEC)
+
+Listing & PPC (MOFU/BOFU → daniks.ai):
+- `/mx/blog/como-optimizar-listado-amazon-mexico-2026` — listing optimization
+- `/mx/blog/acos-amazon-que-es-como-bajarlo-2026` — ACoS guide (Daniks.AI CTA)
+- `/mx/blog/guia-amazon-ppc-mexico-2026` — PPC pillar (Daniks.AI CTA)
+- `/mx/blog/mejores-herramientas-amazon-ppc-2026` — best PPC tools (Daniks.AI #1)
+- `/mx/reviews/daniks-ai-resena` — Daniks.AI review
+
+### Mexico Cross-Linking Guidelines
+- Getting-started posts → link to the gateway (`como-empezar…`), cost (`cuanto-cuesta…`), and taxes (`rfc-sat-impuestos…`).
+- PPC / BOFU posts (funnel to daniks.ai) → link to the pillar (`guia-amazon-ppc-mexico-2026`), `acos-amazon-que-es-como-bajarlo-2026`, `mejores-herramientas-amazon-ppc-2026`, `/mx/reviews/daniks-ai-resena`, and the hub `/mx/daniks`.
+- Local-ops posts (RFC/SAT, importing, Mercado Libre, cross-border) cross-link each other + the getting-started gateway.
+- CTA hierarchy: internal link → daniks.ai (via `getCompanyUrl()` UTM) → English @AmazonFBAGirl YouTube (videos subtitled).
+
 ---
 
 *Note: Update this map whenever a new article is published. The map powers internal linking across the entire SEO Machine content pipeline — stale or missing entries mean missed linking opportunities.*
