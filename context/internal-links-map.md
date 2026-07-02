@@ -153,6 +153,18 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any PPC strategy or PPC tool article, "which tool should I use" discussions, Daniks.AI mentions, articles comparing automation approaches, beginner content where readers ask about PPC tools, tool-stack articles.
 - **Anchor Text Examples**: "7 best Amazon PPC tools", "my PPC tool ranking", "the best PPC tools for 2026", "which Amazon PPC tool to choose", "PPC tool comparison"
 
+### Daniks.AI vs Competitor Comparisons (EN)
+- **URLs**:
+  - `/blog/daniks-ai-vs-perpetua-amazon-ppc-2026` — Daniks.AI vs Perpetua
+  - `/blog/daniks-ai-vs-pacvue-amazon-ppc-2026` — Daniks.AI vs Pacvue
+  - `/blog/daniks-ai-vs-quartile-amazon-ppc-2026` — Daniks.AI vs Quartile
+  - `/blog/daniks-ai-vs-teikametrics-amazon-ppc-2026` — Daniks.AI vs Teikametrics
+  - `/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-2026` — Daniks.AI vs Helium 10 Adtomic
+  - `/blog/daniks-ai-vs-scale-insights-amazon-ppc-2026` — Daniks.AI vs Scale Insights
+  - `/blog/daniks-ai-vs-ad-badger-amazon-ppc-2026` — Daniks.AI vs Ad Badger
+- **When to Link**: PPC tool comparison articles, "which PPC tool" discussions, Daniks.AI mentions, any article about a specific competitor tool. Also available in DE (`/de/blog/daniks-ai-vs-*-vergleich-2026`) and RU (`/ru/blog/daniks-ai-vs-*-sravnenie-2026`).
+- **Anchor Text Examples**: "Daniks.AI vs [Competitor] comparison", "how Daniks.AI compares to [Competitor]", "honest PPC tool comparison"
+
 ### Best Amazon FBA Strategy for Beginners in 2026
 - **URL**: https://thefbagirl.com/blog/best-amazon-fba-strategy-beginners-2026
 - **Primary Topic**: Two-phase beginner strategy — start with arbitrage/wholesale to learn Amazon mechanics, then transition to private label. Covers startup costs, product selection framework, pre-launch checklist.
@@ -243,6 +255,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Russian content about unit economics, profitability, margins, Amazon fees, financial planning, "сколько можно заработать" questions, realistic expectations content.
 - **Anchor Text Examples**: "реальный P&L Amazon-продавца", "сколько зарабатывает продавец Amazon", "разбор прибыли на Amazon", "юнит-экономика Amazon FBA"
 
+### FBA vs FBM: Which Fulfillment Model Should You Use?
+- **URL**: https://thefbagirl.com/blog/fba-vs-fbm-which-to-choose-2026
+- **Primary Topic**: FBA vs FBM head-to-head comparison — five-point scoring (shipping, fees, Prime, control, launch speed), AWD and Global Warehouse Distribution, when to use each model, hybrid approach. Pairs with YouTube video `L4Za73a094U`.
+- **When to Link**: Beginner content, logistics/fulfillment discussions, cost comparison articles, launch guides where fulfillment choice matters, any article mentioning prep centers or 3PL.
+- **Anchor Text Examples**: "FBA vs FBM comparison", "which fulfillment model to choose", "when to use FBM instead of FBA", "the five-point FBA vs FBM comparison", "FBA vs FBM guide"
+
 ### FBA vs FBM на Amazon: что выбрать в 2026 (RU)
 - **URL**: https://thefbagirl.com/ru/blog/fba-vs-fbm-chto-vybrat-2026
 - **Primary Topic**: Russian FBA vs FBM comparison — fulfillment fees, logistics, Buy Box, Prime badge, concrete $25 product example. Hybrid model explanation. Personal experience.
@@ -296,6 +314,18 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **Primary Topic**: Russian guide to 12 AI tools for Amazon sellers — PPC automation (Daniks.AI, Perpetua, Quartile, PacVue), listing optimization (Helium 10 AI, ChatGPT/Claude, Jungle Scout AI), analytics (SoStocked, Nozzle.ai), monitoring (Bindwise), research (Market Tracker 360, Perci.ai). Includes tool stack budget and 5 common mistakes.
 - **When to Link**: Russian content about Amazon tools, PPC automation, AI, listing optimization tools, Daniks.AI mentions, tool comparison articles in Russian.
 - **Anchor Text Examples**: "AI-инструменты для Amazon", "лучшие AI-инструменты для селлеров", "автоматизация PPC", "инструменты Amazon 2026"
+
+### Daniks.AI vs конкуренты — сравнения (RU)
+- **URLs**:
+  - `/ru/blog/daniks-ai-vs-perpetua-amazon-ppc-sravnenie-2026` — Daniks.AI vs Perpetua
+  - `/ru/blog/daniks-ai-vs-pacvue-amazon-ppc-sravnenie-2026` — Daniks.AI vs Pacvue
+  - `/ru/blog/daniks-ai-vs-quartile-amazon-ppc-sravnenie-2026` — Daniks.AI vs Quartile
+  - `/ru/blog/daniks-ai-vs-teikametrics-amazon-ppc-sravnenie-2026` — Daniks.AI vs Teikametrics
+  - `/ru/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-sravnenie-2026` — Daniks.AI vs Helium 10 Adtomic
+  - `/ru/blog/daniks-ai-vs-scale-insights-amazon-ppc-sravnenie-2026` — Daniks.AI vs Scale Insights
+  - `/ru/blog/daniks-ai-vs-ad-badger-amazon-ppc-sravnenie-2026` — Daniks.AI vs Ad Badger
+- **When to Link**: Русскоязычные PPC-статьи, сравнения инструментов, упоминания Daniks.AI, выбор PPC-софта.
+- **Anchor Text Examples**: "Daniks.AI vs [конкурент]", "сравнение PPC-инструментов", "честное сравнение PPC"
 
 ### Amazon FBA из Казахстана и Грузии в 2026 (RU)
 - **URL**: https://thefbagirl.com/ru/blog/amazon-fba-kazahstan-gruzija-2026
@@ -424,6 +454,13 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - `/blog/best-amazon-ppc-tools-2026` — PPC tool comparison (7 tools ranked)
 - `/tutorials/setting-up-ppc-campaigns` — the step-by-step setup
 - `/reviews/helium-10-review` — keyword research tool
+- `/blog/daniks-ai-vs-perpetua-amazon-ppc-2026` — Daniks.AI vs Perpetua (EN)
+- `/blog/daniks-ai-vs-pacvue-amazon-ppc-2026` — Daniks.AI vs Pacvue (EN)
+- `/blog/daniks-ai-vs-quartile-amazon-ppc-2026` — Daniks.AI vs Quartile (EN)
+- `/blog/daniks-ai-vs-teikametrics-amazon-ppc-2026` — Daniks.AI vs Teikametrics (EN)
+- `/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-2026` — Daniks.AI vs Helium 10 Adtomic (EN)
+- `/blog/daniks-ai-vs-scale-insights-amazon-ppc-2026` — Daniks.AI vs Scale Insights (EN)
+- `/blog/daniks-ai-vs-ad-badger-amazon-ppc-2026` — Daniks.AI vs Ad Badger (EN)
 
 **When writing about Amazon Seller Tools / Alternatives**, link to:
 - `/blog/helium-10-alternatives-2026` — 7 Helium 10 alternatives comparison (EN)
@@ -442,6 +479,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - `/blog/listing-optimization-tips-that-boost-sales` — the 7-tip guide
 - `/blog/amazon-virtual-bundles-guide` — bundles as listing strategy
 - `/reviews/helium-10-review` — Scribbles/Listing Builder
+
+**When writing about Logistics / Fulfillment**, link to:
+- `/blog/fba-vs-fbm-which-to-choose-2026` — FBA vs FBM comparison (EN)
+- `/ru/blog/fba-vs-fbm-chto-vybrat-2026` — FBA vs FBM comparison (RU)
+- `/blog/amazon-fba-inventory-management-2026` — storage fees, IPI score, restock timing
+- `/lifehacks/save-money-on-amazon-fba-fees` — fee-saving tactics
 
 **When writing about Profitability/Fees/Financials**, link to:
 - `/blog/the-fifty-cent-mistake-amazon-sellers` — True COGS framework
@@ -492,6 +535,7 @@ All German content lives under `/de/`. When writing German articles, link to Ger
 - `/de/blog/erstes-amazon-produkt-launchen-2026` — Erstes Amazon-Produkt launchen
 - `/de/blog/amazon-fba-setup-vor-produktrecherche` — 3 Schritte vor der Produktrecherche
 - `/de/blog/der-50-cent-fehler-amazon-seller` — Der 0,50-€-Fehler bei Amazon-Sellern
+- `/de/blog/amazon-fba-vs-fbm-deutschland-2026` — FBA vs FBM: Welches Fulfillment-Modell passt zu dir?
 
 ### Blog — Produktrecherche & Nischen (DE)
 
@@ -527,6 +571,9 @@ All German content lives under `/de/`. When writing German articles, link to Ger
 - `/de/blog/daniks-ai-vs-perpetua-amazon-ppc-vergleich-2026` — Daniks.AI vs Perpetua
 - `/de/blog/daniks-ai-vs-quartile-amazon-ppc-vergleich-2026` — Daniks.AI vs Quartile
 - `/de/blog/daniks-ai-vs-teikametrics-amazon-ppc-vergleich-2026` — Daniks.AI vs Teikametrics
+- `/de/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-vergleich-2026` — Daniks.AI vs Helium 10 Adtomic
+- `/de/blog/daniks-ai-vs-scale-insights-amazon-ppc-vergleich-2026` — Daniks.AI vs Scale Insights
+- `/de/blog/daniks-ai-vs-ad-badger-amazon-ppc-vergleich-2026` — Daniks.AI vs Ad Badger
 - `/de/blog/daniks-ai-vs-manuell-amazon-ppc-fornel-fallstudie` — Daniks.AI vs manuell: Fornel-Fallstudie
 - `/de/blog/ki-vs-agentur-amazon-ppc-fallstudie-basecamp-roasters` — KI vs Agentur: Basecamp Roasters
 - `/de/blog/ki-vs-manuell-amazon-ppc-fallstudie-tropeza-2024` — KI vs Manuell: Tropeza Fallstudie
