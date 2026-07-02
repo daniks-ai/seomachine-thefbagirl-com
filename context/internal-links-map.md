@@ -759,6 +759,12 @@ Mexico-specific (local compliance/ops — no EN equivalent):
 - `/mx/blog/mercado-libre-vs-amazon-mexico-2026` — Mercado Libre vs Amazon
 - `/mx/blog/vender-amazon-estados-unidos-mexico-cross-border-2026` — US+MX cross-border (NARF/T-MEC)
 
+Logística & tarifas cluster (published 2026-07-02, see `research/cluster-strategy-logistica-tarifas-amazon-mexico-2026-07-02.md`):
+- `/mx/blog/logistica-de-amazon-fba-mexico-2026` — **cluster pillar**: how FBA works + fee types (es name of FBA = "Logística de Amazon")
+- `/mx/blog/comisiones-amazon-mexico-tabla-2026` — referral fee table by category + 2026 fee changes
+- `/mx/blog/es-rentable-vender-en-amazon-mexico-2026` — honest profitability answer (featured-snippet target)
+- `/mx/blog/calculadora-amazon-fba-rentabilidad-2026` — revenue calculator walkthrough + net-margin framework (PPC cost line → ACoS guide → daniks funnel)
+
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/mx/blog/como-optimizar-listado-amazon-mexico-2026` — listing optimization
 - `/mx/blog/acos-amazon-que-es-como-bajarlo-2026` — ACoS guide (Daniks.AI CTA)
