@@ -80,11 +80,11 @@ def main():
 
     # C. Brand cluster
     print("\n=== C1. 'daniks' QUERIES 90d ===")
-    for r in run(s90, last, ['query'], 50, [{'dimension': 'query', 'operator': 'contains', 'expression': 'daniks'}]) or [['none']]:
-        if r == 'none':
-            print('  (none)')
-        else:
-            print(f"  {int(r['impressions']):>5} {int(r['clicks']):>3} pos{r['position']:>5.1f}  {r['keys'][0]}")
+    daniks_q = run(s90, last, ['query'], 50, [{'dimension': 'query', 'operator': 'contains', 'expression': 'daniks'}])
+    if not daniks_q:
+        print('  (none)')
+    for r in daniks_q:
+        print(f"  {int(r['impressions']):>5} {int(r['clicks']):>3} pos{r['position']:>5.1f}  {r['keys'][0]}")
     print("\n=== C2. 'daniks' PAGES 90d ===")
     for r in run(s90, last, ['page'], 50, [{'dimension': 'page', 'operator': 'contains', 'expression': 'daniks'}]):
         print(f"  {int(r['impressions']):>5} {int(r['clicks']):>3} pos{r['position']:>5.1f}  {short(r['keys'][0])}")

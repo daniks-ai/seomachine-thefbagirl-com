@@ -46,7 +46,7 @@ SCOPES = (['https://www.googleapis.com/auth/webmasters'] if ALLOW_WRITE
 # Inspection URLs must be real https URLs (not the sc-domain: property id).
 BASE = 'https://thefbagirl.com'
 PRIORITY = [
-    f"{BASE}/daniks",
+    f"{BASE}/daniks/",
     f"{BASE}/reviews/daniks-ai-review/",
     f"{BASE}/blog/daniks-ai-review-stopped-managing-amazon-ppc-manually/",
     f"{BASE}/blog/daniks-ai-vs-helium-10-adtomic-amazon-ppc-2026/",
