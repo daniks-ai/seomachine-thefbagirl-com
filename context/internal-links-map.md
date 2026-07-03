@@ -782,6 +782,8 @@ Logística & tarifas cluster (published 2026-07-02, see `research/cluster-strate
 - `/mx/blog/requisitos-para-vender-en-amazon-mexico-2026` — requirements checklist (→ rfc-sat, → crear-cuenta)
 - `/mx/blog/amazon-seller-central-mexico-crear-cuenta-2026` — Seller Central account creation walkthrough (targets "amazon seller central mexico" informational share)
 - `/mx/blog/fba-vs-fbm-amazon-mexico-2026` — FBA vs FBM decision framework (expands pillar's summary section)
+- `/mx/blog/como-enviar-inventario-almacenes-amazon-mexico-2026` — inbound shipments: plan de envío, FNSKU, prep (bridges como-importar's customs leg)
+- `/mx/blog/amazon-brand-registry-mexico-impi-2026` — Brand Registry + IMPI trademark (unlocks A+ → como-optimizar-listado)
 
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/mx/blog/como-optimizar-listado-amazon-mexico-2026` — listing optimization
