@@ -111,6 +111,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Any beginner-oriented content, "what not to do" framing, pre-launch checklists, product-research articles, post-mortem reviews.
 - **Anchor Text Examples**: "10 Amazon FBA mistakes beginners make", "the mistakes that cost beginners thousands", "FBA beginner pitfalls", "common Amazon FBA mistakes"
 
+### Amazon's 'Customer Obsession': What It Really Means for Sellers
+- **URL**: https://thefbagirl.com/blog/amazon-customer-obsession-sellers
+- **Primary Topic**: Why sellers are not Amazon's customer, service level as unit economics, cultural service expectations by marketplace, consumer terrorism / return abuse, protecting account-health metrics. Paired with video `57M1zv4h50Y`. Translations: `/de/blog/customer-obsession-amazon-seller-bedeutung`, `/br/blog/obsessao-pelo-cliente-amazon-vendedores`, `/mx/blog/obsesion-por-el-cliente-amazon-vendedores` (translationKey `amazon-customer-obsession-sellers`).
+- **When to Link**: Seller-mindset content, returns/refund-abuse discussions, account-health articles, buyer-messaging guides, marketplace-culture comparisons (US vs EU vs LATAM).
+- **Anchor Text Examples**: "what customer obsession really means for sellers", "you are not Amazon's customer", "pricing returns and buyer abuse into your margins"
+
 ### Amazon Product Research in 2026: 7 Unconventional Methods
 - **URL**: https://thefbagirl.com/blog/amazon-product-research-methods-2026
 - **Primary Topic**: Unconventional product research methods — Canton Fair catalog, AliExpress Dropshipping Center, one-star review mining, leech strategy, Kickstarter/Indiegogo, Reddit pain points, subscription boxes. Also covers small-MOQ testing tactics and probabilistic launch strategy.
@@ -542,6 +548,7 @@ All German content lives under `/de/`. When writing German articles, link to Ger
 - `/de/blog/amazon-fba-setup-vor-produktrecherche` — 3 Schritte vor der Produktrecherche
 - `/de/blog/der-50-cent-fehler-amazon-seller` — Der 0,50-€-Fehler bei Amazon-Sellern
 - `/de/blog/amazon-fba-vs-fbm-deutschland-2026` — FBA vs FBM: Welches Fulfillment-Modell passt zu dir?
+- `/de/blog/customer-obsession-amazon-seller-bedeutung` — Customer Obsession: Was das für Seller bedeutet (Video 57M1zv4h50Y)
 
 ### Blog — Produktrecherche & Nischen (DE)
 
@@ -721,6 +728,7 @@ Getting started (TOFU):
 - `/br/blog/melhor-estrategia-amazon-fba-iniciantes-2026` — beginner strategy
 - `/br/blog/erros-amazon-fba-iniciantes-2026` — 10 mistakes
 - `/br/blog/como-achar-produtos-amazon-fba-2026` — product research
+- `/br/blog/obsessao-pelo-cliente-amazon-vendedores` — customer obsession / seller mindset (video 57M1zv4h50Y)
 
 Brazil-specific (local compliance/ops — no EN equivalent):
 - `/br/blog/imposto-importacao-nota-fiscal-amazon-brasil-2026` — import tax + Nota Fiscal
@@ -758,6 +766,7 @@ Getting started (TOFU):
 - `/mx/blog/mejor-estrategia-amazon-fba-principiantes-2026` — beginner strategy
 - `/mx/blog/errores-amazon-fba-principiantes-2026` — 10 mistakes
 - `/mx/blog/como-encontrar-productos-amazon-fba-2026` — product research
+- `/mx/blog/obsesion-por-el-cliente-amazon-vendedores` — customer obsession / seller mindset (video 57M1zv4h50Y)
 
 Mexico-specific (local compliance/ops — no EN equivalent):
 - `/mx/blog/rfc-sat-impuestos-vender-amazon-mexico-2026` — RFC/SAT taxes + facturación
