@@ -225,6 +225,12 @@ The site is an Astro 6 static site with five content collections: `blog`, `tutor
 - **When to Link**: Russian-language content about starting Amazon FBA, budget planning, beginner guides in Russian.
 - **Anchor Text Examples**: "сколько стоит начать Amazon FBA", "стартовый бюджет Amazon FBA", "реальный бюджет запуска", "стоимость запуска на Amazon"
 
+### Расходы селлера на Amazon: полный чек-лист запуска 2026 (RU)
+- **URL**: https://thefbagirl.com/ru/blog/rashody-sellera-amazon-zapusk-2026
+- **Primary Topic**: Russian-language cost line-item checklist for launching on Amazon in 2026 — research software, samples, certificates, purchase negotiation, customization/packaging, inspections (×3), AI photos/listing, freight, PPC (15–25% ACoS), Vine ($200/30 units). Summary table with three budgets: $3,000–5,000 / $7,000–12,000 / $15,000+. Pairs with RU YouTube video `l3KBtarsJRI` (@Amazon_FBA_Seller).
+- **When to Link**: Russian content about hidden/overlooked launch costs, inspections, certificates, samples, Vine budgeting, "сколько закладывать на рекламу" questions. Complements (does NOT replace) skolko-stoit-amazon-fba-2026, which owns budget tiers and monthly costs.
+- **Anchor Text Examples**: "расходы селлера на Amazon", "полный чек-лист расходов на запуск", "скрытые расходы при запуске на Amazon", "все статьи расходов селлера"
+
 ### Как начать продавать на Amazon FBA с нуля (RU)
 - **URL**: https://thefbagirl.com/ru/blog/kak-nachat-prodavat-amazon-fba-2026
 - **Primary Topic**: Complete Russian-language beginner guide to starting on Amazon FBA — 7-step process from marketplace choice to PPC launch. Covers company registration, product research, supplier sourcing, listing creation, advertising. Budget breakdown $3,000-5,000.
@@ -764,6 +770,9 @@ Logística & tarifas cluster (published 2026-07-02, see `research/cluster-strate
 - `/mx/blog/comisiones-amazon-mexico-tabla-2026` — referral fee table by category + 2026 fee changes
 - `/mx/blog/es-rentable-vender-en-amazon-mexico-2026` — honest profitability answer (featured-snippet target)
 - `/mx/blog/calculadora-amazon-fba-rentabilidad-2026` — revenue calculator walkthrough + net-margin framework (PPC cost line → ACoS guide → daniks funnel)
+- `/mx/blog/requisitos-para-vender-en-amazon-mexico-2026` — requirements checklist (→ rfc-sat, → crear-cuenta)
+- `/mx/blog/amazon-seller-central-mexico-crear-cuenta-2026` — Seller Central account creation walkthrough (targets "amazon seller central mexico" informational share)
+- `/mx/blog/fba-vs-fbm-amazon-mexico-2026` — FBA vs FBM decision framework (expands pillar's summary section)
 
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/mx/blog/como-optimizar-listado-amazon-mexico-2026` — listing optimization
