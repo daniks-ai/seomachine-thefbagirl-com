@@ -57,8 +57,8 @@ class ContentLengthComparator:
                         competitor_lengths.append({
                             'position': i + 1,
                             'url': url,
-                            'domain': result.get('domain', ''),
-                            'title': result.get('title', '')[:100],
+                            'domain': result.get('domain') or '',
+                            'title': (result.get('title') or '')[:100],
                             'word_count': word_count
                         })
 

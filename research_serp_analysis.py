@@ -93,9 +93,9 @@ def main():
 
     # Analyze each result
     for i, result in enumerate(organic_results, 1):
-        title = result.get('title', '')
-        url = result.get('url', '')
-        description = result.get('description', '')
+        title = result.get('title') or ''
+        url = result.get('url') or ''
+        description = result.get('description') or ''
         domain = extract_domain(url)
 
         analysis['domains'].append(domain)
@@ -479,7 +479,7 @@ def write_markdown_report(keyword: str, analysis: Dict[str, Any]):
         f.write(f"|----------|--------|--------------|------------|\n")
 
         for i, result in enumerate(analysis['top_results'], 1):
-            domain = extract_domain(result.get('url', ''))
+            domain = extract_domain(result.get('url') or '')
             content_type = analysis['content_types'][i-1] if i <= len(analysis['content_types']) else 'Unknown'
             word_count = analysis['word_counts'][i-1] if i <= len(analysis['word_counts']) else 'N/A'
             if isinstance(word_count, int):
