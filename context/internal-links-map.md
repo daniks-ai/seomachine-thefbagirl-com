@@ -813,4 +813,73 @@ Listing & PPC (MOFU/BOFU → daniks.ai):
 
 ---
 
+## UAE (en-AE) — /ae/
+
+English-language locale (NO Arabic — data-verified decision, see memory `mena-uae-expansion`). **Anti-folding rules apply:** /ae/ carries only UAE-specific content; generic evergreens live once on root EN and get linked, not copied; max ONE localized adaptation per EN evergreen (it lives here, not also in /sa/).
+
+### Core Pages (ae)
+- `/ae/` — homepage (en-AE)
+- `/ae/about` — About Ekaterina (has UAE-specific paragraph)
+- `/ae/daniks` — Daniks.AI pre-sell hub (conversion funnel; states Amazon.ae/sa support)
+- `/ae/tools` — Recommended tools
+- `/ae/blog` · `/ae/tutorials` · `/ae/reviews` · `/ae/news` · `/ae/lifehacks` — collection indexes
+- `/ae/newsletter` · `/ae/contact` · `/ae/search`
+
+### Key Blog Posts (ae)
+Pilot published 2026-07-03 (see `research/keyword-research-amazon-uae-pilot-2026-07-03.md`):
+
+Getting started / legal cluster (TOFU):
+- `/ae/blog/how-to-sell-on-amazon-uae-2026` — **pillar**: complete guide ("how to sell on amazon uae" 320 KD0)
+- `/ae/blog/amazon-seller-account-uae-requirements-2026` — documents + registration + rejections (4,400 nav tail)
+- `/ae/blog/ecommerce-license-dubai-uae-amazon-sellers-2026` — eTrader vs free zone vs mainland, expat restriction (1,300+880 KD0-21)
+- `/ae/blog/vat-uae-amazon-sellers-2026` — 5% VAT, AED 375k/187.5k thresholds, TRN reclaims (1,900/mo)
+
+Marketplace & logistics (TOFU/MOFU):
+- `/ae/blog/amazon-ae-vs-noon-sellers-2026` — Amazon vs noon comparison ("noon seller" 8,100/mo intercept)
+- `/ae/blog/how-to-sell-on-noon-uae-2026` — noon onboarding, FBN, Seller Lab
+- `/ae/blog/importing-china-to-uae-amazon-fba-2026` — Jebel Ali, 5% duty, free zone duty trap
+- `/ae/blog/amazon-fba-uae-how-it-works-2026` — FBA mechanics, Dubai FC, FBA vs FBM
+- `/ae/blog/amazon-fba-fees-calculator-uae-2026` — seven-line margin model in AED (calculator cluster ~800/mo)
+
+Adaptations & BOFU (→ daniks.ai):
+- `/ae/blog/amazon-ppc-strategy-uae-2026` — PPC for thin-data market + Arabic search terms (translationKey `amazon-ppc-strategy-guide-2026`)
+- `/ae/blog/amazon-product-research-uae-2026` — UAE research: noon cross-check, Dragon Mart, expat gaps (translationKey `amazon-product-research-methods-2026`)
+- `/ae/blog/expand-amazon-ae-to-amazon-sa-saudi-2026` — UAE→Saudi expansion bridge (links /sa/ section)
+- `/ae/reviews/daniks-ai-review-uae` — Daniks.AI review, Gulf edition (translationKey `daniks-ai-review`)
+
+### UAE Cross-Linking Guidelines
+- Getting-started posts → pillar (`how-to-sell-on-amazon-uae-2026`), licence, VAT.
+- Logistics/fees posts → importing ↔ fba-how-it-works ↔ fees-calculator triangle + pillar.
+- BOFU posts → `/ae/reviews/daniks-ai-review-uae`, `/ae/daniks`, `amazon-ppc-strategy-uae-2026`.
+- Saudi topics from /ae/ → `expand-amazon-ae-to-amazon-sa-saudi-2026`, then /sa/ pillar.
+- Generic evergreen mentions (COGS, global PPC, product research methods) → root EN articles (`/blog/the-fifty-cent-mistake-amazon-sellers/`, `/blog/amazon-ppc-strategy-guide-2026/`, `/blog/amazon-product-research-methods-2026/`), NOT /ae/ copies.
+- CTA hierarchy: internal link → daniks.ai (UTM campaigns `homepage-ae`/`about-ae`/`daniks-hub-ae`) → English @AmazonFBAGirl YouTube (no dubbing needed — English market).
+
+## Saudi Arabia (en-SA) — /sa/
+
+English-language locale. **Strictest anti-folding rules:** /sa/ carries ONLY Saudi-original content — no adaptations of EN evergreens at all (those may live in /ae/ or root EN only).
+
+### Core Pages (sa)
+- `/sa/` — homepage (en-SA)
+- `/sa/about` — About Ekaterina (has Saudi-specific paragraph)
+- `/sa/daniks` — Daniks.AI pre-sell hub (Amazon.sa-first copy)
+- `/sa/tools` · `/sa/blog` · `/sa/tutorials` · `/sa/reviews` · `/sa/news` · `/sa/lifehacks` · `/sa/newsletter` · `/sa/contact` · `/sa/search`
+
+### Key Blog Posts (sa)
+Starter pack published 2026-07-03 (SA volumes: seller central ksa 590, CR 320, VAT 140, customs 110):
+- `/sa/blog/how-to-sell-amazon-sa-saudi-arabia-2026` — **pillar**: Amazon.sa complete guide
+- `/sa/blog/commercial-registration-saudi-ecommerce-2026` — CR / foreign-seller / MISA decision tree
+- `/sa/blog/vat-saudi-arabia-zatca-amazon-sellers-2026` — 15% VAT, ZATCA, FATOORA e-invoicing, non-resident zero threshold
+- `/sa/blog/importing-china-saudi-arabia-amazon-2026` — SABER/SASO gate, HS-specific duties, Jeddah/Dammam/UAE-overland routes
+- `/sa/blog/amazon-sa-vs-noon-saudi-arabia-2026` — Amazon.sa vs noon (noon home market)
+
+### Saudi Cross-Linking Guidelines
+- All posts → pillar (`how-to-sell-amazon-sa-saudi-arabia-2026`); legal posts (CR, VAT) cross-link each other.
+- Import topics → SABER article; cross-border → `/ae/blog/expand-amazon-ae-to-amazon-sa-saudi-2026` and `/ae/blog/importing-china-to-uae-amazon-fba-2026` (UAE overland leg).
+- BOFU → `/sa/daniks` hub; no /sa/ Daniks review exists yet — link `/ae/reviews/daniks-ai-review-uae` or the hub.
+- CTA hierarchy: internal link → daniks.ai (UTM `homepage-sa`/`about-sa`/`daniks-hub-sa`) → English @AmazonFBAGirl YouTube.
+- Scale trigger: add more /sa/ articles when GSC shows KSA impressions on the starter pack (market's country tail is 5–10× smaller than UAE's — don't over-invest ahead of signal).
+
+---
+
 *Note: Update this map whenever a new article is published. The map powers internal linking across the entire SEO Machine content pipeline — stale or missing entries mean missed linking opportunities.*
