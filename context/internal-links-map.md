@@ -741,6 +741,12 @@ Logística & taxas cluster (Phase 1 published 2026-07-03, see `research/cluster-
 - `/br/blog/taxas-para-vender-na-amazon-brasil-2026` — fee table by category
 - `/br/blog/vale-a-pena-vender-na-amazon-2026` — honest profitability answer (featured-snippet target)
 - `/br/blog/calculadora-amazon-fba-brasil-2026` — revenue calculator walkthrough + net-margin framework (PPC → ACoS guide → daniks funnel)
+- `/br/blog/amazon-seller-central-brasil-criar-conta-2026` — Seller Central signup walkthrough (CPF vs CNPJ)
+- `/br/blog/fba-dba-fbm-amazon-brasil-2026` — FBA vs DBA vs FBM triangle (BR-unique DBA model)
+- `/br/blog/vender-na-amazon-sem-estoque-2026` — honest "no inventory" answer: KDP / compliant dropshipping / affiliates (880/mo KD4 gem)
+- `/br/blog/como-enviar-estoque-amazon-brasil-2026` — inbound shipments: plano de envio, FNSKU, NF-e de remessa (bridges imposto-importacao)
+- `/br/blog/registro-de-marca-inpi-amazon-brand-registry-2026` — INPI trademark + Brand Registry (unlocks A+ → como-otimizar-anuncio)
+- `/br/blog/como-vender-livros-ebooks-amazon-2026` — books/ebooks gem: KDP + physical + used (off-cluster)
 
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/br/blog/como-otimizar-anuncio-amazon-brasil-2026` — listing optimization
@@ -790,6 +796,7 @@ Logística & tarifas cluster (published 2026-07-02, see `research/cluster-strate
 - `/mx/blog/fba-vs-fbm-amazon-mexico-2026` — FBA vs FBM decision framework (expands pillar's summary section)
 - `/mx/blog/como-enviar-inventario-almacenes-amazon-mexico-2026` — inbound shipments: plan de envío, FNSKU, prep (bridges como-importar's customs leg)
 - `/mx/blog/amazon-brand-registry-mexico-impi-2026` — Brand Registry + IMPI trademark (unlocks A+ → como-optimizar-listado)
+- `/mx/blog/como-vender-libros-amazon-mexico-2026` — books gem: KDP + physical + used (off-cluster, KD1 keyword)
 
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/mx/blog/como-optimizar-listado-amazon-mexico-2026` — listing optimization
