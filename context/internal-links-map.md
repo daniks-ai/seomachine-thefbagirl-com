@@ -747,6 +747,7 @@ Logística & taxas cluster (Phase 1 published 2026-07-03, see `research/cluster-
 - `/br/blog/como-enviar-estoque-amazon-brasil-2026` — inbound shipments: plano de envio, FNSKU, NF-e de remessa (bridges imposto-importacao)
 - `/br/blog/registro-de-marca-inpi-amazon-brand-registry-2026` — INPI trademark + Brand Registry (unlocks A+ → como-otimizar-anuncio)
 - `/br/blog/como-vender-livros-ebooks-amazon-2026` — books/ebooks gem: KDP + physical + used (off-cluster)
+- `/br/blog/como-vender-amazon-eua-morando-brasil-2026` — BR→US cross-border: Amazon.com signup from Brazil, W-8BEN, payments, China→US logistics (Katia's own model)
 
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/br/blog/como-otimizar-anuncio-amazon-brasil-2026` — listing optimization
