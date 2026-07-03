@@ -736,6 +736,12 @@ Brazil-specific (local compliance/ops — no EN equivalent):
 - `/br/blog/mercado-livre-vs-amazon-brasil-2026` — Mercado Livre vs Amazon
 - `/br/blog/como-receber-pagamento-amazon-brasil-pix-2026` — Pix / payouts
 
+Logística & taxas cluster (Phase 1 published 2026-07-03, see `research/cluster-strategy-logistica-taxas-amazon-brasil-2026-07-03.md`):
+- `/br/blog/logistica-da-amazon-fba-brasil-2026` — **cluster pillar**: how FBA works + fee types + zero-commission promo
+- `/br/blog/taxas-para-vender-na-amazon-brasil-2026` — fee table by category
+- `/br/blog/vale-a-pena-vender-na-amazon-2026` — honest profitability answer (featured-snippet target)
+- `/br/blog/calculadora-amazon-fba-brasil-2026` — revenue calculator walkthrough + net-margin framework (PPC → ACoS guide → daniks funnel)
+
 Listing & PPC (MOFU/BOFU → daniks.ai):
 - `/br/blog/como-otimizar-anuncio-amazon-brasil-2026` — listing optimization
 - `/br/blog/acos-amazon-o-que-e-como-reduzir-2026` — ACoS guide (Daniks.AI CTA)
