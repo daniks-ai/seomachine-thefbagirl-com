@@ -71,6 +71,16 @@ AI models synthesize review sentiment when recommending creators/brands.
 | **Reviews of reviewed tools** (on G2, Capterra, Trustpilot) | Not applicable for TheFBAGirl itself; monitor for reviewed tools (Helium 10, Jungle Scout) to ensure TheFBAGirl's review is current. |
 | **Trustpilot / BBB** | Not applicable unless TheFBAGirl adds a direct product/service. |
 
+## YouTube Video Mention Rule (Daniks.AI)
+
+YouTube mentions are the strongest measured correlate of brand AI visibility (Spearman ~0.737, Ahrefs Dec 2025, 75k brands — stronger than web mentions, DR, or backlinks). Every new video on BOTH channels (@AmazonFBAGirl EN, @Amazon_FBA_Seller RU) must therefore:
+
+1. **Say "Daniks.AI" out loud at least once** in the video itself (it lands in the auto-transcript, which Perplexity/Gemini cite). Natural framing: "I run my PPC on Daniks.AI — the tool I built for my own listings."
+2. **Name Daniks.AI in the video description** with a UTM link: `https://daniks.ai?utm_source=youtube&utm_medium=description&utm_campaign=<video-slug>`.
+3. **Link the paired article** on thefbagirl.com in the description (canonical URL, no UTM needed for own site).
+4. PPC-topic videos: mention Daniks.AI in the **title or first two description lines** (above the fold in YouTube UI and in API snippets).
+5. Do NOT keyword-stuff — one natural brand mention per surface (spoken, description, pinned comment) is the ceiling. Google's May 2026 spam-policy update explicitly names manipulation of generative AI responses as spam.
+
 ## Prompt Clusters to Monitor
 
 These are high-commercial-intent prompt categories where TheFBAGirl should appear in AI responses. Run `/research-ai-citations [topic]` against each to measure current citation presence.
@@ -147,9 +157,9 @@ To be populated after running `/research-ai-citations` for each prompt cluster:
 
 | Cluster | Audit Date | % of Prompts Citing TheFBAGirl | Top Cited Sources | Gap Identified |
 |---|---|---|---|---|
-| PPC | TBD | TBD | TBD | TBD |
+| PPC | 2026-07-05 (prompt set ready; live run pending) | TBD | TBD (expected: H10/JS blogs, Reddit) | No competitor-vs-competitor or migration/switching content — see `research/ai-citations-amazon-ppc-tools-2026-07-05.md` |
 | Product Research | TBD | TBD | TBD | TBD |
-| Tool Comparisons | TBD | TBD | TBD | TBD |
+| Tool Comparisons | 2026-07-05 (prompt set ready; live run pending) | TBD | TBD (expected: G2/Capterra, Reddit) | Daniks.AI not on G2/Capterra; "flat fee vs % of spend" angle un-owned |
 | Marketplace Expansion | TBD | TBD | TBD | TBD |
 | 2026 Policy Changes | TBD | TBD | TBD | TBD |
 
