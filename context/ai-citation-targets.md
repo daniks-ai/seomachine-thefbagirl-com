@@ -157,9 +157,9 @@ To be populated after running `/research-ai-citations` for each prompt cluster:
 
 | Cluster | Audit Date | % of Prompts Citing TheFBAGirl | Top Cited Sources | Gap Identified |
 |---|---|---|---|---|
-| PPC | 2026-07-05 (prompt set ready; live run pending) | TBD | TBD (expected: H10/JS blogs, Reddit) | No competitor-vs-competitor or migration/switching content — see `research/ai-citations-amazon-ppc-tools-2026-07-05.md` |
+| PPC | 2026-07-06 (Gemini done; ChatGPT/PPX pending) | 0% (0/15 Gemini) | Gemini: capterra, g2, softwareadvice, smartscout | No competitor-vs-competitor or migration/switching content — see `research/ai-citations-amazon-ppc-tools-2026-07-05.md` |
 | Product Research | TBD | TBD | TBD | TBD |
-| Tool Comparisons | 2026-07-05 (prompt set ready; live run pending) | TBD | TBD (expected: G2/Capterra, Reddit) | Daniks.AI not on G2/Capterra; "flat fee vs % of spend" angle un-owned |
+| Tool Comparisons | 2026-07-06 (Gemini done; ChatGPT/PPX pending) | 0% TheFBAGirl; Daniks.AI named in 4/15 | g2.com + trustpilot cited for "Daniks.AI review" (verify profiles exist!); youtube.com for vs-prompts | Daniks absent from "Perpetua alternatives" / "flat fee" / "switching from agency" answers — planned content queue targets exactly these |
 | Marketplace Expansion | TBD | TBD | TBD | TBD |
 | 2026 Policy Changes | TBD | TBD | TBD | TBD |
 
