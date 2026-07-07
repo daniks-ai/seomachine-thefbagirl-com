@@ -325,6 +325,8 @@ print(f'Normalized {out[\"word_count\"]} words to {out_path}')
 
 The rest of the pipeline (Steps 2–14) runs identically in both modes. The key difference: in Mode B, every draft and every agent report must frontmatter-set `youtubeVideoId: "$VIDEO_ID"` and `youtubeVideoTitle: "[raw title]"`, and the article body must reference the video ("Watch the full walkthrough in the video above") in the natural place(s) the voice guide specifies.
 
+**Video language**: if the source video is Russian (channel @Amazon_FBA_Seller / any non-English video), the frontmatter must also set `youtubeVideoLang: ru`. Without it the site treats the video as English and demotes it from the article hero to a small end-of-post source card on `/ru/` pages (language-aware placement, see the target repo's `PostLayout.astro`). English videos need no field (`en` is the default).
+
 ---
 
 ### Step 2: SERP research via DataForSEO
@@ -383,7 +385,7 @@ Hard requirements:
   - `category` must match the collection's enum exactly
   - `coverImage: ./images/[slug].jpg`
   - `coverImageAlt` (≤125 chars, keyword natural)
-  - `youtubeVideoId` + `youtubeVideoTitle` if a matching video exists
+  - `youtubeVideoId` + `youtubeVideoTitle` if a matching video exists (+ `youtubeVideoLang: ru` when the video is Russian)
   - `author: "FBA Girl"`
   - `affiliateDisclosure: true` for reviews collection or any article with affiliate links
 - **Direct-answer-first**: First 1–2 sentences directly answer the target query (AI SEO). Narrative hook comes after.
