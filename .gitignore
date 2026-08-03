@@ -116,3 +116,10 @@ google-analytics-credentials.json
 # Claude Code local artifacts (machine-specific)
 .claude/worktrees/
 .claude/launch.json
+
+# Outreach lead data (PII — never commit)
+outreach/data/
+outreach/kdp/data/
+outreach/influencers-en/
+outreach/influencers-es/
+outreach/influencers-de/
