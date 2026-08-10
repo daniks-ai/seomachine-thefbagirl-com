@@ -49,6 +49,25 @@ EXCLUDE_EMAILS = {
     "hellosingapore@tugagency.com", "hellotoronto@tugagency.com",
     "hellonewyork@tugagency.com", "hellolondon@tugagency.com",
     "helloberlin@tugagency.com",
+    # non-AU office inboxes of global holdings
+    "communications.china@groupm.com", "contact.thailand@groupm.com",
+    "hello.groupmsweden@groupm.com",
+    "careers@choosedigital.com.au", "careers@connectedm.com.au",
+    "sponsorship@marginmedia.com.au",
+}
+
+# whole domains mis-attributed to AU in the layer masters (checked 2026-08-10):
+# adage.com = Ad Age magazine journalists; sevenatoms = US agency;
+# commerixsystems = SERP artifact; gocake.shop = cake shop, not an agency
+DROP_DOMAINS = {"adage.com", "sevenatoms.com", "commerixsystems.com", "gocake.shop"}
+
+# master rows carry SERP/GMaps page titles as company names — fix or blank
+# (blank -> Instantly falls back to {{companyName|your agency}})
+COMPANY_FIX = {
+    "creativecircuit.com.au": "Creative Circuit",
+    "merge.com.au": "Merge",
+    "them.com.au": "THEM Advertising",
+    "amazoniac.agency": "",
 }
 
 
@@ -135,15 +154,18 @@ def main():
             if r["country"] != "AU":
                 continue
             e = clean_email(r["email"])
-            if not e or e in seen:
+            if not e or e in seen or e in EXCLUDE_EMAILS:
+                continue
+            dom = builder.domain_of(e)
+            if dom in DROP_DOMAINS:
                 continue
             seen.add(e)
-            dom = builder.domain_of(e)
             kept_prior += 1
+            company = COMPANY_FIX.get(dom, clean_company(r["company_name"], dom))
             rows.append({
                 "email": e, "first_name": r["first_name"] or "there",
                 "last_name": r["last_name"],
-                "company_name": clean_company(r["company_name"], dom),
+                "company_name": company,
                 "website": clean_website(r["website"], dom),
                 "country": "AU", "segment": "AU", "language": "en",
                 "source": r["source"],
