@@ -1,0 +1,57 @@
+Keyword,Match Type,Reason
+job,Broad,job seekers
+jobs,Broad,job seekers
+stellenangebote,Broad,job seekers
+gehalt,Broad,salary/jobs
+ausbildung,Broad,education/jobs
+praktikum,Broad,internships
+karriere,Broad,job seekers
+was ist,Phrase,informational
+bedeutung,Broad,informational
+definition,Broad,informational
+erklärung,Broad,informational
+wiki,Broad,informational
+kurs,Broad,course seekers
+seminar,Broad,course seekers
+schulung,Broad,course seekers
+webinar,Broad,course seekers
+buch,Broad,book seekers
+prime,Broad,Amazon buyer intent
+retoure,Broad,Amazon buyer intent
+rücksendung,Broad,Amazon buyer intent
+rückgabe,Broad,Amazon buyer intent
+kundenservice,Broad,Amazon buyer support
+bestellung,Broad,Amazon buyer intent
+bestellen,Broad,Amazon buyer intent
+lieferung,Broad,Amazon buyer intent
+sendungsverfolgung,Broad,Amazon buyer intent
+gutschein,Broad,coupon seekers
+login,Broad,account login intent
+anmelden,Broad,account login intent
+ebay,Broad,wrong platform
+shopify,Broad,wrong platform
+etsy,Broad,wrong platform
+otto,Broad,wrong platform
+kaufland,Broad,wrong platform
+zalando,Broad,wrong platform
+temu,Broad,wrong platform
+tiktok,Broad,wrong platform
+gratis,Broad,free-only seekers
+kostenloses tool,Phrase,free-only seekers
+tool kostenlos,Phrase,free-only seekers
+geld verdienen,Phrase,get-rich info
+nebenjob,Broad,side-hustle info
+nebeneinkommen,Broad,side-hustle info
+dropshipping,Broad,wrong seller model
+partnernet,Broad,"Amazon PartnerNet = DE affiliate program — biggest leak (added 2026-07-14 after search-term audit)"
+affiliate,Broad,affiliate-program seekers (added 2026-07-14)
+associates,Broad,Amazon Associates = affiliate program (added 2026-07-14)
+partnerprogramm,Broad,affiliate-program seekers (added 2026-07-14)
+werbefrei,Broad,wants Amazon WITHOUT ads (added 2026-07-14)
+ohne werbung,Phrase,wants Amazon WITHOUT ads (added 2026-07-14)
+keine werbung,Phrase,wants Amazon WITHOUT ads (added 2026-07-14)
+werbung entfernen,Phrase,wants to remove ads (added 2026-07-14)
+werbung abschalten,Phrase,wants to remove ads (added 2026-07-14)
+werbung ausschalten,Phrase,wants to remove ads (added 2026-07-14)
+werbung deaktivieren,Phrase,wants to remove ads (added 2026-07-14)
+free tools,Phrase,freebie seekers (added 2026-07-14)

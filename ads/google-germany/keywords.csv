@@ -1,0 +1,74 @@
+Campaign,Ad Group,Keyword,Match Type,Max CPC
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ppc tool,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ppc software,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ppc,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ads tool,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon advertising tool,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ppc manager,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon ppc management,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon fba tool,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,[amazon ppc tool],Exact,3.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,[amazon ppc software],Exact,3.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon werbung automatisieren,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ppc automatisierung,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ads automatisierung,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon werbung optimieren,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ads optimieren,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon anzeigen optimieren,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon kampagnen optimieren,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ki werbung,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon werbung,Phrase,1.20
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,[amazon werbung automatisieren],Exact,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,acos senken,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,acos optimieren,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,acos verbessern,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon acos,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon acos verbessern,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon ppc optimierung,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon ppc kosten,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon werbekosten senken,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,[acos senken],Exact,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon ppc agentur kosten,Phrase,5.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon ppc agentur preise,Phrase,5.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon ppc agentur,Phrase,4.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon ads agentur,Phrase,4.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon advertising agentur,Phrase,4.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon agentur,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,amazon ppc freelancer,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Agentur-Alternative,[amazon ppc agentur kosten],Exact,6.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adference,Phrase,1.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adference erfahrungen,Phrase,1.20
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adference preise,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adference alternative,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,bidx,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,bidx erfahrungen,Phrase,1.20
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,bidx alternative,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adspert,Phrase,1.20
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,adspert alternative,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellics,Phrase,1.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellics alternative,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,perpetua amazon,Phrase,1.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,helium 10 alternative,Phrase,1.50
+# --- Added 2026-07-14 after "Missing enough relevant keywords" + 78.5% lost IS (rank). DataForSEO DE volumes in comments. ---
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellerboard,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellerboard alternative,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellerlogic,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,sellerlogic alternative,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,amalytix,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,amalytix alternative,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Wettbewerber,helium 10 deutsch,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon keyword tool,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon sponsored ads,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon sponsored products,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon seller tool,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,amazon seller software,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,PPC-Tool,ppc tool amazon,Phrase,3.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,acos berechnen,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,tacos amazon,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon werbekosten,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,roas amazon,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,ACoS senken,amazon ppc optimieren,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ppc kampagnen,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ppc strategie,Phrase,2.00
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ads software,Phrase,2.50
+GOOG_Search_DE_AmazonPPC_Autopilot,Werbung automatisieren,amazon ppc automatisieren,Phrase,2.50

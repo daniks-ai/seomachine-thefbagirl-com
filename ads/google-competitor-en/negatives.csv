@@ -1,0 +1,53 @@
+Keyword,Match Type,Why
+careers,Broad,job seekers
+career,Broad,job seekers
+jobs,Broad,job seekers
+job,Broad,job seekers
+hiring,Broad,job seekers
+salary,Broad,job seekers
+salaries,Broad,job seekers
+glassdoor,Broad,employer research
+interview,Broad,job seekers
+internship,Broad,job seekers
+linkedin,Broad,company research
+crunchbase,Broad,investor research
+funding,Broad,investor research
+stock,Broad,investor research
+ipo,Broad,investor research
+acquisition,Broad,investor/news research
+login,Broad,existing users navigating
+log in,Broad,existing users navigating
+sign in,Broad,existing users navigating
+password,Broad,existing users navigating
+api,Broad,developers of existing users
+help,Broad,support seekers
+support,Broad,support seekers
+status,Broad,outage checks
+tutorial,Broad,existing users learning
+webinar,Broad,existing users learning
+academy,Broad,existing users learning
+certification,Broad,existing users learning
+font,Broad,perpetua typeface
+typeface,Broad,perpetua typeface
+saint,Broad,perpetua the martyr
+tattoo,Broad,perpetua name searches
+statistics,Broad,quartile the math term
+statistic,Broad,quartile the math term
+interquartile,Broad,quartile the math term
+percentile,Broad,quartile the math term
+median,Broad,quartile the math term
+deviation,Broad,quartile the math term
+formula,Broad,quartile the math term
+excel,Broad,quartile the math term
+calculator,Broad,quartile the math term
+definition,Broad,informational
+meaning,Broad,informational
+what is,Phrase,informational
+mtg,Broad,m19 Magic card set
+magic,Broad,m19 Magic card set
+booster,Broad,m19 Magic card set
+trellis,Broad,garden trellis shoppers
+garden,Broad,garden trellis shoppers
+free download,Phrase,freebie hunters
+crack,Broad,piracy
+torrent,Broad,piracy

@@ -1,0 +1,27 @@
+Keyword,Match Type,Reason
+求人,Broad,job seekers
+転職,Broad,job seekers
+アルバイト,Broad,job seekers
+年収,Broad,salary/jobs
+楽天,Broad,wrong marketplace
+Shopify,Broad,wrong platform
+eBay,Broad,wrong platform
+メルカリ,Broad,wrong platform
+ヤフオク,Broad,wrong platform
+とは,Broad,informational
+意味,Broad,informational
+使い方,Broad,informational (Amazon buyer help)
+やり方,Broad,informational
+稼ぎ方,Broad,get-rich info
+稼ぐ,Broad,get-rich info
+副業,Broad,side-hustle info
+初心者 ブログ,Phrase,info/blog readers
+無料 ツール,Phrase,free-only seekers
+返品,Broad,Amazon buyer intent
+購入,Broad,Amazon buyer intent
+配送,Broad,Amazon buyer intent
+プライム,Broad,Amazon buyer intent
+カスタマーサービス,Broad,Amazon buyer support
+ログイン,Broad,account login intent
+アプリ ダウンロード,Phrase,unrelated app
+せどり 仕入れ,Phrase,sourcing, not ads
