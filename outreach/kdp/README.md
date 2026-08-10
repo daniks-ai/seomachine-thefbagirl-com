@@ -1,5 +1,33 @@
 # KDP outreach — lead collection
 
+## Round 4 (2026-08-10) — big sweep, THREE-WAY split by offer fit
+
+137 leads imported 2026-08-10 after splitting by which letter actually fits
+(9 research agents, 297 new domains harvested, 456-domain suppression):
+
+| Bucket | Leads | Campaign | Letter |
+|---|---|---|---|
+| Client-managing services (ads agencies, ghostwriting, VA/PA agencies, intl assisted/hybrid publishers) | 67 | services `58f661bd…` (Active) | white-label $999 |
+| Adjacent partners (book/author coaches, blog-tour + promo services, review services, cover/format/audio/website/translation studios) | 39 | influencers `3a49143f…` (Active) | 25% lifetime partner |
+| Influencers (long-tail KDP educators/podcasters) | 8 | influencers `3a49143f…` (Active) | 25% lifetime partner |
+| **Own-catalog publishers** (digital-first genre presses, nonfiction/children's indies, planner/coloring/workbook brands) | 23 | **NEW** «Daniks.AI KDP — Indie Publishers Direct (EN)» `9c35c610-01fb-4109-965e-1702490e8fbc` | direct offer: A/B trial 2 wks, $49/$129, target ACoS |
+
+New campaign built 2026-08-10: 5 steps (A/B in step 1), pauses 3/4/5/4, ET
+Mon-Fri 9-18, 8 senders (daniel@+eric@ × 4 daniks domains), stop-on-reply,
+open tracking off, 30/day. Sequence source: `sequence-kdp-publishers-direct-en.md`.
+**LAUNCHED (Active) 2026-08-10** on the user's explicit go-ahead. Pre-launch
+reload check caught one silent loss: the step-4→5 delay had reverted to 1 day
+(the inline triple-click edit hadn't stuck) — fixed to 4 and re-saved. All six
+email bodies, senders and schedule verified present after reload.
+
+Messaging: KDP case ACoS 46%→21% + sales x2 (canonical facts 2026-08).
+Quality pass dropped 14 junk/third-party emails (ROT13-obfuscated Post Hill
+fixed to contact@; lit-agency/webmaster/publicist addresses dropped) and 2
+hidden same-org dups (Blue Balloon=Ballast, Author Assistants Academy=NFAA).
+~22 influencers/orgs without harvestable emails stay in `round4_raw/`.
+
+---
+
 ## Round 3 (2026-08-03) — IMPORTED into the existing Active campaigns 2026-08-03
 
 Third wave, deduped against rounds 1-2 (`data/sent/*.csv` now holds all six
