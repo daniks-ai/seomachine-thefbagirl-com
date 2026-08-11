@@ -59,7 +59,8 @@ EXCLUDE_EMAILS = {
 # whole domains mis-attributed to AU in the layer masters (checked 2026-08-10):
 # adage.com = Ad Age magazine journalists; sevenatoms = US agency;
 # commerixsystems = SERP artifact; gocake.shop = cake shop, not an agency
-DROP_DOMAINS = {"adage.com", "sevenatoms.com", "commerixsystems.com", "gocake.shop"}
+DROP_DOMAINS = {"adage.com", "sevenatoms.com", "commerixsystems.com", "gocake.shop",
+                "nemred.fr", "ideafusionmedia.com.au"}
 
 # master rows carry SERP/GMaps page titles as company names — fix or blank
 # (blank -> Instantly falls back to {{companyName|your agency}})
@@ -93,7 +94,7 @@ def email_ok_for_site(email, site_domain):
 def clean_email(e):
     e = e.strip().lower()
     e = re.sub(r"^(%[0-9a-f]{2})+", "", e)      # "%20support@x" -> "support@x"
-    e = e.lstrip(":;,. ")
+    e = e.lstrip(":;,.- \t")   # leading punctuation glued on by page markup
     return e if re.match(r"^[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}$", e) else ""
 
 
