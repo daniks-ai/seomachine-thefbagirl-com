@@ -131,3 +131,8 @@ outreach/mx-sellers/data/
 outreach/aggregators/ABM-ACCOUNTS.md
 outreach/aggregators/ABM-SEND-LIST.md
 outreach/scripts/__pycache__/
+outreach/uk-sellers/data/
+outreach/uk-sellers/uk_sellers_uk.jsonl
+outreach/uk-sellers/uk_domains.jsonl
+outreach/uk-sellers/uk_domains.txt
+outreach/uk-sellers/_domains_progress.json
