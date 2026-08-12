@@ -6,6 +6,17 @@
 > (`data/au_agencies.jsonl`, harvested via `2b_email_harvest.py`) →
 > `data/instantly_AU.csv` (176 contacts / 103 domains). Import manually.
 
+> **UK vertical** (2026-08-11): dedicated Great Britain cut for the `[UK]`
+> campaign clone (id `a127207a-…`, TZ `Europe/Isle_of_Man` — `Europe/London` is
+> rejected by Instantly's timezone enum). `scripts/uk1_build_csv.py` merges the
+> GB rows of `data/instantly_all_master.csv` with fresh web-research domains
+> (`data/uk_agencies.jsonl`) and the deep-harvest crack of GB domains that had
+> no email at master-build time (`data/uk_domains_noemail.txt` → `2c_deep_harvest.py`)
+> → `data/instantly_UK.csv` (228 contacts / 190 domains). Unlike the AU builder
+> this one also drops addresses that FAILED the July verification run (109 of
+> them), comparing `emails_to_verify.csv` against `verified/verified_*.csv`.
+> 214 leads live in the campaign; 14 were skipped as already-contacted in `[US]`.
+
 > **Prep-center vertical** (2026-08-10): separate segment targeting FBA prep
 > centers / 3PLs with the 25%-lifetime affiliate offer. Scripts
 > `prep1_directories.py` (free directory scrape: selleressentials + hopstack +
