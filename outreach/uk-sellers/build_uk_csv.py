@@ -125,6 +125,11 @@ def main():
                 continue
             if edom == dom or edom.endswith("." + dom) or dom.endswith("." + edom):
                 candidates.append((e, "self-hosted"))
+            elif domain_token(edom) and domain_token(edom) == dtok:
+                # same brand label, different TLD (e.g. rinkit.co.uk guessed but
+                # the site redirects to rinkit.com). Corroboration check below
+                # still requires the brand token to match, so this stays strict.
+                candidates.append((e, "same-brand-alt-tld"))
         corrob = any(t and (t in dtok or dtok in t) for t in toks) or dtok in {norm(rec.get("n")), norm(rec.get("biz"))}
         if not candidates:
             dropped.append((rec.get("n"), dom, "no-clean-email"))
