@@ -74,7 +74,44 @@ MXCACHE = DATA / "_in_mx.tsv"
 
 FREE_MAIL = re.compile(
     r"@(gmail|googlemail|yahoo|ymail|rediffmail|hotmail|outlook|live|icloud|"
-    r"protonmail|zoho|aol)\.", re.I)
+    r"protonmail|proton\.me|mailbox\.org|zoho|aol)\.?", re.I)
+
+# The "@"-anchored scan in stage 2 truncates a local part whenever the site
+# splits it with markup or an HTML entity ("c<span>are@", "&#105;ndia@"), which
+# produced live-looking addresses like are@, ndia@, ternational@, nline@. If the
+# local is a strict suffix of a role word, it is one of those, not an address.
+ROLE_WORDS = ("care", "customercare", "consumercare", "support", "info",
+              "information", "contact", "contactus", "sales", "online",
+              "orders", "order", "international", "india", "hello", "help",
+              "helpdesk", "enquiry", "enquiries", "inquiry", "service",
+              "services", "admin", "office", "shop", "store", "team",
+              "connect", "reach", "wecare", "export", "business", "official",
+              "email", "mail", "ecommerce", "subscription", "welcome",
+              "official1", "customerservice", "customersupport")
+
+# lookalike mail providers — a typo on the site, dead on delivery
+TYPO_DOMAIN = re.compile(
+    r"^(gmai|gmil|gamil|gmial|gmaill|amail|gnail|hotmial|hotmai|yahho|yaho|"
+    r"outlok|rediff|redifmail)\.", re.I)
+
+# default hosting subdomains and staging hosts — never a monitored inbox
+HOST_JUNK = re.compile(
+    r"\.(hostingersite|myshopify|vercel\.app|netlify\.app|wixsite|"
+    r"weeblysite|godaddysites|square\.site|onrender|herokuapp|"
+    r"pages\.dev|workers\.dev|web\.app|firebaseapp)\.?", re.I)
+
+# large FMCG/electronics groups: these care@ addresses are consumer-support
+# queues, not sellers who would ever buy a $49/mo autopilot
+ENTERPRISE = re.compile(
+    r"(adityabirla|tata|trent-tata|unilever|hul\b|itcportal|dabur|marico|"
+    r"godrej|patanjali|zyduswellness|emami|wipro|reliance|nestle|pepsico|"
+    r"cocacola|britannia|parle|amul|haldiram|bikaji|balajiwafers|theobroma|"
+    r"lakmeindia|ponds\.|dove-india|victorinox|samsung|lg\.com|philips|"
+    r"bosch|whirlpool|havells|bajajelectronics|usha\.|prestige|wonderchef|"
+    r"milton|borosil|cello|pigeon|decathlon|levi|uspoloassn|puma|adidas|"
+    r"nike|titan|fastrack|mamaearth|nykaa|wow|shipway|adityabirla|"
+    r"itc\.in|acer\.com|samsonite|imoo\.com|dreame\.tech|sealy\.in|"
+    r"vardhman|monin\.com|bluestarindia|colorbarcosmetics|delhipress)", re.I)
 ROLE_DROP = re.compile(
     r"^(careers?|jobs?|hr|recruit\w*|press|media|legal|privacy|dpo|grievance|"
     r"compliance|abuse|security|webmaster|admin|noc|billing|invoice|accounts?|"
@@ -131,6 +168,19 @@ def pick_emails(rec):
         # plus-addressed crawler traps ("+claude-searchbot@") both come from
         # scraping markup rather than from a real published address
         if ODD_CHARS.search(e):
+            continue
+        if HOST_JUNK.search(edom) or ENTERPRISE.search(edom):
+            continue
+        if re.search(r"\.(ac|edu|res|gov|nic)\.in$|\.(edu|gov|ltd)$", edom, re.I):
+            continue
+        ll = local.lower()
+        if any(w != ll and w.endswith(ll) for w in ROLE_WORDS):
+            continue
+        # a real local part starts with a letter or digit; "u003e" is an escaped
+        # ">" that leaked out of JSON-encoded markup
+        if not re.match(r"^[a-z0-9]", ll) or "u003e" in ll or "x003e" in ll:
+            continue
+        if TYPO_DOMAIN.match(edom.lower()):
             continue
         if ROLE_DROP.search(e) or BAD_LOCAL.match(local) or BAD_DOMAIN.search(edom):
             continue

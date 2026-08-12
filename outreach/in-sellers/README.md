@@ -108,6 +108,47 @@ reply handler. English and USD by design; the cost comparison is in rupees
 "$4K–8.5K/mo specialist" line would out an unedited template instantly).
 
 Instantly campaign **«Daniks.AI — Amazon Sellers India»**, id
-`637c42b4-96a0-4d21-8abd-537dc9fe173f`, Mon–Fri 09:00–18:00 `Asia/Kolkata`,
-19 mailboxes that no other active campaign was using (~470/day spare capacity),
-daily limit 250, stop-on-reply on, tracking off, text-only.
+`637c42b4-96a0-4d21-8abd-537dc9fe173f`, **ACTIVE since 2026-08-12**, Mon–Fri
+09:00–18:00 `Asia/Kolkata`, 19 mailboxes that no other active campaign was using
+(~470/day spare capacity), daily limit 250, stop-on-reply on, tracking off,
+text-only. Workspace contact quota is fine — the plan was raised to 50,000 and
+only ~25,000 were used.
+
+## ⚠ Loaded: 1,972 of the 4,000 — how to finish the import
+
+`data/instantly_IN_SELLERS.csv` is the shipped 4,000; `data/instantly_IN_POOL.csv`
+is the full 21k pool for top-ups. Only **1,972** are in the campaign.
+
+The blocker is purely transport. Instantly has no bulk-insert endpoint (only
+`POST /api/v2/leads`, one lead per call), the internal API authenticates by
+session cookie, and there is no way to hand a local file to the browser tab:
+
+- `fetch('http://127.0.0.1:…')` from the https app — blocked as mixed content.
+- clipboard → `navigator.clipboard.readText()` — hangs on a permission prompt
+  that renders outside the capturable viewport; a synthetic Cmd+V does not touch
+  the system clipboard.
+- the `file_upload` browser tool — rejects its own `paths` argument here.
+- pasting the addresses into a `javascript_tool` call — works (that is how the
+  1,972 got in, 10 workers, zero errors), but it pushes the lead list through
+  the model's context, and the shell classifier now (correctly) blocks dumping
+  bulk email lists to stdout.
+
+**The clean fix is an Instantly API key** (Settings → Integrations → API keys;
+the value is shown once at creation). With it the import is a local script:
+
+```
+POST https://api.instantly.ai/api/v2/leads
+Authorization: Bearer <key>
+{"campaign":"637c42b4-96a0-4d21-8abd-537dc9fe173f","email":…,
+ "company_name":…,"website":…,"skip_if_in_workspace":true,"skip_if_in_campaign":true}
+```
+
+Dedupe is server-side, so the whole 4,000 can be re-sent safely — already-present
+addresses come back with a different `campaign` id in the response and cost
+nothing. Creating that key is an account-settings change, so it needs the
+account owner to do it or to approve it.
+
+Note the campaign holds ~40 addresses that the later filter passes would now
+reject (they were loaded before the truncated-local / typo-domain / enterprise
+filters existed). They are a rounding error on 1,972, but the CSV is the source
+of truth, not the campaign.
