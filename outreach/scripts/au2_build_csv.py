@@ -24,15 +24,17 @@ ROLE_JUNK = re.compile(r"^(careers?|hr|jobs?|recruit\w*|hiring|talent|apply|"
 # Local parts of overseas-office inboxes: mailing an AU agency's New York desk
 # about Australian Amazon PPC lands wrong. Keep AU cities, drop the rest.
 FOREIGN_OFFICE = re.compile(
-    r"^(usa?|uk|india|singapore|newyork|ny|london|berlin|toronto|dubai|"
-    r"manila|auckland|nz|hongkong|shanghai|tokyo|paris|amsterdam|"
-    r"losangeles|vancouver|chicago|boston|seattle|dublin|mumbai|delhi)@", re.I)
+    r"^(usa?|uk|india|singapore|newyork|nyc|ny|london|berlin|toronto|dubai|"
+    r"manila|auckland|nz|hongkong|shanghai|tokyo|paris|amsterdam|emea|apac|"
+    r"losangeles|vancouver|chicago|boston|seattle|dublin|mumbai|delhi|"
+    r"bangalore|kualalumpur|jakarta|bangkok|seoul)@", re.I)
 
 # Escape sequences that leaked out of page markup and got glued to a local part
 # ("u003econtact@", "nhello@" from a literal \n, "u002f@"). The address is wrong,
 # not merely ugly — sending to it bounces.
 ESCAPE_ARTIFACT = re.compile(
-    r"^(u00[0-9a-f]{2}|x[0-9a-f]{2}"
+    r"^(u00[0-9a-f]{2}|x[0-9a-f]{2}|noopener|noreferrer|nofollow"
+    r"|(email|australia|phone|address)(?=hello@|info@|contact@|sales@)"
     r"|[nrt](?=hello@|info@|contact@|team@|support@|sales@|enquiries@))", re.I)
 
 # Two-letter ccTLDs that read as "another country's office" for an AU brand.
@@ -76,6 +78,8 @@ def usable(email, site_domain):
         return False
     if edom.startswith("www."):          # www-subdomain twin of the apex address
         return False
+    if re.search(r"\.(com|net|org|co)\.au\.[a-z]{2,}$", edom):  # ".com.au.au"
+        return False
     # a .co.nz / .fr twin of an AU brand's inbox is that brand's other market
     if foreign_cc(edom) and not edom.endswith(".au") and not site_domain.endswith(edom.rsplit(".", 1)[-1]):
         return foreign_cc(site_domain) and site_domain.rsplit(".", 1)[-1] == edom.rsplit(".", 1)[-1]
@@ -103,6 +107,12 @@ spec.loader.exec_module(au1)
 builder = au1.builder
 
 
+def _dead_addresses():
+    """Addresses au3_mx_check.py proved have no mail route."""
+    p = DATA / "au_mx_dead.txt"
+    return {l.strip().lower() for l in p.read_text().splitlines() if l.strip()} if p.exists() else set()
+
+
 def main():
     agencies = {a["domain"]: a for a in builder.load_jsonl(DATA / "au2_agencies.jsonl")}
     contacts = json.loads((DATA / "layer1_contacts_raw.json").read_text(encoding="utf-8"))
@@ -117,6 +127,7 @@ def main():
     seen = set()
     for r in csv.DictReader((DATA / "instantly_AU.csv").open(encoding="utf-8")):
         seen.add(r["email"].strip().lower())
+    dead = _dead_addresses()
 
     rows, dom_hits = [], 0
     for dom, agency in sorted(agencies.items()):
@@ -131,7 +142,7 @@ def main():
             0 if builder.NAME_LOCAL.match(e.split("@")[0]) and not builder.is_generic(e.split("@")[0])
             else 1 if not builder.is_generic(e.split("@")[0]) else 2))
         for e in ranked[:3]:
-            if e in seen:
+            if e in seen or e in dead:
                 continue
             seen.add(e)
             fn, ln = builder.guess_name(e.split("@", 1)[0])

@@ -110,8 +110,15 @@ def clean_website(url, domain):
     return urllib.parse.urlunsplit((parts.scheme or "https", parts.netloc, parts.path.rstrip("/"), "", ""))
 
 
+def _dead_addresses():
+    """Addresses au3_mx_check.py proved have no mail route."""
+    p = DATA / "au_mx_dead.txt"
+    return {l.strip().lower() for l in p.read_text().splitlines() if l.strip()} if p.exists() else set()
+
+
 def main():
     rows, seen = [], set()
+    dead = _dead_addresses()
 
     # --- 1. new AU domains + harvested emails -------------------------------
     agencies = {a["domain"]: a for a in builder.load_jsonl(DATA / "au_agencies.jsonl")}
@@ -135,7 +142,7 @@ def main():
             0 if builder.NAME_LOCAL.match(e.split("@")[0]) and not builder.is_generic(e.split("@")[0])
             else 1 if not builder.is_generic(e.split("@")[0]) else 2))
         for e in ranked[:3]:
-            if e in seen:
+            if e in seen or e in dead:
                 continue
             seen.add(e)
             fn, ln = builder.guess_name(e.split("@", 1)[0])
@@ -155,7 +162,7 @@ def main():
             if r["country"] != "AU":
                 continue
             e = clean_email(r["email"])
-            if not e or e in seen or e in EXCLUDE_EMAILS:
+            if not e or e in seen or e in EXCLUDE_EMAILS or e in dead:
                 continue
             dom = builder.domain_of(e)
             if dom in DROP_DOMAINS:

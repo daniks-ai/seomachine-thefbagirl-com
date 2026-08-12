@@ -33,18 +33,39 @@ def _load(name, path):
     return mod
 
 
+import re
+
+# Businesses whose own name says they are not a marketing agency. The homepage
+# verdict cannot separate these — a print shop's site legitimately says "design"
+# and "branding" — but the trading name does.
+NOT_AGENCY_NAME = re.compile(
+    r"(print|signage|embroidery|promotional products|\b(signs?|"
+    r"tradesman|plumbing|electrical|roofing|removalists?|landscap\w+|"
+    r"accounting|bookkeep\w+|conveyanc\w+|lawyers?|solicitors?|"
+    r"dental|dentist|physio|chiropract\w+|veterinary|"
+    r"cafe|restaurant|catering|florist|real estate|realty|pack ?(and|&) ?send|freight|courier|parcel|hosting|promotional product\w*|storage|removals)\b)", re.I)
+
 au2 = _load("au2", HERE / "au2_build_csv.py")
 au1, builder = au2.au1, au2.builder
 
 
 def main():
     agencies = {a["domain"]: a for a in builder.load_jsonl(DATA / "au3_agencies.jsonl")}
-    contacts = json.loads((DATA / "layer1_contacts_raw.json").read_text(encoding="utf-8"))
+    # Private harvest output — the shared layer1_contacts_raw.json is written by
+    # any session running 2b/2c and gets clobbered mid-build (see au7).
+    contacts = json.loads((DATA / "au3_contacts.json").read_text(encoding="utf-8"))
 
     verdicts = {}
     vp = DATA / "au_agency_verdicts.json"
     if vp.exists():
         verdicts = json.loads(vp.read_text(encoding="utf-8"))
+
+    # Addresses with no mail route: dead domains plus harvester artifacts where
+    # page text got glued onto the domain ("axissocial.com.ausydney").
+    dead = set()
+    dp = DATA / "au_mx_dead.txt"
+    if dp.exists():
+        dead = {l.strip().lower() for l in dp.read_text().splitlines() if l.strip()}
 
     by_domain = defaultdict(set)
     for rec in contacts:
@@ -65,9 +86,17 @@ def main():
     for dom, agency in sorted(agencies.items()):
         if dom in au1.DROP_DOMAINS:
             continue
+        # Positive gate, not a negative one. A Maps sweep for "marketing agency"
+        # also returns print shops, sign makers, accountants and tradesmen, and
+        # no blocklist of "other business" phrases catches them all. Requiring
+        # the homepage to actually speak agency does.
+        name = agency.get("name") or ""
+        if NOT_AGENCY_NAME.search(name) or NOT_AGENCY_NAME.search(dom):
+            skipped_wrong_business.append((dom, ["trading name is not an agency"]))
+            continue
         v = verdicts.get(dom)
-        if v and v["verdict"] == "unclear" and v.get("other_business"):
-            skipped_wrong_business.append((dom, v["other_business"]))
+        if v and v["verdict"] != "agency":
+            skipped_wrong_business.append((dom, v.get("other_business") or [v["verdict"]]))
             continue
         emails = {e for e in by_domain.get(dom, set())
                   if au1.email_ok_for_site(e, dom) and au2.usable(e, dom)}
@@ -78,11 +107,16 @@ def main():
             and not builder.is_generic(e.split("@")[0])
             else 1 if not builder.is_generic(e.split("@")[0]) else 2))
         for e in ranked[:2]:            # 2/domain: the list is big enough now
-            if e in seen:
+            if e in seen or e in dead:
                 continue
             seen.add(e)
+            # Names only from the firstname.lastname pattern. Guessing a name
+            # from a single-token local part worked at wave-1/2 scale with a
+            # hand-reviewed stop list; across 1,600 domains it produced "Hi
+            # Awesome,", "Hi Bangalore," and "Hi Letmework,". A generic
+            # greeting costs a little warmth, a wrong name costs the reply.
             fn, ln = builder.guess_name(e.split("@", 1)[0])
-            if not au2.plausible_given_name(fn, ln):
+            if not ln or not au2.plausible_given_name(fn, ln):
                 fn, ln = "", ""
             rows.append({
                 "email": e, "first_name": fn or "there", "last_name": ln,

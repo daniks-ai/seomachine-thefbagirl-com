@@ -24,7 +24,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parents[1] / "data"
-SOURCES = ("instantly_AU.csv", "instantly_AU2.csv")
+SOURCES = ("instantly_AU.csv", "instantly_AU2.csv", "instantly_AU3.csv")
 
 
 def dig(domain, rrtype, patient=False):
