@@ -1,11 +1,12 @@
 # Reactivation — signed up, never connected Amazon account (EN)
 
 **Instantly campaign**: «Daniks.AI Reactivation — Signed Up, Never Connected»,
-id `6275b37f-b8f3-4222-87d9-ff8b53c857ba`, built 2026-08-10, status **Draft**.
-3 steps + schedule + options + **177 leads imported** (verified server-side).
+id `6275b37f-b8f3-4222-87d9-ff8b53c857ba`, built and **LAUNCHED 2026-08-10**
+(status Active). 3 steps + schedule + options + **134 leads** + sender
+`daniel@daniks.io`. Activated via `POST /api/v2/campaigns/{id}/activate`.
 
-**One thing blocks launch: no sender is selected** — see "Sender problem" below.
-This is a real decision, not an oversight.
+Sequence text is maintained via the API (`PATCH /api/v2/campaigns/{id}` with the
+full `sequences` array) — far more reliable than the WYSIWYG editor.
 
 Leads went in via the internal API from the page console (the UI CSV upload is
 broken — same workaround as [IN] campaign): `POST /backend-alt/api/v2/leads`
@@ -20,36 +21,40 @@ are in «Daniks.AI Amazon Sellers [DE Companies]»; `merakvic@`, `ana.isabel.gmu
 These are people who already registered on daniks.ai being cold-pitched as
 strangers. Worth suppressing registered users from the cold Sellers campaigns.
 
-## Sender problem (read before launching)
+## Sender: daniel@daniks.io (user's decision, 2026-08-10)
 
-Instantly has NO mailbox on the real `daniks.ai` domain. The only Daniks-looking
-senders connected are cold-outreach lookalikes: `daniks-ai.com`, `daniks.io`,
-`getdaniks.ai`, `trydaniks.com` (daniel@ / eric@ personas). Those are fine for
-strangers, wrong for this list: these 189 people registered on daniks.ai, know
-the real domain, and a mail from "Alex, Founder, Daniks.AI" arriving from
-`daniks-ai.com` reads as a phishing clone of the product they signed up for.
+Instantly has NO mailbox on the real `daniks.ai` domain — only cold-outreach
+lookalikes: `daniks-ai.com`, `daniks.io`, `getdaniks.ai`, `trydaniks.com`, each
+with daniel@ / eric@ / nick@ personas (Daniel Harris, Eric Bennett, Nick Foster),
+all active, warmup on, 15-17/day. The risk was raised — a warm list that knows
+the real domain may read a lookalike as a phishing clone — and the user chose to
+send from a lookalike anyway. Best available option going forward is still to
+connect a real `daniks.ai` mailbox.
 
-Options, best first:
-1. Connect a real `daniks.ai` mailbox (alex@ or ekaterina@) to Instantly and
-   send from it. Warm list, low volume (30/day) — no warmup risk.
-2. Send this sequence from the product's own transactional/marketing mail
-   instead of Instantly — same argument, and it keeps the thread on-brand.
-3. Use a lookalike domain anyway — cheapest, but burns trust on a warm list.
-   Not recommended.
+`daniks.io` picked of the four: it reads as an ordinary alternate TLD for the
+company name, while `daniks-ai.com` is the textbook typosquat shape and
+`get-`/`try-` prefixes read as pure cold outreach. All four are equally healthy,
+so the choice is purely about how it looks to the recipient.
+
+**Signature had to change**: the mailbox sends as "Daniel Harris", so signing
+"Alex, Founder" would have been incoherent. Emails are now signed **Daniel**,
+and the call-to-action explicitly books time with Alex the founder — which
+matches what `daniks.ai/meet/alex` actually is.
 
 **Segment**: daniks.ai registered users with a real (non-demo) seller record but
 NO Amazon Ads API token, NO SP-API token, never had a trial (`had_trial=false`),
-not unsubscribed. 189 leads as of 2026-08-10 (list:
+not unsubscribed, minus internal accounts, minus the junk Nov-2025 cohort.
+**134 leads live** (full 184-row list kept in
 `data/instantly_reactivation_never_connected.csv`, gitignored).
 
 **Nature**: these are WARM leads — they created an account themselves. Tone is
 "founder checking in", not cold pitch. Short sequence (3 steps), personal
 sender, no heavy sales pressure.
 
-**Personalization vars**: `first_name` (47 rows with a junk/empty name were
-filled with the literal "there" so `Hi {{firstName}},` always reads right —
-no Instantly fallback config needed), `joined_phrase` ("in July" / "back in
-November"), `signup_date`.
+**Personalization vars**: `first_name` (rows with a junk/empty name were filled
+with the literal "there" so `Hi {{firstName}},` always reads right — no Instantly
+fallback config needed), `joined_phrase` ("in July" / "back in February"),
+`signup_date`.
 
 **Instantly gotcha**: typing `{{firstName}}` into the rich-text editor gets
 eaten by the variable autocomplete. Use the `<>` code-view toggle at the bottom
@@ -91,57 +96,60 @@ brand (Daniks) on Amazon the same way, so it's our money on the line too.
 
 Pick it back up here: https://daniks.ai
 
-Prefer to talk to a human first? Grab a slot: https://daniks.ai/meet/alex
+Or if it's easier to just talk it through, book a short call with Alex, our
+founder — 15 minutes, no pitch: https://daniks.ai/meet/alex
 
-Alex
-Founder, Daniks.AI
+Daniel
+Daniks.AI
 
 ---
 
-## Step 2 — Day 4 (same thread)
+## Step 2 — +4 days (same thread)
 
 Hi {{firstName}},
 
 Quick follow-up. If you tried to connect back then and something got in the
-way — wrong account, permissions, just wasn't sure what we'd do with the
+way — wrong account, permissions, or just not being sure what we'd do with the
 access — reply here and I'll walk you through it personally.
 
 Nothing has changed on our side: the first two weeks are free, no card charge,
 and your existing campaigns stay exactly as they are.
 
-Or book 15 minutes and I'll show it on a screen: https://daniks.ai/meet/alex
+Happy to do it live instead — grab a short call with our founder Alex and he'll
+show it on a screen: https://daniks.ai/meet/alex
 
-Alex
+Daniel
 
 ---
 
-## Step 3 — Day 10 (same thread)
+## Step 3 — +6 days (same thread)
 
 Hi {{firstName}},
 
 Last note from me, promise.
 
-If you're still managing PPC by hand — or paying an agency a % of ad spend —
-it's worth one look at a side-by-side test on your own account. After the free
-two weeks it's a flat subscription from $49/mo, not a cut of your spend.
+If you're still managing PPC by hand — or paying an agency a percentage of ad
+spend — it's worth one look at a side-by-side test on your own account. After
+the free two weeks it's a flat subscription from $49/mo, not a cut of your spend.
 
-Connect: https://daniks.ai · Talk first: https://daniks.ai/meet/alex
+Connect: https://daniks.ai
+Or book a short call with Alex, our founder: https://daniks.ai/meet/alex
 
 And if Amazon ads just aren't a priority right now, no hard feelings — your
 account will be there when you come back.
 
-Alex
-Founder, Daniks.AI
+Daniel
+Daniks.AI
 
 ---
 
 ## Campaign settings (as configured 2026-08-10)
 
-- **Senders: NOT SET** — blocked on the sender problem above.
+- Sender: **daniel@daniks.io** (single mailbox, 15/day cap → 134 leads drain in ~9 sending days). ✅
 - Schedule: 9:00 AM–6:00 PM Eastern, Mon–Fri. ✅ saved
 - Stop sending on reply: Enabled. ✅
 - Open tracking: Disabled (warm list, protect deliverability). ✅
-- Daily limit: 30/day → 189 leads drain in ~7 sending days. ✅
+- Campaign daily limit: 30 (effective cap is the mailbox: 15/day). ✅
 - Step delays: Step 1 → +4 days → Step 2 → +6 days → Step 3. Steps 2-3 reuse
   the Step 1 subject (empty subject = same thread). ✅
 
@@ -161,7 +169,7 @@ signed up and did nothing. Minus 5 internal/test accounts (`support@daniks.ai`,
 Note on `auth_user`: in this DB **every** user row has `is_staff = true`, so
 that column is useless as a staff filter — exclude internal accounts by address.
 
-## Suspicious Nov-2025 cohort — decide before launching
+## Nov-2025 cohort — REMOVED from the campaign (2026-08-10)
 
 The single biggest cohort is Nov 2025 (45 signups), and it does not look like
 Amazon sellers. It's full of school/student addresses (`36576@llschools.net`,
@@ -170,7 +178,11 @@ Amazon sellers. It's full of school/student addresses (`36576@llschools.net`,
 `dirtyhead710@`, `deathmetallog@`). Reads like a junk/bot signup wave or
 misdirected traffic, not prospects.
 
-They are imported, but consider filtering them out before launch: they add
-~25% volume with near-zero conversion odds and above-average spam-complaint
-risk, which matters more than usual because this is a warm-list send from a
-domain we care about. Filter in Instantly by `joined_phrase = "back in November"`.
+**43 of them were deleted from the campaign on the user's instruction**, taking
+it from 177 to 134 leads. They are still in the CSV — if the cohort ever needs
+re-adding, they are the rows with `joined_phrase = "back in November"`.
+
+Delete method (the bulk endpoint does not exist): `DELETE
+/backend-alt/api/v2/leads/{id}` with the `x-workspace-id` header and **no
+content-type header and no body** — sending `content-type: application/json`
+returns 400 whether the body is empty, `{}`, or null.

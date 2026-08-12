@@ -127,6 +127,37 @@ Either way: may your dock stay busy.
 
 ---
 
+## Step 1 — 3PL variant (segments `3PL-US` / `3PL-INTL`)
+
+For general 3PL / e-commerce fulfillment warehouses that aren't Amazon-prep
+specialists. They don't self-identify as "prep centers", so the opener leads
+with their Amazon-selling clients rather than with FBA prep. Steps 2-5 are
+unchanged — only this first email differs.
+
+**Subject:** the Amazon sellers in your warehouse
+
+Hi {{firstName|there}},
+
+Some slice of {{companyName|your}} clients sell on Amazon — and for them the biggest uncontrolled cost isn't storage or shipping. It's their ad spend.
+
+That's the one thing a fulfillment partner can't fix. We can, and the partnership runs both ways:
+
+1. You introduce those clients to Daniks.AI — an Amazon Ads autopilot (the seller sets a target ACoS; the AI runs campaigns, bids, keywords and negatives 24/7). You earn 25% of subscription revenue for the lifetime of every client who subscribes.
+
+2. We send sellers back: when our 1,000+ sellers ask us to recommend fulfillment or prep in their region, partner warehouses get the intro.
+
+One of our partners — an Amazon seller behind the Fornel brand — already clears $1,000/month in referral share on these exact terms. No PPC work on your side: you make the intro, we handle onboarding, support and billing, and your clients get a 2-week free trial with an A/B test against their current campaigns.
+
+If partnerships aren't your desk, could you forward this to the owner?
+
+Reply "details" and I'll send the one-pager with the math.
+
+{{sendingAccountFirstName}}
+
+Not relevant? Reply "no thanks" and I won't follow up.
+
+---
+
 ## Subsequence — "Reply handler" (fires when a lead is marked Interested)
 
 Hi {{firstName|there}},

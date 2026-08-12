@@ -25,6 +25,24 @@
 > `data/instantly_segments_prep/instantly_PREP-{US,INTL,CN}.csv`.
 > Sequence draft: `sequences/prep-centers-en.md`. PREP-CN pairs with the
 > WeChat/China motion — don't import into the EN campaign blindly.
+>
+> **Round 2** (2026-08-11, +94 leads → 264 in campaign `61e094c8-…`):
+> `prep1_directories.py` → `prep3_ddg_serp.py` / `prep3b_bing_serp.py`
+> (free SERP sweeps; both get rate-limited fast) → `prep4_normalize_r2.py`
+> (merges ShipHype + RocketSource + fbaprepfinder + prepmarketplace +
+> sermondo + SERP, dedupes vs round 1) → `2b_email_harvest.py` →
+> `2c_deep_harvest.py` on the no-email remainder → `prep5_build_r2_csv.py`.
+> ShipHype (403) and RocketSource (429) block urllib — those two lists were
+> pulled through the Claude-in-Chrome browser and saved as
+> `data/prep_r2_shiphype_domains.txt` / `prep_r2_rocketsource.txt`.
+> `prep6_gmaps.py` (Apify Maps sweep) is written but refuses to run: the
+> Apify cycle is spent ($0.08 of $5 left), DataForSEO is at −$0.03.
+>
+> **Niche ceiling:** 526 unique prep domains found, only 244 publish an
+> email. The worldwide FBA-prep niche is ~600-900 companies with websites,
+> so volume targets in the thousands need either an adjacent segment
+> (general 3PL / e-commerce fulfillment, not Amazon-specific) or a funded
+> Maps/SERP API.
 
 > **CPA / e-commerce accountant vertical** (2026-08-10): same 25%-lifetime
 > affiliate offer to accounting firms specializing in Amazon/e-commerce books

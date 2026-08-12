@@ -125,7 +125,7 @@ def guess_name(local):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--layer", choices=["1", "2", "3", "4", "all"], default="1",
+    ap.add_argument("--layer", choices=["1", "2", "3", "4", "5", "all"], default="1",
                     help="which lead layer(s) to build CSVs for")
     args = ap.parse_args()
 
@@ -135,6 +135,7 @@ def main():
         "2": ["layer2_agencies.jsonl"],
         "3": ["layer3_agencies.jsonl"],
         "4": ["layer4_agencies.jsonl"],
+        "5": ["layer5_agencies.jsonl"],
         "all": ["layer1_agencies.jsonl", "layer2_agencies.jsonl",
                 "layer3_agencies.jsonl", "layer4_agencies.jsonl"],
     }[args.layer]
@@ -168,7 +169,9 @@ def main():
     prior_masters = {"2": ["instantly_layer1_master.csv"],
                      "3": ["instantly_layer1_master.csv", "instantly_layer2_master.csv"],
                      "4": ["instantly_layer1_master.csv", "instantly_layer2_master.csv",
-                           "instantly_layer3_master.csv"]}
+                           "instantly_layer3_master.csv"],
+                     "5": ["instantly_layer1_master.csv", "instantly_layer2_master.csv",
+                           "instantly_layer3_master.csv", "instantly_layer4_master.csv"]}
     for mname in prior_masters.get(args.layer, []):
         m = DATA / mname
         if m.exists():
@@ -205,7 +208,7 @@ def main():
             })
 
     # write master + per-segment files (layer 1 keeps its legacy filenames)
-    suffix = {"1": "layer1", "2": "layer2", "3": "layer3", "4": "layer4", "all": "all"}[args.layer]
+    suffix = {"1": "layer1", "2": "layer2", "3": "layer3", "4": "layer4", "5": "layer5", "all": "all"}[args.layer]
     master = DATA / f"instantly_{suffix}_master.csv"
     fields = ["email", "first_name", "last_name", "company_name", "website",
               "country", "segment", "language", "source"]

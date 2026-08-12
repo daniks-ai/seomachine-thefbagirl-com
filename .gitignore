@@ -127,6 +127,10 @@ outreach/influencers-ru/
 outreach/reactivation/data/
 outreach/ru-sellers/data/
 outreach/influencers-ru/r2data/
+outreach/kdp-authors/data/
+outreach/courses/data/
+outreach/aggregators/*.csv
+outreach/REPLIES-*.md
 outreach/mx-sellers/data/
 outreach/aggregators/ABM-ACCOUNTS.md
 outreach/aggregators/ABM-SEND-LIST.md

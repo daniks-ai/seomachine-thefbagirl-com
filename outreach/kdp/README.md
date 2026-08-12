@@ -1,5 +1,124 @@
 # KDP outreach — lead collection
 
+## Round 7 (2026-08-11) — GERMANY / DACH, three new campaigns LAUNCHED
+
+First non-English KDP round. Six research agents swept the German-language book
+market (Amazon-Ads/Buchmarketing agencies, Selfpublishing-Dienstleister, KDP
+coaches & influencers, indie Verlage, low-content/planner brands + ghostwriting,
+book PR/promo & eBook-deal newsletters) → 113 orgs → 109 domains after
+suppression → `harvest_deep.py` → **84 clean leads after QA**, all imported and
+**launched (Active) 2026-08-11**.
+
+Split by which offer actually fits (same three-way logic as r4):
+
+| Bucket | Leads | Campaign | Letter |
+|---|---|---|---|
+| Client-managing services (Amazon-Ads agencies, Selfpublishing-Dienstleister, ghostwriting) | 39 | «Daniks.AI KDP — Buchmarketing Services & Agenturen (DE)» `0e274b9e-f0ac-4368-8846-57d391ed4aaf` | white-label $999 |
+| Own-catalog publishers (genre presses, Kinderbuch, planner/Rätsel brands) | 21 | «Daniks.AI KDP — Indie Verlage Direct (DE)» `22a8ff19-8d21-41e3-803a-476f41edc8ea` | direct: 2-week A/B, from $49 |
+| Partners (KDP coaches/podcasters, promo services, eBook-deal newsletters) | 24 | «Daniks.AI Partnerprogramm — KDP Coaches & Buch-Promo (DE)» `306ed5e9-ba78-42a9-878f-62e285644100` | 25% lifetime |
+
+Sequences are written in German (Sie-form), not literally translated:
+`sequence-kdp-services-de.md`, `sequence-kdp-publishers-direct-de.md`,
+`sequence-kdp-partners-de.md`. Same cadence as EN (services/publishers 5 steps
+3/4/5/4, partners 4 steps 3/4/5), A/B in step 1, zero links in cold mails,
+stop-on-reply, tracking off, 30/day, 8 senders daniel@+eric@ (services,
+publishers) / 4 senders nick@ (partners).
+
+**Schedule gotcha:** Mon–Fri 09:00–18:00 **`Arctic/Longyearbyen`** — that is
+Instantly's identifier for Central European time. `Europe/Berlin` is rejected
+with `400 timezone must be equal to one of the allowed values`. The pre-existing
+DE campaigns use the same value.
+
+Build pipeline (`build_kdp_de_csv.py` imports `build_kdp_csv.py` for suppression):
+
+```
+agents → data/de/raw_{agencies,services,lowcontent_ghost,publishers,promo,influencers}.jsonl
+python3 outreach/kdp/build_kdp_de_csv.py --stage domains   # → data/de/kdp_de_domains.txt (109)
+python3 outreach/kdp/harvest_deep.py --domains-file outreach/kdp/data/de/kdp_de_domains.txt
+python3 outreach/kdp/build_kdp_de_csv.py --stage csv       # → three data/de/instantly_import_*.csv
+```
+
+QA dropped or fixed before import: `hellogeroz@gmail.com` (autoren-partner.de,
+off-domain gmail), `info@flyeralarm-trading.com` (Cupcakes & Kisses — their
+printer, not the brand), `produktsicherheit@droemer-knaur.de` (Groh — parent
+group's product-safety inbox), `max@mustermann.de` placeholder, a ROT13
+address at lowcontentkurs.de, and the concatenation artifact
+`19-519info@singliesel.dewww.singliesel.de` → `info@singliesel.de`. Coaches who
+also sell services (Gaiswinkler, Nomad, Autorenkompass, Schlienz) were routed to
+the partner letter rather than white-label.
+
+Workspace dedup caught one silent overlap at import: `kontakt@carow-verlag.de`
+already sits in «Amazon Sellers [DE Companies]», so 84 of 85 leads went in.
+Suppressed as already contacted: sinaveria.de, selfpublisherbibel.de,
+nomad-publishing.de, nice-publishing.de.
+
+**Open:** 19 DACH domains yielded no email (`data/de/no_email_de.txt`). They were
+harvested with `harvest_deep.py` before r6's `harvest_crawl.py` existed — that
+crawler is the better tool and should be re-run over them before anyone resorts
+to contact forms.
+
+---
+
+## Round 6 (2026-08-10) — full site crawl
+
+`harvest_deep.py` still guessed URLs, so it missed addresses published on
+non-standard pages (Celebrate Lit's was on `/19-2/`, a services page).
+`harvest_crawl.py` instead enumerates the site's own internal links, scores them
+(contact > about > team > submissions > services > faq > press), reads the best
+14 pages, and additionally parses **JSON-LD / schema.org** and inline JSON
+(`__NEXT_DATA__`, `__NUXT__`, Wix warmup) where many sites keep the address.
+
+Run over 195 never-contacted, reachable domains: **113 yielded an email.**
+
+Split of that yield:
+* **75 are `.de` / `.at`** — they belong to the pre-existing **German (DACH) KDP
+  round**, not to the English campaigns. Left alone.
+* **26 English** → **12 after QA** → imported: 5 services, 4 partners, 3 publishers.
+* 72 English domains still have no address at all.
+
+QA again removed the usual third-party noise (lit agencies, web designers,
+`john@doe.com`, `info@simprosys.com`) — the same 14-address blocklist as r5.
+Two useful recoveries: Ghostwriters Avenue and The Writing Room, whose contact
+forms could not be submitted (phone-gated / lazy reCAPTCHA), turned out to
+publish `sales@` and `info@` addresses deeper in the site.
+
+> ⚠️ **Note for whoever owns the German round:** `harvest_deep.py` and
+> `classify_forms.py` already existed in this folder from that earlier session
+> and were **overwritten** by this session's versions. The data they had
+> produced (`data/kdp_contacts_deep.json`, 270 domains incl. the German ones)
+> is intact and `build_kdp_de_csv.py` still reads it fine — only the two script
+> sources were replaced.
+
+---
+
+## Round 5 (2026-08-10) — deep re-harvest of the domains v1 missed
+
+The shallow `harvest_kdp.py` only fetched the homepage + 2 link-matched pages
+and could not read Cloudflare-obfuscated addresses, so **161 of the 297 r4
+domains yielded no email**. `harvest_deep.py` re-ran them with:
+Cloudflare `data-cfemail` decoding, `[at]`/`[dot]` de-obfuscation, direct probes
+of 18 common contact paths, a wider link-hint regex, 6 pages/domain, and a
+`hasForm` flag for routing the leftovers.
+
+Result: **58 domains yielded an email → 43 clean leads after QA**, imported
+2026-08-10 into the matching campaign by the same three-way split:
+
+| Bucket | Leads | Campaign |
+|---|---|---|
+| Client-managing services | 20 | services `58f661bd…` |
+| Adjacent partners | 15 | partners `3a49143f…` |
+| Own-catalog publishers | 8 | Indie Publishers Direct `9c35c610…` |
+
+QA dropped 15 third-party/junk addresses the scraper picked up off client and
+credit links (lit agencies, web designers, PR reps, `john@doe.com`) and decoded
+a second ROT13-obfuscated address (Fisher King → `submissions@`).
+
+**Still unreachable by email: 118 orgs** — see `data/no_email_remaining.txt`
+(58 have a contact form, 21 have a LinkedIn page, 24 sites are dead/unreachable).
+These need manual form/LinkedIn follow-up; not yet actioned.
+
+---
+
 ## Round 4 (2026-08-10) — big sweep, THREE-WAY split by offer fit
 
 137 leads imported 2026-08-10 after splitting by which letter actually fits

@@ -1,112 +1,178 @@
 #!/usr/bin/env python3
-"""
-Deep second-pass email harvester for domains where 2b found nothing.
+"""Second-pass email harvester for domains that came back empty from 2b.
 
-Differences vs 2b_email_harvest.py:
-- probes common contact paths directly (/contact, /contact-us, /about, ...)
-  even when the homepage has no matching link;
-- follows up to 5 contact-ish internal links (2b: 2);
-- decodes Cloudflare email obfuscation (data-cfemail) and simple
-  "name [at] domain [dot] com" spellings;
-- own progress cache (_deep_harvest_progress.json) so cached empty results
-  from the first pass are re-tried, then merges results back into
-  layer1_contacts_raw.json (the file 3_build_instantly_csv.py reads).
+2b fetches the homepage + 2 contact links and regex-greps for plain emails. It
+misses the three ways sites actually hide addresses:
+
+  1. Cloudflare Email Obfuscation — `<a data-cfemail="hex">[email protected]</a>`
+     (this is what daniks.ai itself uses, so it's everywhere).
+  2. Human-readable munging — "info [at] example [dot] com", "info (at) example".
+  3. Addresses that only live on a deeper contact page 2b never reached
+     (/contact-us, /get-in-touch, /reach-us, /enquiry, /team, …).
+
+Output merges into the same `_harvest_progress.json` / `layer1_contacts_raw.json`
+shape as 2b, so downstream builders need no changes. Stdlib only, resumable.
 
 Usage:
-    python3 outreach/scripts/2c_deep_harvest.py --domains-file outreach/data/us_domains_noemail.txt
+    python3 outreach/scripts/2c_deep_harvest.py --domains-file <file>
+    python3 outreach/scripts/2c_deep_harvest.py --domains-file <file> --workers 16
 """
 import argparse
 import concurrent.futures as cf
+import gzip
 import json
 import re
-import sys
+import ssl
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from importlib import import_module
-h = import_module("2b_email_harvest")
-
 DATA = Path(__file__).resolve().parents[1] / "data"
-PROGRESS = DATA / "_deep_harvest_progress.json"
+PROGRESS = DATA / "_harvest_progress.json"
 OUT = DATA / "layer1_contacts_raw.json"
 
-COMMON_PATHS = ["contact", "contact-us", "contactus", "about", "about-us",
-                "team", "our-team", "company", "get-in-touch"]
-CONTACT_HINT = re.compile(r"(contact|about|team|kontakt|company|reach|touch|connect|support)", re.I)
-CF_RE = re.compile(r'data-cfemail="([0-9a-f]+)"', re.I)
-AT_RE = re.compile(r"([a-z0-9._%+\-]+)\s*(?:\[at\]|\(at\)|\{at\})\s*([a-z0-9.\-]+)\s*(?:\[dot\]|\(dot\)|\{dot\})\s*([a-z]{2,})", re.I)
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+EMAIL_RE = re.compile(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}")
+LINK_RE = re.compile(r'href=["\']([^"\']+)["\']', re.I)
+CF_RE = re.compile(r'data-cfemail=["\']([0-9a-fA-F]+)["\']')
+# "info [at] example [dot] com" / "info (at) example (dot) com" / "info AT example DOT com"
+MUNGED_RE = re.compile(
+    r"([a-zA-Z0-9._%+\-]+)\s*(?:\[at\]|\(at\)|\{at\}|\s+at\s+)\s*"
+    r"([a-zA-Z0-9.\-]+)\s*(?:\[dot\]|\(dot\)|\{dot\}|\s+dot\s+)\s*([a-zA-Z]{2,})",
+    re.I)
+
+CONTACT_PATHS = ["/contact", "/contact-us", "/contactus", "/about", "/about-us",
+                 "/get-in-touch", "/reach-us", "/enquiry", "/team", "/support"]
+CONTACT_HINT = re.compile(r"(contact|about|team|reach|touch|enquir|inquir|support|connect)", re.I)
+
+JUNK_RE = re.compile(
+    r"(no-?reply|noreply|postmaster|mailer-daemon|abuse|hostmaster|dns-admin|sentry|"
+    r"@(?:example|wix|squarespace|godaddy|wordpress|shopify|cloudflare|netlify|"
+    r"gmail|googlemail|yahoo|hotmail|outlook|domain|email|company)\.)", re.I)
+IMG_EXT_RE = re.compile(r"\.(png|jpg|jpeg|gif|svg|webp|css|js|ico|woff|ttf)$", re.I)
+
+CTX = ssl.create_default_context()
+CTX.check_hostname = False
+CTX.verify_mode = ssl.CERT_NONE
 
 
-def decode_cf(hexstr):
+def decode_cfemail(hexstr):
+    """Cloudflare XORs each byte with the first byte of the hex blob."""
     try:
         b = bytes.fromhex(hexstr)
-        return "".join(chr(c ^ b[0]) for c in b[1:])
+        key = b[0]
+        return "".join(chr(c ^ key) for c in b[1:])
     except Exception:
         return ""
 
 
-def deep_harvest(domain):
-    rec = {"domain": domain, "emails": [], "linkedIns": [], "scrapedUrls": []}
-    pages = []
-    base = None
-    for scheme in ("https://", "http://"):
-        try:
-            html, final = fetch = h.fetch(scheme + domain)
-            base = fetch[1]
-            pages.append(fetch)
-            break
-        except Exception:
-            continue
-    if base is None:
-        rec["error"] = "homepage_unreachable"
-        return rec
-    root = base.split("://")[0] + "://" + base.split("://")[1].split("/")[0]
+def fetch(url, timeout=12):
+    req = urllib.request.Request(url, headers={
+        "User-Agent": UA,
+        "Accept": "text/html,application/xhtml+xml",
+        "Accept-Encoding": "gzip",
+    })
+    with urllib.request.urlopen(req, timeout=timeout, context=CTX) as r:
+        raw = r.read(2_000_000)
+        if r.headers.get("Content-Encoding") == "gzip":
+            try:
+                raw = gzip.decompress(raw)
+            except OSError:
+                pass
+        return raw.decode("utf-8", "replace"), r.geturl()
 
-    seen = {pages[0][0]}
-    candidates = []
-    for href in h.LINK_RE.findall(pages[0][1]):
+
+def emails_from(html):
+    found = set(EMAIL_RE.findall(html))
+    for m in re.findall(r'mailto:([^"\'?>&]+)', html, re.I):
+        found.add(urllib.parse.unquote(m))
+    for hx in CF_RE.findall(html):
+        d = decode_cfemail(hx)
+        if "@" in d:
+            found.add(d)
+    for local, dom, tld in MUNGED_RE.findall(html):
+        found.add(f"{local}@{dom}.{tld}")
+    return found
+
+
+def clean(found, domain):
+    root = domain.split(".")[-2] if "." in domain else domain
+    out = set()
+    for e in found:
+        e = e.strip().strip(".,;:").lower()
+        e = re.sub(r"^(%20|mailto:)+", "", e)
+        if IMG_EXT_RE.search(e) or JUNK_RE.search(e) or e.count("@") != 1:
+            continue
+        local, host = e.split("@")
+        if not local or "." not in host or len(e) > 80:
+            continue
+        if not re.match(r"^[a-z0-9][a-z0-9._%+\-]*$", local):
+            continue
+        # second pass is on-domain only — third-party strays are what polluted pass 1
+        if root not in host:
+            continue
+        out.add(e)
+    return out
+
+
+def harvest(domain):
+    rec = {"domain": domain, "emails": [], "linkedIns": [], "scrapedUrls": [], "pass": 2}
+    pages, base = [], None
+    for scheme in ("https://", "http://"):
+        for host in (domain, "www." + domain):
+            try:
+                html, final = fetch(scheme + host)
+                base, pages = final, [(final, html)]
+                break
+            except Exception:
+                continue
+        if base:
+            break
+    if base is None:
+        rec["error"] = "unreachable"
+        return rec
+
+    origin = "{0.scheme}://{0.netloc}".format(urllib.parse.urlsplit(base))
+    seen = {base}
+    targets = []
+    # links the homepage itself offers
+    for href in LINK_RE.findall(pages[0][1]):
+        if len(targets) >= 4:
+            break
         if href.startswith(("mailto:", "tel:", "#", "javascript:")):
             continue
         if not CONTACT_HINT.search(href):
             continue
-        if href.startswith("http") and domain not in href:
+        url = urllib.parse.urljoin(base, href)
+        if url in seen or IMG_EXT_RE.search(url) or urllib.parse.urlsplit(url).netloc not in base:
             continue
-        url = href if href.startswith("http") else root + "/" + href.lstrip("/")
-        if url not in seen and not h.IMG_EXT_RE.search(url):
-            seen.add(url)
-            candidates.append(url)
-    for p in COMMON_PATHS:
-        url = f"{root}/{p}"
+        seen.add(url)
+        targets.append(url)
+    # plus the conventional paths, which many sites don't link from the header
+    for p in CONTACT_PATHS:
+        if len(targets) >= 7:
+            break
+        url = origin + p
         if url not in seen:
             seen.add(url)
-            candidates.append(url)
+            targets.append(url)
 
-    fetched = 0
-    for url in candidates:
-        if fetched >= 5:
-            break
+    for url in targets:
         try:
-            html, final = h.fetch(url, timeout=12)
+            html, final = fetch(url)
             pages.append((final, html))
-            fetched += 1
         except Exception:
             pass
 
-    emails, lis = set(), set()
+    found, lis = set(), set()
     for final, html in pages:
         rec["scrapedUrls"].append(final)
-        emails |= set(h.EMAIL_RE.findall(html))
-        for m in re.findall(r'mailto:([^"\'?>]+)', html, re.I):
-            emails.add(m)
-        for hexstr in CF_RE.findall(html):
-            d = decode_cf(hexstr)
-            if d:
-                emails.add(d)
-        for m in AT_RE.findall(html):
-            emails.add(f"{m[0]}@{m[1]}.{m[2]}")
+        found |= emails_from(html)
         for li in re.findall(r'https?://[a-z]{0,3}\.?linkedin\.com/(?:company|in)/[^"\'\s<>]+', html, re.I):
             lis.add(li.rstrip("/").split("?")[0])
-    rec["emails"] = sorted(h.clean_emails(emails, domain))
+    rec["emails"] = sorted(clean(found, domain))
     rec["linkedIns"] = sorted(lis)[:3]
     return rec
 
@@ -114,43 +180,37 @@ def deep_harvest(domain):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--domains-file", required=True)
-    ap.add_argument("--workers", type=int, default=30)
+    ap.add_argument("--workers", type=int, default=14)
+    ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
-    domains = [d.strip() for d in Path(args.domains_file).read_text().splitlines() if d.strip()]
+    domains = [d.strip().lower() for d in Path(args.domains_file).read_text().split() if d.strip()]
+    if args.limit:
+        domains = domains[: args.limit]
     cache = json.loads(PROGRESS.read_text()) if PROGRESS.exists() else {}
-    todo = [d for d in domains if d not in cache]
-    print(f"{len(cache)} cached, deep-harvesting {len(todo)} domains", flush=True)
 
-    done = 0
+    print(f"deep pass over {len(domains)} domains, {args.workers} workers")
+    hits = 0
     with cf.ThreadPoolExecutor(max_workers=args.workers) as ex:
-        futs = {ex.submit(deep_harvest, d): d for d in todo}
-        for fut in cf.as_completed(futs):
+        futs = {ex.submit(harvest, d): d for d in domains}
+        for i, fut in enumerate(cf.as_completed(futs), 1):
             d = futs[fut]
             try:
-                cache[d] = fut.result()
-            except Exception as e:  # noqa
-                cache[d] = {"domain": d, "emails": [], "error": str(e)[:60]}
-            done += 1
-            if done % 100 == 0:
+                rec = fut.result()
+            except Exception as e:
+                rec = {"domain": d, "emails": [], "error": str(e)[:60], "pass": 2}
+            if rec.get("emails"):
+                # keep pass-1 record if it already had emails; else upgrade
+                if not cache.get(d, {}).get("emails"):
+                    cache[d] = rec
+                    hits += 1
+            if i % 50 == 0:
                 PROGRESS.write_text(json.dumps(cache, ensure_ascii=False))
-                hits = sum(1 for v in cache.values() if v.get("emails"))
-                print(f"  {done}/{len(todo)} | {hits} with email", flush=True)
+                print(f"  {i}/{len(domains)} | {hits} recovered")
 
     PROGRESS.write_text(json.dumps(cache, ensure_ascii=False))
-    hits = sum(1 for v in cache.values() if v.get("emails"))
-    print(f"deep pass done: {len(cache)} domains, {hits} with >=1 email", flush=True)
-
-    # merge into the builder's contacts file: replace empty records for these domains
-    records = json.loads(OUT.read_text()) if OUT.exists() else []
-    by_dom = {r.get("domain"): r for r in records}
-    merged = 0
-    for d, rec in cache.items():
-        if rec.get("emails") and not (by_dom.get(d) or {}).get("emails"):
-            by_dom[d] = rec
-            merged += 1
-    OUT.write_text(json.dumps(list(by_dom.values()), ensure_ascii=False), encoding="utf-8")
-    print(f"merged {merged} newly-found domains into {OUT}", flush=True)
+    OUT.write_text(json.dumps(list(cache.values()), ensure_ascii=False), encoding="utf-8")
+    print(f"recovered {hits} domains that pass 1 left empty")
 
 
 if __name__ == "__main__":
