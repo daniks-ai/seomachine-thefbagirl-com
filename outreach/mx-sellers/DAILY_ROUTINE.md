@@ -31,9 +31,11 @@ and report what was skipped. Do NOT commit/push anything — lead data stays loc
    which saturates on already-seen sellers). Get the next unprocessed chunk from the
    pre-harvested pool of ~23k products and advance its cursor:
    ```bash
-   python3 outreach/mx-sellers/daily_collect.py --next-asins 2500
+   python3 outreach/mx-sellers/daily_collect.py --next-asins 400
    ```
-   Inject the printed ASINs: `window.__seedAsins([...asins])` (chunk to ~2000/call).
+   (400 ≈ what one bounded burst consumes; the cursor persists so each day advances
+   through the pool. Pool ~23k → ~2 months of fresh products before it wraps.)
+   Inject the printed ASINs: `window.__seedAsins([...asins])`.
    This is the main lever for finding NEW sellers day over day.
 
 4. **Start**: `window.__mxStart()` → `"started"`.

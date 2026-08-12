@@ -131,6 +131,14 @@ LIST_PAGES = [
     ("marketing_uk2", "https://ghostwritingsolution.com/blog/top-17-book-marketing-services-in-the-uk/"),
     ("ghostwriters_uk", "https://www.bookwritinginc.com/blog/top-ghostwriting-services-in-the-united-kingdom/"),
     ("promo_uk", "https://www.barnesghostwriting.com/blog/top-10-best-book-marketing-and-promotion-services-in-uk/"),
+    # --- second pass ---
+    ("kids_pub_uk", "https://schoolreadinglist.co.uk/resources/childrens-book-publishers-in-uk/"),
+    ("kids_pub_uk2", "https://writingtipsoasis.com/uk-childrens-book-publishers-accepting-submissions/"),
+    ("kids_pub_uk3", "https://weebookworms.co.uk/blogs/blog/20-uk-childrens-book-publishers-accepting-your-manuscript"),
+    ("kids_pr_uk", "https://schoolreadinglist.co.uk/resources/childrens-and-ya-book-publicists-and-pr/"),
+    ("ghost_dir_uk", "https://www.publishersglobal.com/directory/united-kingdom/publishing-services-of-london/service/ghostwriting-services"),
+    ("alli_services", "https://selfpublishingadvice.org/self-publishing-services-directory/"),
+    ("wa_selfpub", "https://www.writersandartists.co.uk/advice/self-publishing/self-publishing-provider"),
 ]
 
 NOISE_HOST = re.compile(
