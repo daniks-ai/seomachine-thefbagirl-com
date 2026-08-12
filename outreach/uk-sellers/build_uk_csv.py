@@ -27,7 +27,8 @@ FREE = {"gmail.com", "hotmail.com", "hotmail.co.uk", "outlook.com",
         "yahoo.com", "yahoo.co.uk", "live.com", "live.co.uk", "icloud.com",
         "btinternet.com", "aol.com", "googlemail.com", "sky.com", "talktalk.net"}
 PLACEHOLDER = re.compile(
-    r"^(youremail|your|example|email|name|test|demo|user|info@email)$"
+    r"^(youremail|your|example|email|name|firstname|lastname|fname|lname|"
+    r"firstnamelastname|yourname|test|demo|user|username|info@email)$"
     r"|@email\.com$|@sentry|wixpress|sentry-next", re.I)
 JUNK = re.compile(
     r"(no-?reply|noreply|postmaster|mailer-daemon|abuse|hostmaster|dns-admin|"
