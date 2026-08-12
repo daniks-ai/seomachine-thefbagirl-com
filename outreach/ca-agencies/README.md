@@ -51,34 +51,24 @@ tech2globe.com, already contacted).
 | Wave | Firms | New domains | Leads |
 |---|---|---|---|
 | Quebec / francophone directories + listicles | 134 | 110 | 79 imported |
-| Digital Agency Network (8 Canadian city pages) + retail/DTC | 172 | 170 | 118 **queued** |
-| Google Partners Canada + Shopify/Klaviyo partners | 350+ | 273 | 187 **queued** |
+| Digital Agency Network (8 Canadian city pages) + retail/DTC | 172 | 170 | 118 imported |
+| Google Partners Canada + Shopify/Klaviyo partners | 350+ | 273 | 185 imported |
 
 Big creative/brand shops were dropped from the Quebec and retail waves — Sid Lee,
 LG2, Cossette, DDB, Publicis, Tank Worldwide, Zulu Alpha Kilo and similar run
 brand campaigns, not ecommerce paid media, so the white-label offer misfits.
 
-## BLOCKED: workspace contact quota is full
+## Quota block (resolved 2026-08-10)
 
-The Instantly plan (Hyper Growth, $97/mo) caps **uploaded contacts at 25,000** and
-the workspace sits at **24,969** — 31 slots left, against 305 leads ready to go.
-The import dialog replaces its button with "Upgrade plan" once the list exceeds
-the remaining quota, so the last two waves could not be loaded.
+Rounds 4-5 initially could not be imported: the Hyper Growth plan caps uploaded
+contacts at 25,000 and the workspace sat at 24,969 — 31 slots against 305 leads.
+When the pasted list exceeds the remaining quota Instantly hides the Import
+button and shows "Upgrade plan" plus a line reading "N uploads remaining for
+your workspace, but the import list has M valid entries".
 
-Ready-to-paste file: `outreach/data/instantly_CA_QUEUED_bulk.txt` (305 lines,
-already deduped against everything imported so far). Paste it into
-Add Leads → Emails Manually once quota exists.
-
-Three ways to free room, all needing a decision from the account owner:
-
-1. **Buy a contact add-on** on the current plan (cheapest if only ~1k more slots
-   are needed).
-2. **Upgrade to Light Speed** ($358/mo) — 100,000 contacts, only worth it if
-   several verticals keep scaling.
-3. **Delete leads from finished campaigns** — the completed [DE] (21,706 sent)
-   and [ES] (6,599 sent) Amazon-seller campaigns hold most of the 25,000. This
-   frees space at no cost but discards their lead history, and those numbers
-   feed other verticals' reporting, so it should not be done casually.
+The account owner raised the cap to **50,000**, after which the queued file
+imported cleanly: **303 contacts** (two dropped in a final cleaning pass — a UK
+and a NYC office inbox that are not Canadian).
 
 ## Cleaning rules (apply before every import)
 
@@ -103,7 +93,7 @@ outreach/data/instantly_CA_master.csv  instantly_CA_bulk.txt        round 1 impo
 outreach/data/ca_r2_{clutch,directories,listicles,ecom}.json        round 2 raw
 outreach/data/ca_r2_agencies.json  ca_r2_domains.txt                round 2 new
 outreach/data/instantly_CA_r{2..5}_master.csv + _bulk.txt          rounds 2-5
-outreach/data/instantly_CA_QUEUED_bulk.txt                          305 leads awaiting quota
+outreach/data/sent/ca_r4_r5_imported.txt                            rounds 4-5, imported
 outreach/data/ca_all_domains.txt                                    dedup key for round 3
 ```
 
@@ -113,5 +103,11 @@ outreach/data/ca_all_domains.txt                                    dedup key fo
   the usual 5-15% bounce risk.
 - Bulk-insert-manually is the only import path that works from an automated
   browser session; the CSV uploader commits the first few rows then hangs.
-- The campaign's lead counter is cached — verify an import by searching for
-  specific addresses, not by reading the number.
+- The campaign's lead counter is cached and can lag an import by a long while —
+  verify by searching for specific addresses, or by watching Uploaded Contacts
+  move on the billing page. Do not trust the number on the leads tab.
+
+## Totals
+
+822 leads pushed across four imports (173 + 267 + 79 + 303). Workspace dedup
+absorbs some of every batch, so the campaign holds fewer than the sum.
