@@ -31,7 +31,7 @@ Those two scrape the marketplace itself. That does not work here:
 | 2 | `in2_crawl.py` | async homepage crawl + contact-page chase, extracts emails and signals | 687,719 crawled, 110k with an address |
 | 2b | `in2b_platform.py` | is a **store engine** installed (Shopify/WooCommerce/Magento/…)? | 68,290 shops |
 | 2c | `in2c_retail.py` | does it sell **physical goods** (shipping/COD/returns, no service verticals)? | 34,249 retailers |
-| 3 | `in3_build_csv.py` | clean, MX-validate, tier, dedupe vs all of `outreach/` | **21,132 leads**, 4,000 shipped |
+| 3 | `in3_build_csv.py` | clean, MX-validate, tier, dedupe vs all of `outreach/` | **21,040 leads**, 4,000 shipped |
 
 `in1_serp.py` is a DataForSEO SERP discovery grid, parked: the shared DataForSEO
 balance went negative mid-build (another pipeline drained it), and CrUX turned
@@ -61,11 +61,11 @@ up — 1,090 queries, ~$5.
 
 ## Lead tiers
 
-- **A — 221** explicit Amazon product/store link or "buy on Amazon" copy.
-- **B — 378** bare `amazon.in` / `amazon.com` mention.
-- **C — 20,533** Indian physical-goods store, no Amazon evidence on the site.
+- **A — 219** explicit Amazon product/store link or "buy on Amazon" copy.
+- **B — 377** bare `amazon.in` / `amazon.com` mention.
+- **C — 20,444** Indian physical-goods store, no Amazon evidence on the site.
 
-The shipped 4,000 = all of A + all of B + the top 3,402 of C, ranked by branded
+The shipped 4,000 = all of A + all of B + the top 3,404 of C, ranked by branded
 (non-freemail) address first, then traffic rank. One address per company —
 never two mailboxes at the same shop, which doubles complaint risk on shared
 sending mailboxes for no extra reach.
