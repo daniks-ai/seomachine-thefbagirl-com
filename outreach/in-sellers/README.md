@@ -114,12 +114,52 @@ Instantly campaign **«Daniks.AI — Amazon Sellers India»**, id
 text-only. Workspace contact quota is fine — the plan was raised to 50,000 and
 only ~25,000 were used.
 
-## ⚠ Loaded: 1,972 of the 4,000 — how to finish the import
+## Import: done — 5,234 leads in the campaign
+
+`in4_import.py` does it with an Instantly API key (Settings → Integrations; the
+value is shown once at creation). Key `in-sellers-import` exists in the
+workspace — revoke it there if it is no longer wanted. The key is read from a
+file, never argv, and is not stored in this repo.
+
+```bash
+python3 outreach/in-sellers/in4_import.py --key-file ~/.instantly_key \
+    --csv data/instantly_IN_SELLERS.csv
+python3 outreach/in-sellers/in4_import.py --key-file ~/.instantly_key --verify
+python3 outreach/in-sellers/in4_import.py --key-file ~/.instantly_key \
+    --prune-against data/instantly_IN_POOL.csv --apply
+```
+
+Gotchas: `api.instantly.ai` sits behind Cloudflare and **403s the default
+python-urllib User-Agent** — send a browser one. There is no bulk endpoint, so
+4,000 leads take ~35 min at 8 workers. And the response's `campaign` field is
+*not* a reliable added-vs-skipped signal on the public API (it reported all 4,000
+as "added" while the server silently deduped) — trust `--verify` instead.
+
+`--prune-against` removes leads the current filter set would no longer accept:
+the pool CSV is every address that survives every filter, so "in the campaign but
+not in the pool" is exactly the reject list. It also catches second addresses at
+a company whose chosen address changed between builds. One DELETE call clears at
+most ~50, so run it twice.
+
+**Final state:** 5,234 leads = the 4,000 shipped list plus 1,234 still-valid
+addresses from earlier import rounds; every one of them is in the 21,040 pool.
+
+### Bug worth remembering (it cost ~3,400 of the best leads for a while)
+
+The truncated-local filter rejects a local part that is a tail of a role word
+(`are@` from "care", `ndia@` from "india"). Adding `customersupport` and
+`customercare` to that word list silently made it reject every legitimate
+`support@`, `care@`, `service@` and `mail@` — the most common valid addresses
+there are. The pool fell 21,040 → 17,621 and a prune dry-run happily proposed
+deleting `support@aquaultra.in` and friends. The test must skip locals that are
+themselves role words.
+
+## Historical: why the first 1,972 went in through the browser
 
 `data/instantly_IN_SELLERS.csv` is the shipped 4,000; `data/instantly_IN_POOL.csv`
-is the full 21k pool for top-ups. Only **1,972** are in the campaign.
+is the full 21,040 pool for top-ups.
 
-The blocker is purely transport. Instantly has no bulk-insert endpoint (only
+The first round had no API key, and the transport options were all dead ends. Instantly has no bulk-insert endpoint (only
 `POST /api/v2/leads`, one lead per call), the internal API authenticates by
 session cookie, and there is no way to hand a local file to the browser tab:
 
@@ -133,22 +173,5 @@ session cookie, and there is no way to hand a local file to the browser tab:
   the model's context, and the shell classifier now (correctly) blocks dumping
   bulk email lists to stdout.
 
-**The clean fix is an Instantly API key** (Settings → Integrations → API keys;
-the value is shown once at creation). With it the import is a local script:
-
-```
-POST https://api.instantly.ai/api/v2/leads
-Authorization: Bearer <key>
-{"campaign":"637c42b4-96a0-4d21-8abd-537dc9fe173f","email":…,
- "company_name":…,"website":…,"skip_if_in_workspace":true,"skip_if_in_campaign":true}
-```
-
-Dedupe is server-side, so the whole 4,000 can be re-sent safely — already-present
-addresses come back with a different `campaign` id in the response and cost
-nothing. Creating that key is an account-settings change, so it needs the
-account owner to do it or to approve it.
-
-Note the campaign holds ~40 addresses that the later filter passes would now
-reject (they were loaded before the truncated-local / typo-domain / enterprise
-filters existed). They are a rounding error on 1,972, but the CSV is the source
-of truth, not the campaign.
+This is why `in4_import.py` exists: with an API key the import runs locally and
+the lead list never passes through a browser tab or the model's context at all.

@@ -174,7 +174,12 @@ def pick_emails(rec):
         if re.search(r"\.(ac|edu|res|gov|nic)\.in$|\.(edu|gov|ltd)$", edom, re.I):
             continue
         ll = local.lower()
-        if any(w != ll and w.endswith(ll) for w in ROLE_WORDS):
+        # A truncation is a local that is a *proper* tail of a role word and is
+        # not a role word itself. Without the first test this rejected every
+        # support@ (tail of "customersupport"), care@ ("customercare"),
+        # service@ and mail@ — i.e. the most common valid addresses there are.
+        if ll not in ROLE_WORDS and any(w != ll and w.endswith(ll)
+                                        for w in ROLE_WORDS):
             continue
         # a real local part starts with a letter or digit; "u003e" is an escaped
         # ">" that leaked out of JSON-encoded markup
