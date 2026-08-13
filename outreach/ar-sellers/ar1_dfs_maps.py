@@ -67,6 +67,14 @@ QUERIES_B = [
     "agencia performance marketing",
     "desarrollo tienda online",
     "agencia marketplace",
+    # round 2 (2026-08-12): the same firms sell themselves under different
+    # labels city to city, so the query set matters as much as the city list
+    "agencia seo",
+    "agencia google ads",
+    "agencia de social media",
+    "diseño web y marketing",
+    "consultora de negocios digitales",
+    "agencia de publicidad",
 ]
 # Tier C — brands/retailers/importers that could sell on Amazon US themselves.
 QUERIES_C = [
@@ -93,6 +101,29 @@ CITIES = [
     "Posadas", "Parana", "Neuquen", "Bariloche", "Rio Gallegos",
     "Ushuaia", "San Juan", "San Luis", "La Rioja", "Catamarca",
     "Formosa", "Comodoro Rivadavia", "Trelew", "Santa Rosa",
+    # round 2 (2026-08-12): the AMBA partidos and the provincial mid-size
+    # cities. Round 1 stopped at provincial capitals, which under-samples
+    # Greater Buenos Aires — where most of these agencies actually sit.
+    "Berazategui", "Florencio Varela", "Almirante Brown", "Esteban Echeverria",
+    "Ezeiza", "San Justo, La Matanza", "Merlo, Buenos Aires", "Moreno",
+    "Jose C Paz", "San Miguel, Buenos Aires", "Grand Bourg", "Caseros",
+    "Hurlingham", "Ituzaingo", "Escobar", "Zarate", "Campana", "Lujan",
+    "Mercedes, Buenos Aires", "Chivilcoy", "Junin, Buenos Aires", "Pergamino",
+    "San Nicolas de los Arroyos", "Olavarria", "Azul", "Necochea", "Pinamar",
+    "Villa Gesell", "Chascomus", "Balcarce", "Tres Arroyos", "Coronel Suarez",
+    "Nunez, Buenos Aires", "Caballito, Buenos Aires", "Recoleta, Buenos Aires",
+    "Almagro, Buenos Aires", "Nueva Cordoba, Cordoba", "Villa Maria",
+    "Rio Tercero", "San Francisco, Cordoba", "Alta Gracia", "Jesus Maria",
+    "Bell Ville", "Venado Tuerto", "Reconquista", "Villa Constitucion",
+    "San Lorenzo, Santa Fe", "Casilda", "Sunchales", "Esperanza, Santa Fe",
+    "Concordia", "Gualeguaychu", "Concepcion del Uruguay", "Villaguay",
+    "Goya", "Curuzu Cuatia", "Obera", "Eldorado", "Puerto Iguazu",
+    "Tartagal", "Yerba Buena", "Concepcion, Tucuman", "La Banda",
+    "Termas de Rio Hondo", "Chilecito", "San Martin, Mendoza",
+    "Lujan de Cuyo", "Maipu, Mendoza", "Tunuyan", "Villa Mercedes",
+    "General Roca", "Cipolletti", "Villa Regina", "San Martin de los Andes",
+    "Zapala", "Viedma", "Puerto Madryn", "Esquel", "Caleta Olivia",
+    "Rio Grande, Tierra del Fuego", "El Calafate", "Rafaela, Santa Fe",
 ]
 # Tier C sweeps only the top metros — long-tail provinces are all local retail.
 CITIES_C = CITIES[:22]
