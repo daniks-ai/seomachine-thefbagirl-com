@@ -68,7 +68,14 @@ DROP_DOMAINS = {
     # deep-harvest additions: SaaS tools / non-UK / junk-only inboxes
     "competera.net", "croud.com", "nozzle.ai", "sellertoolkit.co.uk",
     "vyper.global",
+    # round 2 (2026-08-11): global holdco networks (same call as havas/omnicom)
+    # and a 3PL that belongs to the prep-centre offer, not the agency one
+    "inizioevoke.com", "zenithmedia.com", "danum3pl.com",
 }
+
+# same brand, foreign office: the UK inbox is already in the list, so mailing
+# these would be a second touch to one company aimed at the wrong country
+FOREIGN_OFFICE_TLD = re.compile(r"\.(com\.au|co\.nz|in|ae|sg|za|co\.za|ca|us)$")
 MAX_PER_DOMAIN = 3
 
 # master rows carry SERP/GMaps page titles as company names — fix or blank
