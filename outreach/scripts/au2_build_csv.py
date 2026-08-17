@@ -37,15 +37,6 @@ ESCAPE_ARTIFACT = re.compile(
     r"|(email|australia|phone|address)(?=hello@|info@|contact@|sales@)"
     r"|[nrt](?=hello@|info@|contact@|team@|support@|sales@|enquiries@))", re.I)
 
-# Two-letter ccTLDs that read as "another country's office" for an AU brand.
-# .co/.io/.ai/.me/.tv and friends are sold as generic vanity TLDs, so they stay.
-GENERIC_SHORT_TLD = {"co", "io", "ai", "me", "tv", "cc", "ly", "sh", "gg", "fm", "au"}
-
-
-def foreign_cc(domain):
-    tld = domain.rsplit(".", 1)[-1].lower()
-    return len(tld) == 2 and tld not in GENERIC_SHORT_TLD
-
 # Words that are never a person's given name but pass builder.guess_name's
 # "short single token with a vowel" test — greetings, service words, cities.
 NOT_A_NAME = {
@@ -80,9 +71,8 @@ def usable(email, site_domain):
         return False
     if re.search(r"\.(com|net|org|co)\.au\.[a-z]{2,}$", edom):  # ".com.au.au"
         return False
-    # a .co.nz / .fr twin of an AU brand's inbox is that brand's other market
-    if foreign_cc(edom) and not edom.endswith(".au") and not site_domain.endswith(edom.rsplit(".", 1)[-1]):
-        return foreign_cc(site_domain) and site_domain.rsplit(".", 1)[-1] == edom.rsplit(".", 1)[-1]
+    # vendor / staging / network-holding / foreign-ccTLD rejects live in
+    # au1.email_ok_for_site, which every wave already calls before this.
     return True
 
 

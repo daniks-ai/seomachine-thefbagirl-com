@@ -72,12 +72,58 @@ COMPANY_FIX = {
 }
 
 
+# Two-letter ccTLDs that read as "another country's business". .co/.io/.ai/.me
+# and friends are sold as generic vanity TLDs, so they stay.
+GENERIC_SHORT_TLD = {"co", "io", "ai", "me", "tv", "cc", "ly", "sh", "gg", "fm", "au"}
+
+
+def foreign_cc(domain):
+    tld = domain.rsplit(".", 1)[-1].lower()
+    return len(tld) == 2 and tld not in GENERIC_SHORT_TLD
+
+
+# Global holding networks and mega-agencies. Two hard reasons, both measured on
+# the live [AU] campaign (2026-08-13): their corporate filters reject cold mail
+# (2 of the 4 contacted bounced, against 1.7% on everything else), and a network
+# shop does not buy a white-label PPC tool — it has an in-house trading desk.
+NETWORK_AGENCY = re.compile(
+    r"\b(groupm|wpp|omnicom|publicis|dentsu|havas|ogilvy|mccann|saatchi|"
+    r"leoburnett|bbdo|ddb|wunderman|vmly|mindshare|mediacom|starcom|zenith|"
+    r"initiative|carat|iprospect|essence|isobar|clemenger|bmf|thinkerbell|"
+    r"hogarth|razorfish|digitas|merkle|accenture|deloitte|kpmg)\b", re.I)
+
+# SaaS vendors and platforms whose address gets scraped off an agency's page
+# ("we're a Shopify Plus partner, mail@semrush.com"). Mailing the vendor is
+# noise at best; several are competitors.
+VENDOR_DOMAINS = {
+    "semrush.com", "ahrefs.com", "moz.com", "hubspot.com", "shopify.com",
+    "mailchimp.com", "klaviyo.com", "wix.com", "squarespace.com",
+    "wordpress.com", "godaddy.com", "google.com", "facebook.com", "meta.com",
+    "xero.com", "canva.com", "hootsuite.com", "activecampaign.com",
+    "bigcommerce.com", "wpengine.com", "zapier.com", "stripe.com",
+}
+
+# Non-production hosts: a staging/dev copy of the site exposes the same inbox
+# under a subdomain that does not receive mail.
+NONPROD_HOST = re.compile(r"^(staging|dev|test|demo|uat|beta|preview|www\d)\.", re.I)
+
+
 def email_ok_for_site(email, site_domain):
     """On-domain, brand-stem alternate apex, or whitelisted alternate."""
     if email in EXCLUDE_EMAILS:
         return False
     edom = email.split("@", 1)[1]
-    if edom in PLACEHOLDER_DOMAINS:
+    if edom in PLACEHOLDER_DOMAINS or edom in VENDOR_DOMAINS:
+        return False
+    if NONPROD_HOST.match(edom):
+        return False
+    if NETWORK_AGENCY.search(edom) or NETWORK_AGENCY.search(site_domain):
+        return False
+    # AU-only campaign, so any two-letter ccTLD other than .au is out. This is
+    # stricter than "the inbox disagrees with the site": a New Zealand agency
+    # cleared every earlier filter precisely because its .co.nz site and its
+    # .co.nz inbox agreed with each other.
+    if foreign_cc(edom) or foreign_cc(site_domain):
         return False
     local = email.split("@", 1)[0]
     if len(local) > 20 and "." not in local:   # wewelcometheopportunity@…
@@ -166,6 +212,11 @@ def main():
                 continue
             dom = builder.domain_of(e)
             if dom in DROP_DOMAINS:
+                continue
+            # Master rows were built for other campaigns and never saw the AU
+            # hygiene gate — that is how a GroupM inbox and a .co.nz agency got
+            # into wave 1. Re-check them against the address's own domain.
+            if not email_ok_for_site(e, dom):
                 continue
             seen.add(e)
             kept_prior += 1

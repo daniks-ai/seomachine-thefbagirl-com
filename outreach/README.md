@@ -4,7 +4,41 @@
 > clone (id `83755a44-…`, Sydney TZ). `scripts/au1_build_csv.py` merges the
 > AU rows from layers 1-3 masters with fresh web-research domains
 > (`data/au_agencies.jsonl`, harvested via `2b_email_harvest.py`) →
-> `data/instantly_AU.csv` (176 contacts / 103 domains). Import manually.
+> `data/instantly_AU.csv`. Import manually.
+>
+> Scaled to three waves (2026-08-13) — campaign now holds **2,284 leads /
+> 1,976 domains**, Active:
+> - **wave 1** `au1_build_csv.py` → `instantly_AU.csv` — masters + web research.
+> - **wave 2** `au2_build_csv.py` → `instantly_AU2.csv` — broad ICP (digital /
+>   ecommerce / Google Ads / Shopify) from Apify Google Maps + directories.
+> - **wave 3** `au6_build_wave3.py` → `instantly_AU3.csv` — DataForSEO Maps grid
+>   over 63 AU locations (630 searches, $1.29, 10,018 places → 2,203 new
+>   domains — an order of magnitude more productive than every free source
+>   combined), plus Yellow Pages, vertical specialists, award shortlists.
+>
+> Supporting scripts: `au3_mx_check.py` (DNS deliverability triage — every
+> "dead" verdict gets a patient serial re-check, because a fast parallel sweep
+> called 5 of 8 healthy domains dead), `au4_dataforseo.py` (Maps grid),
+> `au5_verify_agency.py` (homepage agency-vocabulary verdicts),
+> `au7_harvest_isolated.py` (harvest into private cache files — the shared
+> `layer1_contacts_raw.json` is written by any session running 2b/2c and got
+> clobbered mid-build twice).
+>
+> **The hygiene gate lives in `au1.email_ok_for_site` and every wave calls it.**
+> It rejects, in order: hand-excluded addresses, placeholder domains, SaaS
+> vendors scraped off partner badges (`mail@semrush.com`), non-production hosts
+> (`hello@staging.…`), global holding networks (GroupM, Thinkerbell, BMF — 2 of
+> the 4 contacted bounced, against 1.7% elsewhere, and they buy nothing
+> white-label), and any two-letter ccTLD other than `.au` (a New Zealand agency
+> cleared every earlier filter because its `.co.nz` site and `.co.nz` inbox
+> agreed with each other). Wave-1 rows carried over from the layer masters are
+> re-checked through the same gate — they were built for other campaigns and
+> never saw it.
+>
+> **Gotcha — the CSVs are not reproducible between rebuilds.** Per-domain
+> addresses are held in a Python `set`, so `ranked[:2]` can pick a different
+> pair each run. Never diff by row index when topping up; diff the actual
+> addresses against what the campaign already holds.
 
 > **UK vertical** (2026-08-11): dedicated Great Britain cut for the `[UK]`
 > campaign clone (id `a127207a-…`, TZ `Europe/Isle_of_Man` — `Europe/London` is
@@ -43,6 +77,22 @@
 > so volume targets in the thousands need either an adjacent segment
 > (general 3PL / e-commerce fulfillment, not Amazon-specific) or a funded
 > Maps/SERP API.
+>
+> **Round 3 — DataForSEO scale-up** (2026-08-11, +1,847 emails):
+> `prep7_dfs_maps.py` (966 Maps searches → 12,066 places → 3,051 domains) +
+> `prep8_dfs_serp.py` (177 organic queries → 1,277 domains) →
+> `prep4_normalize_r2.py` (category filter drops pharmacies, printers,
+> truckers, self-storage) → harvest + deep pass → `prep5_build_r2_csv.py`.
+> Rows are split by `kind`: Amazon-specific prep keeps the prep copy and goes
+> to campaign `61e094c8-…`; generic 3PL/fulfillment goes to the separate
+> campaign `a16564ec-…` whose Step 1 opens on "the Amazon sellers in your
+> warehouse" (both variants live in `sequences/prep-centers-en.md`).
+>
+> **Cost warning:** the sweep was budgeted at $6-8 from the observed
+> layer-2/3 rates, but actually consumed the whole $50 top-up (balance ended
+> at −$0.54). `resp["cost"]` reported only $3.13 and does NOT reflect real
+> billing for Maps/SERP live-advanced. Before the next sweep, run ~100
+> queries and compare `/appendix/user_data` balance before/after.
 
 > **CPA / e-commerce accountant vertical** (2026-08-10): same 25%-lifetime
 > affiliate offer to accounting firms specializing in Amazon/e-commerce books
