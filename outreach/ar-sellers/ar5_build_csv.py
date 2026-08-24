@@ -30,6 +30,7 @@ import argparse
 import csv
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -153,6 +154,74 @@ MASTER_GLOBS = ["instantly_*.csv", "instantly_segments*/*.csv"]
 
 FIELDS = ["email", "first_name", "last_name", "company_name", "website",
           "city", "tier", "segment", "source"]
+
+
+# --- company-name hygiene ------------------------------------------------
+# Maps and SERP titles carry SEO taglines ("sitefy - Desarrollo Web",
+# "Diseno Web Argentina - Webcrea"). Left alone they render as
+# "Comision recurrente en dolares para sitefy - Desarrollo Web", so the
+# tagline half is dropped and the half holding the brand is kept.
+#
+# ALLCAPS is deliberately NOT title-cased: it wrecks initialisms
+# ("H&FV" -> "H&fv", "GR" -> "Gr"), and shouty-but-correct beats wrong.
+GENERIC_TOKENS = set("""
+agencia agencias publicidad marketing desarrollo diseno consultora consultoria
+estudio servicio servicios soluciones solucion tienda tiendas empresa productora
+comunicacion software sistemas web webs ecommerce comercio digital digitales
+creacion pagina paginas online profesional profesionales integral integrales
+creativa creativo grafico grafica publicitaria publicitario electronico internet
+sitio sitios express company agency studio design designs
+""".split())
+# connectors and place names carry no brand signal either
+FILLER_TOKENS = set("""
+de del la el los las y e en para con a al por argentina arg buenos aires caba
+cordoba rosario mendoza santa fe plata tucuman salta zona sur norte oeste este
+centro
+""".split())
+TAGLINE_SEP = re.compile(r"\s+(?:[|\u00b7\u2022\u2016\u2013\u2014]|-)\s+")
+
+
+def _tok(w):
+    w = unicodedata.normalize("NFD", w.lower().strip(".,()"))
+    return "".join(c for c in w if not unicodedata.combining(c))
+
+
+def _pure_descriptor(s):
+    """True when every token is a category word, connector or place name — i.e.
+    the half carries no brand at all. 'Agencia Interactua' is NOT pure, so it
+    survives; 'Diseno Web Argentina' is, so the brand must be the other half."""
+    toks = [t for t in (_tok(x) for x in s.split()) if t]
+    real = [t for t in toks if t not in FILLER_TOKENS]
+    if not real:
+        return True
+    return all(t in GENERIC_TOKENS for t in real)
+
+
+def tidy_company(name):
+    """Reduce a SERP/Maps title to the brand, or to nothing.
+
+    Returning "" is a feature: the sequences fall back to "tu agencia" / "la
+    marca", which reads far better in a subject line than a truncated SEO
+    title ("Agencia de Diseno web Argentina | Paginas Web en Buenos ...").
+    """
+    name = (name or "").strip()
+    if name.endswith(("...", "\u2026")):        # truncated title, never a name
+        return ""
+    parts = [p.strip() for p in TAGLINE_SEP.split(name) if p.strip()]
+    if len(parts) < 2:
+        # A separator-less name is kept even when every token is a category
+        # word: "Agencia Digital Sur" and "Cordoba Soluciones Digitales" are
+        # real Argentine brands, and blanking them loses good personalisation
+        # to catch a handful of SEO titles. Only the two unambiguous shapes
+        # above and below are dropped.
+        return name
+    # the brand is not always the first or second half —
+    # "Diseno Web - Desarrollo de Paginas Web - Nubelab" hides it third
+    for part in parts:
+        if len(part) >= 3 and not _pure_descriptor(part):
+            return part
+    return ""
+
 
 
 def known_emails():
@@ -291,7 +360,7 @@ def main():
             continue
         segment = "AR-AGENCIES" if (
             lead["tier"] in ("A", "B") and AGENCY_RE.search(blob)) else "AR-SELLERS"
-        company = (lead.get("company") or "").strip()[:60]
+        company = tidy_company((lead.get("company") or ""))[:60]
 
         for e in good:
             dedupe.add(e)

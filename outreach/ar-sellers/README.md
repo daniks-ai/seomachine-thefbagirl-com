@@ -113,6 +113,25 @@ after cleaning and the 2-per-domain cap. DataForSEO spend: **$5.66** total
 Tier A (Amazon-explicit) is only 423 of 7,776 domains. That is the finding, not
 a shortfall — see the marketplace note at the top.
 
+**Company-name hygiene (`tidy_company`).** Maps and SERP titles carry SEO
+taglines, so `{{companyName}}` rendered subjects like *"Comision recurrente en
+dolares para sitefy - Desarrollo Web"*. The builder now keeps the half that
+holds the brand — scanning every separator-split part, since the brand is
+sometimes third ("Diseno Web - Desarrollo de Paginas Web - **Nubelab**") — and
+drops titles truncated with "...". Two deliberate non-rules, both learned the
+hard way:
+
+* **ALLCAPS is never title-cased.** It wrecks initialisms ("H&FV" to "H&fv",
+  "GR" to "Gr"). Shouty-but-correct beats wrong in a subject line.
+* **A separator-less name is kept even if every token is a category word.**
+  "Agencia Digital Sur" and "Cordoba Soluciones Digitales" are real Argentine
+  brands; blanking them to catch a few SEO titles loses more than it gains.
+
+Applied to the 2,898 live leads it corrected 130 names. Note that Instantly's
+`PATCH /leads/{id}` **silently ignores an empty or null `company_name`** — it
+merges, so a field can be overwritten but never cleared. It returns 200 either
+way, so verify by re-reading rather than trusting the status.
+
 **Company-name enrichment.** Bulk-insert only carries the address, so every lead
 initially fell back to "tu agencia" / "la marca". `data/ar_enrich.tsv`
 (`email⇥company⇥website`) was transferred by clipboard and applied with
